@@ -13,7 +13,7 @@ return new class extends Migration
     {
         Schema::create('barion_tranzakcio', function (Blueprint $table) {
             $table->id("bt_id");
-            $table->foreignId("m_id")->references("m_id")->on("menhelyek");
+            $table->foreignId("m_id")->references("m_id")->on("menhelyek")->onDelete('cascade')->onUpdate('cascade');
             $table->string("payment_id");
             $table->string("status");
             $table->string("letrehozas_ideje");

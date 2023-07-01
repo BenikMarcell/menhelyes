@@ -13,8 +13,8 @@ return new class extends Migration
     {
         Schema::create('allatszinek', function (Blueprint $table) {
             $table->id("asz_id");
-            $table->foreignId("a_id")->references("a_id")->on("allatok");
-            $table->foreignId("szin_id")->references("szin_id")->on("szin");
+            $table->foreignId("a_id")->references("a_id")->on("allatok")->onDelete('cascade')->onUpdate('cascade');
+            $table->foreignId("szin_id")->references("szin_id")->on("szin")->onDelete('cascade')->onUpdate('cascade');
         });
     }
 

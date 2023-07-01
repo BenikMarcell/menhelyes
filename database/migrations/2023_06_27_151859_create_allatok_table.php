@@ -13,7 +13,7 @@ return new class extends Migration
     {
         Schema::create('allatok', function (Blueprint $table) {
             $table->id("a_id");
-            $table->foreignId("af_id")->references("af_id")->on("allatfajtak");
+            $table->foreignId("af_id")->references("af_id")->on("allatfajtak")->onDelete('cascade')->onUpdate('cascade');
             $table->integer("m_id");
             $table->smallInteger("kor");
             $table->tinyInteger("ivar-allapot");

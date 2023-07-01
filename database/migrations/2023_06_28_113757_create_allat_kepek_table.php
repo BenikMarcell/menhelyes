@@ -13,7 +13,7 @@ return new class extends Migration
     {
         Schema::create('allat_kepek', function (Blueprint $table) {
             $table->id("ak_id");
-            $table->foreignId("a_id")->references("a_id")->on("allatok");
+            $table->foreignId("a_id")->references("a_id")->on("allatok") ->onDelete('cascade')->onUpdate('cascade');
             $table->string("kep_cim", 50);
             $table->string("src")->nullable();
             $table->string("alt")->nullable();

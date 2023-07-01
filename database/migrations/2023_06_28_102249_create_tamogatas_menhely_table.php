@@ -13,7 +13,7 @@ return new class extends Migration
     {
         Schema::create('tamogatas_menhely', function (Blueprint $table) {
             $table->id("ma_id");
-            $table->foreignId("m_id")->references("m_id")->on("menhelyek");
+            $table->foreignId("m_id")->references("m_id")->on("menhelyek")->onDelete('cascade')->onUpdate('cascade');
             $table->foreignId("payment_id");
             $table->integer("osszeg");
             $table->string("megjegyzes");
