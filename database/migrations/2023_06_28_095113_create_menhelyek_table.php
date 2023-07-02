@@ -24,7 +24,7 @@ return new class extends Migration
             $table->string("menhely_adoszam");
             $table->string("menhely_email");
             $table->string("menhely_telefon");
-            $table->string("menhely_leiras");
+            $table->text("menhely_leiras");
             $table->string("menhely_weblink");
             $table->timestamps();
         });

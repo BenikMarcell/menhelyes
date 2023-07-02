@@ -15,8 +15,8 @@ return new class extends Migration
             $table->id("aa_id");
             $table->foreignId("a_id")->references("a_id")->on("allatok")->onDelete('cascade')->onUpdate('cascade');
             $table->foreignId("payment_id");
-            $table->text("osszeg");
-            $table->text("megjegyzes")->nullable();
+            $table->integer("osszeg");
+            $table->string("megjegyzes")->nullable();
             $table->timestamps();
         });
     }
