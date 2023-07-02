@@ -40,5 +40,8 @@ class DatabaseSeeder extends Seeder
          $this->call([
             TamogatasMenhelySeeder::class,
          ]);
+         $this->call([
+            UsersTableSeeder::class,
+         ]);
     }
 }

@@ -13,7 +13,7 @@ return new class extends Migration
     {
         Schema::create('users_jogkorei', function (Blueprint $table) {
             $table->id("ujk_id");
-            $table->foreignId("u_id")->references("u_id")->on("users")->onDelete('cascade')->onUpdate('cascade');
+            $table->foreignId("id")->references("id")->on("users")->onDelete('cascade')->onUpdate('cascade');
             $table->foreignId("uj_id")->references("uj_id")->on("users_jogkorok")->onDelete('cascade')->onUpdate('cascade');
             $table->timestamps();
         });
