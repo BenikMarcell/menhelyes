@@ -5,6 +5,7 @@ namespace Database\Seeders;
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 
+
 class DatabaseSeeder extends Seeder
 {
     /**
@@ -20,28 +21,38 @@ class DatabaseSeeder extends Seeder
         // ]);
 
         $this->call([
-            SzinTableSeeder::class,
+            MenhelySeeder::class,
         ]);
         $this->call([
-            AllatfajtakTableSeeder::class,
+            AllatFajSeeder::class,
         ]);
         $this->call([
-           AllatTableSeeder::class,
+            AllatSzinSeeder::class,
         ]);
         $this->call([
-            AllatSzinTableSeeder::class,
-         ]);
-         $this->call([
-            MenhelyTableSeeder::class,
-         ]);
-         $this->call([
-            TamogatasAllatSeeder::class,
-         ]);
-         $this->call([
+          AllatSeeder::class,
+        ]);
+        $this->call([
+            AllatnakSzineSeeder::class,
+          ]);
+
+          $this->call([
             TamogatasMenhelySeeder::class,
-         ]);
-         $this->call([
+          ]);
+          $this->call([
+            TamogatasAllatSeeder::class,
+          ]);
+
+          $this->call([
             UsersTableSeeder::class,
-         ]);
+          ]);
+
+          $this->call([
+            BarionSeeder::class,
+          ]);
+
+
+
+        
     }
 }

@@ -43,7 +43,5 @@ class TamogatasAllatSeeder extends Seeder
 
 
         ]);
-        
-        
     }
 }

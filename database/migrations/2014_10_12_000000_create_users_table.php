@@ -8,8 +8,6 @@ return new class extends Migration
 {
     /**
      * Run the migrations.
-     * 
-     * Ez már alapból volt, de nekünk is volt egy Users táblánk. Ez a kettő lehet egy??
      */
     public function up(): void
     {
@@ -21,7 +19,6 @@ return new class extends Migration
             $table->string('password');
             $table->rememberToken();
             $table->timestamps();
-            
         });
     }
 

@@ -6,14 +6,14 @@ use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
 
-class AllatfajtakTableSeeder extends Seeder
+class AllatFajSeeder extends Seeder
 {
     /**
      * Run the database seeds.
      */
     public function run(): void
     {
-        DB::table('allatfajtak')->insert ([
+        DB::table('allat_faj')->insert ([
 
             [
                 'faj'=>'kutya',

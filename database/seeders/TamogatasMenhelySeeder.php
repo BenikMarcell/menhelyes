@@ -41,6 +41,5 @@ class TamogatasMenhelySeeder extends Seeder
                 'megjegyzes'=>'Boldogok vagyunk!',
             ],
         ]);
-
     }
 }

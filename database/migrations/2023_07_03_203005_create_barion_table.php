@@ -11,9 +11,9 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('barion_tranzakcio', function (Blueprint $table) {
+        Schema::create('barion', function (Blueprint $table) {
             $table->id("bt_id");
-            $table->foreignId("m_id")->references("m_id")->on("menhelyek")->onDelete('cascade')->onUpdate('cascade');
+            $table->foreignId("m_id")->references("m_id")->on("menhely")->onDelete('cascade')->onUpdate('cascade');
             $table->string("payment_id");
             $table->string("status");
             $table->string("letrehozas_ideje");
@@ -29,6 +29,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('barion_tranzakcio');
+        Schema::dropIfExists('barion');
     }
 };

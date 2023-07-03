@@ -7,26 +7,30 @@ use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Str;
 
-class SzinTableSeeder extends Seeder
+class AllatnakSzineSeeder extends Seeder
 {
     /**
      * Run the database seeds.
      */
     public function run(): void
     {
-        DB::table('szin')->insert ([
+        DB::table('allatnak_szine')->insert ([
 
             [
-                'szin'=>'fekete',
+                'a_id'=>'1',
+                'szin_id'=>'1',
             ],
             [
-                'szin'=>'fehér',
+                'a_id'=>'2',
+                'szin_id'=>'2',
             ],
             [
-                'szin'=>'barna',
+                'a_id'=>'3',
+                'szin_id'=>'3',
             ],
             [
-                'szin'=>'szürke',
+                'a_id'=>'4',
+                'szin_id'=>'4',
             ],
 
 

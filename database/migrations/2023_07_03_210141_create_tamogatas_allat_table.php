@@ -11,12 +11,12 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('tamogatas_menhely', function (Blueprint $table) {
-            $table->id("ma_id");
-            $table->foreignId("m_id")->references("m_id")->on("menhelyek")->onDelete('cascade')->onUpdate('cascade');
+        Schema::create('tamogatas_allat', function (Blueprint $table) {
+            $table->id("at_id");
+            $table->foreignId("a_id")->references("a_id")->on("allat")->onDelete('cascade')->onUpdate('cascade');
             $table->foreignId("payment_id");
             $table->integer("osszeg");
-            $table->string("megjegyzes");
+            $table->string("megjegyzes")->nullable();
             $table->timestamps();
         });
     }
@@ -26,6 +26,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('tamogatas_menhely');
+        Schema::dropIfExists('tamogatas_allat');
     }
 };

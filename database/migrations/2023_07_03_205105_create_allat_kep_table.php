@@ -11,9 +11,9 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('allat_kepek', function (Blueprint $table) {
+        Schema::create('allat_kep', function (Blueprint $table) {
             $table->id("ak_id");
-            $table->foreignId("a_id")->references("a_id")->on("allatok") ->onDelete('cascade')->onUpdate('cascade');
+            $table->foreignId("a_id")->references("a_id")->on("allat") ->onDelete('cascade')->onUpdate('cascade');
             $table->string("kep_cim", 50);
             $table->string("src")->nullable();
             $table->string("alt")->nullable();
@@ -27,6 +27,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('allat_kepek');
+        Schema::dropIfExists('allat_kep');
     }
 };
