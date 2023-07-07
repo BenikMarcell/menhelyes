@@ -5,14 +5,14 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Validator;
-use App\Models\Szin;
+use App\Models\Szin; #modell
 
 class szinController extends Controller
 {
    public function index(){
-    #összes eddigi színt
-    $szinek = Szin::paginate(30);
-    return view('szinfelvetel',['szinek' => $szinek]);
+    #összes eddigi színt kilistázza
+    $szinek = Szin::paginate(30); # modell
+    return view('szinfelvetel',['szinek' => $szinek]); # változó
    }
 
    public function store(Request $req){
@@ -32,7 +32,7 @@ class szinController extends Controller
       );
       #adatbázisba rögzítés modellt használva
       Szin::create([
-         "szin" => $req->get("szin")
+         "szin" => $req->get("szin") #modell
       ]);
 
       #visszairányítjuk a felhasználót, egy kész sessionsel
@@ -64,7 +64,7 @@ class szinController extends Controller
             $data['error'] = true;
             $data['errorMsg'] = $validalas->messages();
         }else{
-            DB::delete("DELETE FROM szinek WHERE szin_id=?",[$req->szin_id]);
+            DB::delete("DELETE FROM allat_szin WHERE szin_id=?",[$req->szin_id]);
         }
         return response()->json($data);   
    }

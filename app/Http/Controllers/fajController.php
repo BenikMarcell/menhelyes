@@ -10,7 +10,7 @@ use App\Models\Faj;
 class tipusController extends Controller
 {
     public function index(){
-        $tipusok = Faj::paginate(3);
+        $fajok = Faj::paginate(3);
         return view("fajfelvetel",["fajok" => $fajok]);
     }
     
