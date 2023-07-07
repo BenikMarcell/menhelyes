@@ -1,5 +1,5 @@
 @extends('layouts.master') // majd elkészül - Marci
-@section('title','A faj meghatározása')
+@section('title','A faj meghatározása') // meglátjuk
 
 
 @section('content')
