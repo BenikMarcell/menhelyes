@@ -22,8 +22,8 @@
             <form method="POST">
                 @csrf
                 <label for="fajmeghatarozas" class="form-label">A faj meghatározása</label>
-                <input type="text" class="form-control" id="faj" name="faj" placeholder="Példa: Macska" value="{{old('faj')}}">
-                @error('faj')
+                <input type="text" class="form-control" id="fajok" name="faj" placeholder="Példa: Macska" value="{{old('fajok')}}">
+                @error('fajok')
                             <div class="alert alert-danger">
                                 {{$message}}
                             </div>

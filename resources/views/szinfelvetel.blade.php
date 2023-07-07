@@ -17,7 +17,7 @@
         <form method="POST">
             @csrf
             <label for="szin" class="form-label"><h4>Színkezelés</h4></label> // id="szin"
-                <input type="text" class="form-control" id="szin"  name="szin" placeholder="Kérjük, írja le az állat színtét!" value="{{old('szin')}}">
+                <input type="text" class="form-control" id="szinek"  name="szin" placeholder="Kérjük, írja le az állat színtét!" value="{{old('szinek')}}">
             @error('szin_nev')
                         <div class="alert alert-danger">
                             {{$message}}
