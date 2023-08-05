@@ -2,25 +2,93 @@
 @section('title','Főoldal')
 @section('content')
 
- 
-<h1>Ez a főoldal!</h1>
+<div class="container-fluid">
+    <div>
+        <h1>Főoldal</h1>
+        <h6>A belépés: vagyunk@gmail.com és  12345678</h6>
+    </div>
+    <div class="row justify-content-center">
+        <div class="col-3 border border-primary m-2 p-4">
+            <div>
+                <img src="./images/kutya1.jpg" class="img-fluid img-thumbnail" alt="Ez egy kép lenne">
+                <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium,
+                    totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae
+                    dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit,
+                    sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam
+                    est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius
+                    modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.
+                </p>
 
+            </div>
+        </div>
+        <div class="col-3 border border-primary m-2 p-4">
+            <div>
+                <img src="./images/kutya2.jpg" class="img-fluid img-thumbnail" alt="Ez egy kép lenne">
+                <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium,
+                    totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae
+                    dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit,
+                    sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam
+                    est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius
+                    modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.
+                </p>
 
-<div class="container">
+            </div>
+        </div>
+        <div class="col-3 border border-primary m-2 p-4">
+            <div>
+                <img src="./images/kuty3.jpg" class="img-fluid img-thumbnail" alt="Ez egy kép lenne">
+                <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium,
+                    totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae
+                    dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit,
+                    sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam
+                    est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius
+                    modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.
+                </p>
 
-    <div class="row">
-
-        
-        <div class="col-6 text-justify mt-3 p-4"> <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.
-        </p>
+            </div>
         </div>
     </div>
 
+    <div class="row justify-content-center">
+        <div class="col-3 border border-primary m-2 p-4">
+            <div>
+                <img src="./images/macska3.jpg" class="img-fluid img-thumbnail" alt="Ez egy kép lenne">
+                <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium,
+                    totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae
+                    dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit,
+                    sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam
+                    est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius
+                    modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.
+                </p>
 
+            </div>
+        </div>
+        <div class="col-3 border border-primary m-2 p-4">
+            <div>
+                <img src="./images/macska2.jpg" class="img-fluid img-thumbnail" alt="Ez egy kép lenne">
+                <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium,
+                    totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae
+                    dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit,
+                    sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam
+                    est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius
+                    modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.
+                </p>
+
+            </div>
+        </div>
+        <div class="col-3 border border-primary m-2 p-4">
+            <div>
+                <img src="./images/macska1.jpg" class="img-fluid img-thumbnail" alt="Ez egy kép lenne">
+                <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium,
+                    totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae
+                    dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit,
+                    sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam
+                    est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius
+                    modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.
+                </p>
+
+            </div>
+        </div>
+    </div>
 </div>
-@endsection       
-
-  
-
-                                
-              
+@endsection

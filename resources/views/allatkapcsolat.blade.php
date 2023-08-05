@@ -1,14 +1,13 @@
-@extends('layouts.master')
-@section('title',"Főoldal")
+@extends('layouts.app2')
 
 @section('content')
-<h1>Ez a kapcsolat!</h1>
+<h1>Ez a kapcsolat csak menhelyeknek!</h1>
 
 <div class="container">
     <div class="row">
         <div class="col-6 border border-primary m-3 p-4">
             <div class="mb-3">
-                <label for="exampleFormControlInput1" class="form-label">Név</label>
+                <label for="exampleFormControlInput1" class="form-label">A menhely neve</label>
                 <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Név">
             </div>
             <div class="mb-3">
@@ -17,28 +16,15 @@
             </div>
             <div class="mb-3">
                 <label for="exampleFormControlTextarea1" class="form-label">Szöveg</label>
-                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"
-                    placeholder="valamilyen szöveg"></textarea>
+                <textarea class="form-control" id="exampleFormControlTextarea1" rows="10"
+                    placeholder="szöveg"></textarea>
             </div>
             <div class="d-grid gap-2 col-6 mx-auto mb-3">
 
                 <button type="button" class="btn btn-success">Beküld</button>
             </div>
-
         </div>
-
     </div>
-
 </div>
-<nav class="navbar navbar-expand-sm bg-light navbar-light">
-    <div class="container-fluid">
-        <ul class="navbar-nav">
 
-            <li class="nav-item">
-                <a class="nav-link" href="./kapcsolat/kapcsolat2">Tovább a Kapcsolat2</a>
-            </li>
-
-        </ul>
-    </div>
-</nav>
 @endsection

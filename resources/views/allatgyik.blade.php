@@ -1,10 +1,7 @@
-@extends('layouts.master')
-@section('title',"Főoldal")
-
-
+@extends('layouts.app2')
 
 @section('content')
-<h1>Ez a GY.I.K. !</h1>
+<h1>Ez a GY.I.K. kizárólag menhelyeknek!</h1>
 
 <div class="container-fluid">
 

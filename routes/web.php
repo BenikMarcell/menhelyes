@@ -31,6 +31,9 @@ Route::get('/kapcsolat/kapcsolat2', function () {
 Route::get('/gyik', function () {
     return view('gyik');
 });
+Route::get('/szerkesztesalatt', function () {
+    return view('szerkesztesalatt');
+});
 Route::get('/veddkiareszed', function () {
     return view('veddkiareszed');
 });
@@ -42,6 +45,15 @@ Route::get('/menkapcsolat', function () {
 });
 Route::get('/mengyik', function () {
     return view('mengyik');
+});
+Route::get('/allatregisztracio', function () {
+    return view('allatregisztracio');
+});
+Route::get('/allatgyik', function () {
+    return view('allatgyik');
+});
+Route::get('/allatkapcsolat', function () {
+    return view('allatkapcsolat');
 });
 
 
