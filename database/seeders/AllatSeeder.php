@@ -23,6 +23,7 @@ class AllatSeeder extends Seeder
                 'ivar-allapot'=>'1',
                 'chip'=>'1',
                 'nev'=>'Buksi',
+                'nem'=>'fiú',
                 'leiras'=>'Etiam facilisis gravida neque id porta. In quis diam facilisis massa elementum auctor nec vel sem. Phasellus pulvinar posuere tortor, eu maximus est maximus id. Aliquam erat volutpat. Pellentesque molestie, nulla et tempus aliquam, dolor mi viverra sapien, a tincidunt sem orci id metus. Aliquam augue ipsum, rutrum sed eleifend sed, blandit eu metus. Donec eu ultricies velit. Vestibulum eu urna eros. Sed ac laoreet sem. Donec feugiat lorem sed laoreet egestas. Donec vestibulum auctor odio at iaculis. Nullam ut lectus orci. Integer aliquet ultrices quam eu ornare. ',
                 
            
@@ -35,6 +36,7 @@ class AllatSeeder extends Seeder
                 'ivar-allapot'=>'1',
                 'chip'=>'1',
                 'nev'=>'Cirmos',
+                'nem'=>'lány',
                 'leiras'=>'Etiam facilisis gravida neque id porta. In quis diam facilisis massa elementum auctor nec vel sem. Phasellus pulvinar posuere tortor, eu maximus est maximus id. Aliquam erat volutpat. Pellentesque molestie, nulla et tempus aliquam, dolor mi viverra sapien, a tincidunt sem orci id metus. Aliquam augue ipsum, rutrum sed eleifend sed, blandit eu metus. Donec eu ultricies velit. Vestibulum eu urna eros. Sed ac laoreet sem. Donec feugiat lorem sed laoreet egestas. Donec vestibulum auctor odio at iaculis. Nullam ut lectus orci. Integer aliquet ultrices quam eu ornare. ',
                 
            
@@ -47,6 +49,7 @@ class AllatSeeder extends Seeder
                 'ivar-allapot'=>'1',
                 'chip'=>'2',
                 'nev'=>'Micky',
+                'nem'=>'fiú',
                 'leiras'=>'Etiam facilisis gravida neque id porta. In quis diam facilisis massa elementum auctor nec vel sem. Phasellus pulvinar posuere tortor, eu maximus est maximus id. Aliquam erat volutpat. Pellentesque molestie, nulla et tempus aliquam, dolor mi viverra sapien, a tincidunt sem orci id metus. Aliquam augue ipsum, rutrum sed eleifend sed, blandit eu metus. Donec eu ultricies velit. Vestibulum eu urna eros. Sed ac laoreet sem. Donec feugiat lorem sed laoreet egestas. Donec vestibulum auctor odio at iaculis. Nullam ut lectus orci. Integer aliquet ultrices quam eu ornare. ',
                 
            
@@ -59,6 +62,7 @@ class AllatSeeder extends Seeder
                 'ivar-allapot'=>'2',
                 'chip'=>'2',
                 'nev'=>'Misi',
+                'nem'=>'fiú',
                 'leiras'=>'Etiam facilisis gravida neque id porta. In quis diam facilisis massa elementum auctor nec vel sem. Phasellus pulvinar posuere tortor, eu maximus est maximus id. Aliquam erat volutpat. Pellentesque molestie, nulla et tempus aliquam, dolor mi viverra sapien, a tincidunt sem orci id metus. Aliquam augue ipsum, rutrum sed eleifend sed, blandit eu metus. Donec eu ultricies velit. Vestibulum eu urna eros. Sed ac laoreet sem. Donec feugiat lorem sed laoreet egestas. Donec vestibulum auctor odio at iaculis. Nullam ut lectus orci. Integer aliquet ultrices quam eu ornare. ',
                 
            

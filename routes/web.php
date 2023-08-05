@@ -2,6 +2,8 @@
 
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Auth;
+use App\Http\Controllers\szinController;
+use App\Http\Controllers\fajController;
 
 /*
 |--------------------------------------------------------------------------
@@ -17,8 +19,45 @@ use Illuminate\Support\Facades\Auth;
 Route::get('/', function () {
     return view('welcome');
 });
+Route::get('/fooldal', function () {
+    return view('fooldal');
+});
+Route::get('/kapcsolat', function () {
+    return view('kapcsolat');
+});
+Route::get('/kapcsolat/kapcsolat2', function () {
+    return view('kapcsolat2');
+});
+Route::get('/gyik', function () {
+    return view('gyik');
+});
+Route::get('/veddkiareszed', function () {
+    return view('veddkiareszed');
+});
+Route::get('/menhelyregisztracio', function () {
+    return view('menhelyregisztracio');
+});
+Route::get('/menkapcsolat', function () {
+    return view('menkapcsolat');
+});
+Route::get('/mengyik', function () {
+    return view('mengyik');
+});
+
+
 
 
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+/*
+Route::get('/szin-kezeles',[szinController::class,'index'])->name('szinszinfelvetel');
+Route::post('/szin-kezeles',[szinController::class,'store']);
+Route::post('/szin-torles',[szinController::class, 'szinTorles']);
+Route::post('/szin-torles-megerositese',[szinController::class,'szinTorlesMegerosites']);
+
+
+Route::post('/faj-torles',[fajController::class,'fajTorles']);
+Route::post('/faj-torles-megerositese',[fajController::class,'fajTorlesMegerosites']);
+
+*/

@@ -18,6 +18,7 @@ return new class extends Migration
             $table->smallInteger("kor");
             $table->tinyInteger("ivar-allapot");
             $table->string("nev", 50);
+            $table->string("nem", 50);
             $table->tinyInteger("chip");
             $table->text("leiras");
         });
