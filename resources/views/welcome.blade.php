@@ -198,8 +198,11 @@
                     est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius
                     modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.
                 </p>
-                <a class="btn btn-success" href="./kapcsolat" role="button">Téged kerestelek! <br> 
-                  Indulok érted a menhelyre!</a>
+                <a class="btn btn-info m-1" href="./kapcsolat" role="button">Támogatlak! 
+                </a> <br>
+                <a class="btn btn-success" href="./kapcsolat" role="button">Megtaláltalak! 
+                 </a>
+                  
                 </div>
             </div>
           </div>
@@ -209,11 +212,10 @@
 
           <button
             type="button"
-            class="btn btn-success"
+            class="btn btn-warning"
             data-dismiss="modal"
           >
-          
-            Tovább nézelődöm... 
+             Tovább nézelődöm... 
           </button>
         </div>
       </div>
