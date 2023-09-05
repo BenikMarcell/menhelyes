@@ -198,15 +198,9 @@
                     est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius
                     modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.
                 </p>
-                <button
-                    type="button"
-                    class="btn btn-success"
-                    data-dismiss="modal"
-                  >
-                    Téged kerestelek! <br> 
-                    Indulok érted a menhelyre!
-                  </button>
-              </div>
+                <a class="btn btn-success" href="./kapcsolat" role="button">Téged kerestelek! <br> 
+                  Indulok érted a menhelyre!</a>
+                </div>
             </div>
           </div>
         </div>
