@@ -194,12 +194,14 @@
     </nav>
     @yield("content")
 
-    <footer class="bg-dark text-light" style="height: 8vh; display: flex; align-items: center; justify-content: center;">
+    <footer class="bg-dark text-light">
         <div class="container-fluid">
             <div class="row">
 
                 <div class="col-3">
+                  <div class="p-5">
                     <a style="text-decoration: none;  display: flex; align-items: center; justify-content: center;" href="./gyik">GyIK</a>
+                  </div>
                 </div>
                 <div class="col-3">
                     <a style="text-decoration: none;  display: flex; align-items: center; justify-content: center;" href="./kapcsolat">Kapcsolat</a>
