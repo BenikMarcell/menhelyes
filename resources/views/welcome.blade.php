@@ -13,7 +13,7 @@
                 <img src="./images/kutya1.jpg" class="img-fluid img-thumbnail card-img-top" alt="Ez egy kép lenne">
                 <div class="card-body">
                     <h5 class="card-title text-success">
-                <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium,
+                <p> Az adatbázisból<br> Név: <br> Kor: <br> Leírás: <br>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium,
                     totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae
                     dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit,
                     sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam
@@ -190,7 +190,7 @@
               </div>
               <div class="col-sm-8">
                 <h4>Kutya 1</h4>
-                <p>
+                <p>Az adatbázisból<br> Név: <br> Kor: <br> És a többi adat:  <br> Leírás: <br> 
                     Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium,
                     totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae
                     dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit,
@@ -218,7 +218,7 @@
             class="btn btn-success"
             data-dismiss="modal"
           >
-            
+          
             Tovább nézelődöm... 
           </button>
         </div>
