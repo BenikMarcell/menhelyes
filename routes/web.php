@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Auth;
+use App\Http\Controllers\MenhelyController;
 use App\Http\Controllers\szinController;
 use App\Http\Controllers\fajController;
 
@@ -53,15 +54,20 @@ Route::get('/allatgyik', function () {
     return view('allatgyik');
 });
 Route::get('/allatkapcsolat', function () {
+
     return view('allatkapcsolat');
 });
 
+Route::get('/menhelyek/create', function () {
 
+    return view('allatkapcsolat');
+});
 
 
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::resource('menhelyek', MenhelyController::class);
 /*
 Route::get('/szin-kezeles',[szinController::class,'index'])->name('szinszinfelvetel');
 Route::post('/szin-kezeles',[szinController::class,'store']);
