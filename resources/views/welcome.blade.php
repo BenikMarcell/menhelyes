@@ -2,6 +2,56 @@
 @section('title','Főoldal')
 @section('content')
 
+
+<div class="container">
+    <div class="row">
+        <div class="col-3">
+            <div class="card">
+                <img class="card-img-top" src="./images/kutya1.jpg" alt="Card image">
+                <div class="card-body">
+                  <h4 class="card-title">John Doe</h4>
+                  <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa nam ex obcaecati unde repudiandae nemo, debitis placeat vitae incidunt, est accusantium velit eligendi molestiae iste sunt fuga nobis, earum voluptate!</p>
+                  <a href="#" class="btn btn-primary">See Profile</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-3">
+            <div class="card">
+                <img class="card-img-top" src="./images/kutya1.jpg" alt="Card image">
+                <div class="card-body">
+                  <h4 class="card-title">John Doe</h4>
+                  <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa nam ex obcaecati unde repudiandae nemo, debitis placeat vitae incidunt, est accusantium velit eligendi molestiae iste sunt fuga nobis, earum voluptate!</p>
+                  <a href="#" class="btn btn-primary">See Profile</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-3">
+            <div class="card">
+                <img class="card-img-top" src="./images/kutya1.jpg" alt="Card image">
+                <div class="card-body">
+                  <h4 class="card-title">John Doe</h4>
+                  <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa nam ex obcaecati unde repudiandae nemo, debitis placeat vitae incidunt, est accusantium velit eligendi molestiae iste sunt fuga nobis, earum voluptate!</p>
+                  <a href="#" class="btn btn-primary">See Profile</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-3">
+            <div class="card">
+                <img class="card-img-top" src="./images/kutya1.jpg" alt="Card image">
+                <div class="card-body">
+                  <h4 class="card-title">John Doe</h4>
+                  <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa nam ex obcaecati unde repudiandae nemo, debitis placeat vitae incidunt, est accusantium velit eligendi molestiae iste sunt fuga nobis, earum voluptate!</p>
+                  <a href="#" class="btn btn-primary">See Profile</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
 <div class="container-fluid">
     <div>
         <h1>Főoldal</h1>
@@ -72,7 +122,7 @@
 
             </div>
         </div>
-        <div class="col-2 border border-primary rounded m-2">
+        <div class="col-2  border-primary rounded m-2">
             <div>
                 <img src="./images/kuty3.jpg" class="img-fluid img-thumbnail" alt="Ez egy kép lenne">
                 <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium,
@@ -88,7 +138,7 @@
     </div>
 
     <div class="row justify-content-center">
-        <div class="col-2 border border-primary rounded m-2">
+        <div class="col-2  border-primary rounded m-2">
             <div>
                 <img src="./images/macska3.jpg" class="img-fluid img-thumbnail" alt="Ez egy kép lenne">
                 <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium,
@@ -101,7 +151,7 @@
 
             </div>
         </div>
-        <div class="col-2 border border-primary rounded m-2">
+        <div class="col-2  border-primary rounded m-2">
             <div>
                 <img src="./images/macska2.jpg" class="img-fluid img-thumbnail" alt="Ez egy kép lenne">
                 <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium,
@@ -114,7 +164,7 @@
 
             </div>
         </div>
-        <div class="col-2 border border-primary rounded m-2">
+        <div class="col-2  border-primary rounded m-2">
             <div>
                 <img src="./images/macska1.jpg" class="img-fluid img-thumbnail" alt="Ez egy kép lenne">
                 <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium,
@@ -127,7 +177,7 @@
 
             </div>
         </div>
-        <div class="col-2 border border-primary rounded m-2">
+        <div class="col-2  border-primary rounded m-2">
             <div>
                 <img src="./images/macska3.jpg" class="img-fluid img-thumbnail" alt="Ez egy kép lenne">
                 <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium,
@@ -140,7 +190,7 @@
 
             </div>
         </div>
-        <div class="col-2 border border-primary rounded m-2">
+        <div class="col-2  border-primary rounded m-2">
             <div>
                 <img src="./images/macska2.jpg" class="img-fluid img-thumbnail" alt="Ez egy kép lenne">
                 <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium,
