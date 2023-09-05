@@ -2,16 +2,65 @@
 @section('title','Főoldal')
 @section('content')
 
-
+<div class="container p-3 m-3 text-center">
+    <form class="form form-control border border-primary p-3 m-3 text-center" action="#" method="post">
+        <h2>Állat Kereső</h2>
+        <div class="col-6 border border-success p-3 m-3 text-center">
+            <div class="m-2">
+                <label for="allatfajta">Állat fajta:</label>
+                <select name="allatfajta" id="allatfajtaValaszto" aria-placeholder="Válassz fajt">
+                    <option value="kutya">Kutya</option>
+                    <option value="macska">Macska</option>
+                    <option value="kutya">Kutya</option>
+                    <option value="medve">Medve</option>
+                </select>
+            </div>
+            <div class="m-2">
+                <label for="allatszine">Állat színe:</label>
+                <select name="allatszine" id="allatszineValaszto" aria-placeholder="Válassz színt">
+                    <option value="fekete">Fekete</option>
+                    <option value="feher">Fehér</option>
+                    <option value="szurke">Szürke</option>
+                    <option value="barna">Barna</option>
+                </select>
+            </div>
+        </div>
+        <div class="col-6 border border-success p-3 m-3 text-center">
+            <div class="m-2">
+                <label for="allatneme">Állat neme:</label>
+                <select name="allatneme" id="allatnemeValaszto" aria-placeholder="Válassz nemet">
+                    <option value="him">Hím</option>
+                    <option value="nosteny">Nőstény</option>
+                </select>
+            </div>
+            <div class="m-2">
+                <label for="allatkora">Állat kora:</label>
+                <input type="number" placeholder="Kor">
+            </div>
+        </div>
+        <button class="btn btn-primary rounded">Keress!</button>
+    </form>
+</div>
 <div class="container">
+    <div>
+        <h1>Főoldal</h1>
+        <h6>A belépés: vagyunk@gmail.com és  12345678</h6>
+    </div>
     <div class="row">
         <div class="col-3">
             <div class="card">
                 <img class="card-img-top" src="./images/kutya1.jpg" alt="Card image">
                 <div class="card-body">
-                  <h4 class="card-title">John Doe</h4>
-                  <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa nam ex obcaecati unde repudiandae nemo, debitis placeat vitae incidunt, est accusantium velit eligendi molestiae iste sunt fuga nobis, earum voluptate!</p>
-                  <a href="#" class="btn btn-primary">See Profile</a>
+                    <h4 class="card-title">John Doe</h4>
+                    <p> Az adatbázisból<br> 
+                        Név:<br> 
+                        Kor:<br> 
+                        Leírás:<br>
+                        Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium,
+                        totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae
+                        dicta sunt explicabo.
+                    </p>
+                    <a href="#" class="btn btn-primary">See Profile</a>
                 </div>
             </div>
         </div>
@@ -20,9 +69,16 @@
             <div class="card">
                 <img class="card-img-top" src="./images/kutya1.jpg" alt="Card image">
                 <div class="card-body">
-                  <h4 class="card-title">John Doe</h4>
-                  <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa nam ex obcaecati unde repudiandae nemo, debitis placeat vitae incidunt, est accusantium velit eligendi molestiae iste sunt fuga nobis, earum voluptate!</p>
-                  <a href="#" class="btn btn-primary">See Profile</a>
+                    <h4 class="card-title">John Doe</h4>
+                    <p> Az adatbázisból<br> 
+                        Név:<br> 
+                        Kor:<br> 
+                        Leírás:<br>
+                        Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium,
+                        totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae
+                        dicta sunt explicabo.
+                    </p>
+                    <a href="#" class="btn btn-primary">See Profile</a>
                 </div>
             </div>
         </div>
@@ -31,9 +87,16 @@
             <div class="card">
                 <img class="card-img-top" src="./images/kutya1.jpg" alt="Card image">
                 <div class="card-body">
-                  <h4 class="card-title">John Doe</h4>
-                  <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa nam ex obcaecati unde repudiandae nemo, debitis placeat vitae incidunt, est accusantium velit eligendi molestiae iste sunt fuga nobis, earum voluptate!</p>
-                  <a href="#" class="btn btn-primary">See Profile</a>
+                    <h4 class="card-title">John Doe</h4>
+                    <p> Az adatbázisból<br> 
+                        Név:<br> 
+                        Kor:<br> 
+                        Leírás:<br>
+                        Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium,
+                        totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae
+                        dicta sunt explicabo.
+                    </p>
+                    <a href="#" class="btn btn-primary">See Profile</a>
                 </div>
             </div>
         </div>
@@ -42,165 +105,92 @@
             <div class="card">
                 <img class="card-img-top" src="./images/kutya1.jpg" alt="Card image">
                 <div class="card-body">
-                  <h4 class="card-title">John Doe</h4>
-                  <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa nam ex obcaecati unde repudiandae nemo, debitis placeat vitae incidunt, est accusantium velit eligendi molestiae iste sunt fuga nobis, earum voluptate!</p>
-                  <a href="#" class="btn btn-primary">See Profile</a>
+                    <h4 class="card-title">John Doe</h4>
+                    <p> Az adatbázisból<br> 
+                        Név:<br> 
+                        Kor:<br> 
+                        Leírás:<br>
+                        Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium,
+                        totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae
+                        dicta sunt explicabo.
+                    </p>
+                    <a href="#" class="btn btn-primary">See Profile</a>
                 </div>
             </div>
         </div>
+
     </div>
 </div>
 
 
-<div class="container-fluid">
-    <div>
-        <h1>Főoldal</h1>
-        <h6>A belépés: vagyunk@gmail.com és  12345678</h6>
-    </div>
-    <div class="row justify-content-center">
-        <div class="col-2 border border-success rounded m-2">
-            <div class="card"> 
-                <img src="./images/kutya1.jpg" class="img-fluid img-thumbnail card-img-top" alt="Ez egy kép lenne">
+<div class="container">
+    <div class="row">
+        <div class="col-3">
+            <div class="card">
+                <img class="card-img-top" src="./images/macska1.jpg" alt="Card image">
                 <div class="card-body">
-                    <h5 class="card-title text-success">
-                <p> Az adatbázisból<br> Név: <br> Kor: <br> Leírás: <br>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium,
-                    totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae
-                    dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit,
-                    sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam
-                    est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius
-                    modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.
-                </p>
-                
-                      </h5>
-                      <button type="button" class="btn btn-success" data-toggle="modal" data-target="#idKutya1">
-                        Részletesen rólam...
-                      </button>
-                 
+                    <h4 class="card-title">John Doe</h4>
+                    <p> Az adatbázisból<br> 
+                        Név:<br> 
+                        Kor:<br> 
+                        Leírás:<br>
+                        Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium,
+                        totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae
+                        dicta sunt explicabo.
+                    </p>
+                    <a href="#" class="btn btn-primary">See Profile</a>
                 </div>
-    
-
-            </div>
-            
-        </div>
-        <div class="col-2 border border-primary rounded m-2">
-            <div>
-                <img src="./images/kutya2.jpg" class="img-fluid img-thumbnail" alt="Ez egy kép lenne">
-                <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium,
-                    totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae
-                    dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit,
-                    sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam
-                    est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius
-                    modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.
-                </p>
-
-            </div>
-            
-        </div>
-        <div class="col-2 border border-primary rounded m-2">
-            <div>
-                <img src="./images/kuty3.jpg" class="img-fluid img-thumbnail" alt="Ez egy kép lenne">
-                <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium,
-                    totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae
-                    dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit,
-                    sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam
-                    est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius
-                    modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.
-                </p>
-
             </div>
         </div>
-        <div class="col-2 border border-primary rounded m-2">
-            <div>
-                <img src="./images/kuty3.jpg" class="img-fluid img-thumbnail" alt="Ez egy kép lenne">
-                <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium,
-                    totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae
-                    dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit,
-                    sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam
-                    est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius
-                    modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.
-                </p>
-
+        <div class="col-3">
+            <div class="card">
+                <img class="card-img-top" src="./images/macska1.jpg" alt="Card image">
+                <div class="card-body">
+                    <h4 class="card-title">John Doe</h4>
+                    <p> Az adatbázisból<br> 
+                        Név:<br> 
+                        Kor:<br> 
+                        Leírás:<br>
+                        Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium,
+                        totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae
+                        dicta sunt explicabo.
+                    </p>
+                    <a href="#" class="btn btn-primary">See Profile</a>
+                </div>
             </div>
         </div>
-        <div class="col-2  border-primary rounded m-2">
-            <div>
-                <img src="./images/kuty3.jpg" class="img-fluid img-thumbnail" alt="Ez egy kép lenne">
-                <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium,
-                    totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae
-                    dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit,
-                    sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam
-                    est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius
-                    modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.
-                </p>
-
+        <div class="col-3">
+            <div class="card">
+                <img class="card-img-top" src="./images/macska1.jpg" alt="Card image">
+                <div class="card-body">
+                    <h4 class="card-title">John Doe</h4>
+                    <p> Az adatbázisból<br> 
+                        Név:<br> 
+                        Kor:<br> 
+                        Leírás:<br>
+                        Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium,
+                        totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae
+                        dicta sunt explicabo.
+                    </p>
+                    <a href="#" class="btn btn-primary">See Profile</a>
+                </div>
             </div>
         </div>
-    </div>
-
-    <div class="row justify-content-center">
-        <div class="col-2  border-primary rounded m-2">
-            <div>
-                <img src="./images/macska3.jpg" class="img-fluid img-thumbnail" alt="Ez egy kép lenne">
-                <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium,
-                    totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae
-                    dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit,
-                    sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam
-                    est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius
-                    modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.
-                </p>
-
-            </div>
-        </div>
-        <div class="col-2  border-primary rounded m-2">
-            <div>
-                <img src="./images/macska2.jpg" class="img-fluid img-thumbnail" alt="Ez egy kép lenne">
-                <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium,
-                    totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae
-                    dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit,
-                    sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam
-                    est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius
-                    modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.
-                </p>
-
-            </div>
-        </div>
-        <div class="col-2  border-primary rounded m-2">
-            <div>
-                <img src="./images/macska1.jpg" class="img-fluid img-thumbnail" alt="Ez egy kép lenne">
-                <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium,
-                    totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae
-                    dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit,
-                    sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam
-                    est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius
-                    modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.
-                </p>
-
-            </div>
-        </div>
-        <div class="col-2  border-primary rounded m-2">
-            <div>
-                <img src="./images/macska3.jpg" class="img-fluid img-thumbnail" alt="Ez egy kép lenne">
-                <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium,
-                    totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae
-                    dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit,
-                    sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam
-                    est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius
-                    modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.
-                </p>
-
-            </div>
-        </div>
-        <div class="col-2  border-primary rounded m-2">
-            <div>
-                <img src="./images/macska2.jpg" class="img-fluid img-thumbnail" alt="Ez egy kép lenne">
-                <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium,
-                    totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae
-                    dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit,
-                    sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam
-                    est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius
-                    modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.
-                </p>
-
+        <div class="col-3">
+            <div class="card">
+                <img class="card-img-top" src="./images/macska1.jpg" alt="Card image">
+                <div class="card-body">
+                    <h4 class="card-title">John Doe</h4>
+                    <p> Az adatbázisból<br> 
+                        Név:<br> 
+                        Kor:<br> 
+                        Leírás:<br>
+                        Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium,
+                        totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae
+                        dicta sunt explicabo.
+                    </p>
+                    <a href="#" class="btn btn-primary">See Profile</a>
+                </div>
             </div>
         </div>
     </div>
