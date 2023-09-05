@@ -134,12 +134,26 @@
                     </ul>
                   </div>
 
-
-
-                <li class="nav-item">
-                    <a class="nav-link" href="./kapcsolat">Kapcsolat</a>
-                </li>
-                
+                  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDarkDropdown" aria-controls="navbarNavDarkDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                  </button>
+                  <div class="collapse navbar-collapse" id="navbarNavDarkDropdown">
+                    <ul class="navbar-nav">
+                      <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDarkDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                           Kapcsolat
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDarkDropdownMenuLink">
+                          <li><a class="dropdown-item" href="./kapcsolat">Kapcsolat</a></li>
+                          <li><a class="dropdown-item" href="./kapcsolat2">Telefon</a></li>
+                          <li><a class="dropdown-item" href="./szerkesztesalatt">Címünk</a></li>
+                          <li><a class="dropdown-item" href="./szerkesztesalatt">Tömegközlekedéssel</a></li>
+                          <li><a class="dropdown-item" href="./szerkesztesalatt">Autóval</a></li>
+                          <li><a class="dropdown-item" href="./szerkesztesalatt">Ügyfélfogadás</a></li>
+                         </ul>
+                      </li>
+                    </ul>
+                  </div>
             </ul>
 
             

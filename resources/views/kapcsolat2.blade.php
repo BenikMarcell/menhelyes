@@ -1,12 +1,12 @@
-@extends('layouts.master1')
-@section('title',"kapcsolat2")
-    
+@extends('layouts.master')
+@section('title',"Főoldal")
 
 
 @section('content')
-<h1>Ez a kapcsolat2!</h1>
+<h1>Ez a telefon</h1>
 
-Ez tartalom
+
+Telefon, fax, postagalamb
 
 
 

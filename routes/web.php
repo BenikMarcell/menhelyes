@@ -25,7 +25,7 @@ Route::get('/fooldal', function () {
 Route::get('/kapcsolat', function () {
     return view('kapcsolat');
 });
-Route::get('/kapcsolat/kapcsolat2', function () {
+Route::get('/kapcsolat2', function () {
     return view('kapcsolat2');
 });
 Route::get('/gyik', function () {
