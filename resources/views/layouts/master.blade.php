@@ -81,20 +81,25 @@
         <div class="container-fluid">
             <div class="row">
 
-                <div class="col-4">
+                <div class="col-3">
                     <a style="text-decoration: none;  display: flex; align-items: center; justify-content: center;" href="./gyik">GyIK</a>
                 </div>
+                <div class="col-3">
+                    <a style="text-decoration: none;  display: flex; align-items: center; justify-content: center;" href="./kapcsolat">Kapcsolat</a>
+                </div>
 
-                <div class="col-4" style="text-decoration: none;  display: flex; align-items: center; justify-content: center;">
+                <div class="col-3" style="text-decoration: none;  display: flex; align-items: center; justify-content: center;">
                     <p>Készítette: A Menhelyes Csapat&copy;</p>
                 </div>
 
-                <div class="col-4">
+                <div class="col-3">
                     <a style="text-decoration: none;  display: flex; align-items: center; justify-content: center;" href="./szerkesztesalatt">Rólunk</a>
                 </div>
 
             </div>
         </div>
+
+        
 
 
 
