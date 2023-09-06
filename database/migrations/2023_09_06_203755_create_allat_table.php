@@ -16,7 +16,7 @@ return new class extends Migration
             $table->foreignId("af_id")->references("af_id")->on("allat_faj")->onDelete('cascade')->onUpdate('cascade');
             $table->foreignId("m_id")->references("m_id")->on("menhely")->onDelete('cascade')->onUpdate('cascade');
             $table->smallInteger("kor");
-            $table->tinyInteger("ivar-allapot");
+            $table->tinyInteger("ivar_allapot");
             $table->string("nev", 50);
             $table->string("nem", 50);
             $table->tinyInteger("chip");
