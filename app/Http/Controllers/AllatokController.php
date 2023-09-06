@@ -13,7 +13,7 @@ class AllatokController extends Controller
     public function index()
     {
         $allatok = Allat::all();
-        return view('menhelyek.index', compact('menhelyek'));
+        return view('allatok.index', compact('allatok'));
     }
 
     /**
@@ -31,46 +31,51 @@ class AllatokController extends Controller
     {
         $request->validate([
 
+            
+            'nev'=>'required|min:3|max:100',
+            /*
             'kor'=>'required',
             'ivar_allapot'=>'required',
-            'nev'=>'required|min:3|max:100',
+            
             'nem'=>'required',
             'chip '=>'required',
-            'leiras'=>'required|min:10',
- 
+            'leiras'=>'required|min:3',*/
+ /*
         ],
 
       [
+        "nev.required" => "A mező kitöltése kötelező!",
+                "nev.min" => "Minimum 3 karaktert adj meg!",
+                "nev.max" => "Maximum 100 karaktert adhatsz meg!", 
                 
                 "kor.required" => "A mező kitöltése kötelező!",
 
                 "ivar_allapot.required" => "A mező kitöltése kötelező!",
 
-                "nev.required" => "A mező kitöltése kötelező!",
-                "nev.min" => "Minimum 3 karaktert adj meg!",
-                "nev.max" => "Maximum 100 karaktert adhatsz meg!", 
+                
                 
                 "nem.required" => "A mező kitöltése kötelező!",
 
                 "chip.min" => "A mező kitöltése kötelező!",
 
                 "leiras.required" => "A mező kitöltése kötelező!",
-                "leiras.min" => "Minimum 10 karaktert adj meg!",
+                "leiras.min" => "Minimum 10 karaktert adj meg!",*/
   
         ]);  
         
         $allat = new Allat();
+        $allat->nev =$request->nev;
+        /*
         $allat->kor =$request->kor;
         $allat->ivar_allapot =$request->ivar_allapot;
-        $allat->nev =$request->nev;
+        
         $allat->nem =$request->nem;
         $allat->chip =$request->chip;
-        $allat->leiras =$request->leiras;
+        $allat->leiras =$request->leiras;*/
         
-
         $allat->save();
         
-        return redirect()->route('menhelyek.index')->with('success', 'Menhely sikeresen létrehozva.');
+        return redirect()->route('allatok.index')->with('success', 'Menhely sikeresen létrehozva.');
         
     }
 

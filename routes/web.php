@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AllatokController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\fajController;
@@ -59,6 +60,7 @@ Route::get('/allatkapcsolat', function () {
 });
 
 Route::resource('menhelyek', MenhelyekController::class);
+Route::resource('allatok', AllatokController::class);
 
 
 
