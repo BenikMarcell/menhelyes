@@ -30,15 +30,5 @@
     </div>
 
 </div>
-<nav class="navbar navbar-expand-sm bg-light navbar-light">
-    <div class="container-fluid">
-        <ul class="navbar-nav">
 
-            <li class="nav-item">
-                <a class="nav-link" href="./kapcsolat/kapcsolat2">Tovább a Kapcsolat2</a>
-            </li>
-
-        </ul>
-    </div>
-</nav>
 @endsection

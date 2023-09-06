@@ -75,7 +75,7 @@ class AllatokController extends Controller
         
         $allat->save();
         
-        return redirect()->route('allatok.index')->with('success', 'Menhely sikeresen létrehozva.');
+        return redirect()->route('allatok.index')->with('success', 'Állat sikeresen létrehozva.');
         
     }
 

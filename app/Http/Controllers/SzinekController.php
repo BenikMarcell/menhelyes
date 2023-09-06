@@ -2,16 +2,18 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Szin;
 use Illuminate\Http\Request;
 
-class SzinController extends Controller
+class SzinekController extends Controller
 {
     /**
      * Display a listing of the resource.
      */
     public function index()
     {
-        //
+        $szinek = Szin::all();
+        return view('szinek.index', compact('szinek'));
     }
 
     /**
@@ -19,7 +21,7 @@ class SzinController extends Controller
      */
     public function create()
     {
-        //
+        return view('szinek.create');
     }
 
     /**
@@ -27,7 +29,20 @@ class SzinController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $request->validate([
+
+            
+            'szin'=>'required|min:2|max:20',
+            
+  
+        ]);  
+        
+        $szin = new Szin();
+        $szin->szin =$request->szin;
+        
+        $szin->save();
+        
+        return redirect()->route('szinek.index')->with('success', 'Szín sikeresen létrehozva.');
     }
 
     /**

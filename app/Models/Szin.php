@@ -9,8 +9,8 @@ class Szin extends Model
 {
     use HasFactory;
     public $table = "allat_szin";
-    public $timestamps = false;
     public $primaryKey = "szin_id";
-    protected $guarded = [];
-
+    public $timestamps = false;
+    
+    
 }
