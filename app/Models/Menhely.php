@@ -8,4 +8,10 @@ use Illuminate\Database\Eloquent\Model;
 class Menhely extends Model
 {
     use HasFactory;
+    public $table = "menhely";
+    public $primaryKey = "m_id";
+    
+    public $timestamps = false;
+    
+   
 }
