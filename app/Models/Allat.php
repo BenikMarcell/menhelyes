@@ -21,5 +21,7 @@ class Allat extends Model
         return $this->belongsTo(Szin::class);
 
         return $this->belongsTo(Faj::class);
+
+        return $this->hasMany(Kep::class);
     }
 }
