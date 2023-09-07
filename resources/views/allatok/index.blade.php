@@ -20,7 +20,7 @@
 
     @foreach($allatok as $allat)
     <li>
-        {{$allat->m_id}} --- {{$allat->nev}}
+        {{$allat->a_id}} --- {{$allat->nev}}
     </li>
         
     @endforeach

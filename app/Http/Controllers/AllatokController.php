@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Faj;
+use App\Models\Szin;
 use App\Models\Allat;
 use Illuminate\Http\Request;
 
@@ -21,8 +23,15 @@ class AllatokController extends Controller
      */
     public function create()
     {
-        return view('allatok.create');
+        $fajok = Faj::all();
+        $szinek = Szin::all();
+
+        return view('allatok.create', compact('fajok', 'szinek'));
     }
+
+    
+
+       
 
     /**
      * Store a newly created resource in storage.
@@ -33,8 +42,10 @@ class AllatokController extends Controller
 
             
             'nev'=>'required|min:3|max:100',
+            
+            'af_id '=>'required',
+
             /*
-            'kor'=>'required',
             'ivar_allapot'=>'required',
             
             'nem'=>'required',
@@ -65,13 +76,13 @@ class AllatokController extends Controller
         
         $allat = new Allat();
         $allat->nev =$request->nev;
-        /*
-        $allat->kor =$request->kor;
+        $allat->af_id =$request->af_id;
+       
         $allat->ivar_allapot =$request->ivar_allapot;
+        $allat-> chip=$request->chip;
+        $allat->kor =$request->kor;
+        $allat->leiras =$request->leiras;
         
-        $allat->nem =$request->nem;
-        $allat->chip =$request->chip;
-        $allat->leiras =$request->leiras;*/
         
         $allat->save();
         
