@@ -67,7 +67,7 @@
             <div class="container-fluid">
                 <ul class="navbar-nav">
                     <li class="nav-item">
-                        <a class="nav-link" href="./menhelyregisztracio">Menhelyregisztráció</a>
+                        <a class="nav-link" href="./menhelyregisztracio">Menhelyek regisztrálása</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="./allatregisztracio">Állatok regisztrálása</a>
@@ -77,6 +77,9 @@
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="./fajregisztracio">Fajok regisztrálasa</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./kepregisztracio">Képek regisztrálasa</a>
                     </li>
                 </ul>
             </div>

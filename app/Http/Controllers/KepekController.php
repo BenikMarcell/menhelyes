@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Kep;
 use Illuminate\Http\Request;
 
 class KepekController extends Controller
@@ -11,7 +12,8 @@ class KepekController extends Controller
      */
     public function index()
     {
-        //
+        $kepek = Kep::all();
+        return view('kepek.index', compact('kepek'));
     }
 
     /**
@@ -19,7 +21,7 @@ class KepekController extends Controller
      */
     public function create()
     {
-        //
+        return view('kepek.create');
     }
 
     /**
@@ -27,7 +29,45 @@ class KepekController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $request->validate([
+
+            'kep_cim'=>'required|min:3|max:20',
+            'alt'=>'required|min:3|max:20',
+            'leiras'=>'required|min:3',
+            
+           
+        ],
+
+      [
+                
+                "kep_cim.required" => "A mező kitöltése kötelező!",
+                "kep_cim.min" => "Minimum 3 karaktert adj meg!",
+                "kep_cim.max" => "Maximum 20 karaktert adhatsz meg!", 
+                
+                "alt.required" => "A mező kitöltése kötelező!",
+                "alt.min" => "Minimum 3 karaktert adj meg!",
+                "alt.max" => "Maximum 20 karaktert adhatsz meg!",  
+
+                "leiras.required" => "A mező kitöltése kötelező!",
+                "leiras.min" => "Minimum 3 karaktert adj meg!",
+
+               
+                
+                
+        ]);   
+        
+      
+
+        $kep = new Kep();
+        $kep->kep_cim =$request->kep_cim;
+        $kep->src =$request->src;
+        $kep->alt =$request->alt;
+        $kep->leiras =$request->leiras;
+        
+
+        $kep->save();
+        
+        return redirect()->route('kepek.index')->with('success', 'Kép sikeresen mentve.');
     }
 
     /**

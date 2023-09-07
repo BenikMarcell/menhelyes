@@ -8,4 +8,12 @@ use Illuminate\Database\Eloquent\Model;
 class Kep extends Model
 {
     use HasFactory;
+    public $table = "allat_kep";
+    public $primaryKey = "ak_id";
+    public $timestamps = false;
+    public function category()
+    {
+        return $this->belongsTo(Allat::class);
+    
+    }
 }

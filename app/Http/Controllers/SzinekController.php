@@ -42,7 +42,7 @@ class SzinekController extends Controller
         
         $szin->save();
         
-        return redirect()->route('szinek.index')->with('success', 'Szín sikeresen létrehozva.');
+        return redirect()->route('szinek.index')->with('success', 'Szín sikeresen mentve.');
     }
 
     /**

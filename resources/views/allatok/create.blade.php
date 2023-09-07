@@ -17,6 +17,11 @@
                 <div class="alert alert-warning">{{$message}} </div>
                 @enderror
             </div>
+
+            <div>
+
+                
+            </div>
             <div class="mb-3">
                 <label for="exampleFormControlInput1" class="form-label">Állatfaj</label>
                 <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="pl. kutya">
