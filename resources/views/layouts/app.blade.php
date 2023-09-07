@@ -73,7 +73,10 @@
                         <a class="nav-link" href="./allatregisztracio">Állatok regisztrálása</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="./szinregisztracio">Színek regisztralasa</a>
+                        <a class="nav-link" href="./szinregisztracio">Színek regisztrálasa</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./fajregisztracio">Fajok regisztrálasa</a>
                     </li>
                 </ul>
             </div>

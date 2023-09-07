@@ -11,6 +11,11 @@ class Szin extends Model
     public $table = "allat_szin";
     public $primaryKey = "szin_id";
     public $timestamps = false;
-    
+    public function category()
+    {
+          
+        return $this->hasMany(Allat::class);
+        
+    }
     
 }

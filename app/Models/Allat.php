@@ -2,8 +2,11 @@
 
 namespace App\Models;
 
-use Illuminate\Database\Eloquent\Factories\HasFactory;
+use App\Models\Faj;
+use App\Models\Szin;
+use App\Models\Menhely;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Factories\HasFactory;
 
 class Allat extends Model
 {
@@ -11,4 +14,12 @@ class Allat extends Model
     public $table = "allat";
     public $primaryKey = "a_id";
     public $timestamps = false;
+    public function category()
+    {
+        return $this->belongsTo(Menhely::class);
+    
+        return $this->belongsTo(Szin::class);
+
+        return $this->belongsTo(Faj::class);
+    }
 }

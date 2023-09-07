@@ -3,6 +3,8 @@
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AllatokController;
+use App\Http\Controllers\FajokController;
+use App\Http\Controllers\KepekController;
 use App\Http\Controllers\MenhelyekController;
 use App\Http\Controllers\SzinekController;
 
@@ -20,6 +22,8 @@ use App\Http\Controllers\SzinekController;
 Route::resource('menhelyek', MenhelyekController::class);
 Route::resource('allatok', AllatokController::class);
 Route::resource('szinek', SzinekController::class);
+Route::resource('fajok', FajokController::class);
+Route::resource('kepek', KepekController::class);
 
 Route::get('/', function () {
     return view('welcome');
@@ -54,6 +58,12 @@ Route::get('/allatregisztracio', function () {
 });
 Route::get('/szinregisztracio', function () {
     return view('szinregisztracio');
+});
+Route::get('/fajregisztracio', function () {
+    return view('fajregisztracio');
+});
+Route::get('/kepregisztracio', function () {
+    return view('kepregisztracio');
 });
 Route::get('/allatgyik', function () {
     return view('allatgyik');

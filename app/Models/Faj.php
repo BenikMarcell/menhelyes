@@ -9,7 +9,13 @@ class Faj extends Model
 {
     use HasFactory;
     public $table = "allat_faj";
-    public $timestamps = false;
     protected $primaryKey = 'af_id';
-    protected $guarded = [];
+    public $timestamps = false;
+    public function category()
+    {
+          
+        return $this->hasMany(Allat::class);
+        
+    }
+    
 }

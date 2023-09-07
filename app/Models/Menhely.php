@@ -10,8 +10,12 @@ class Menhely extends Model
     use HasFactory;
     public $table = "menhely";
     public $primaryKey = "m_id";
-    
     public $timestamps = false;
+
+    public function category()
+    {
+        return $this->hasMany(Allat::class);
+    }
     
    
 }
