@@ -2,29 +2,43 @@
 @section('title',"Főoldal")
 
 @section('content')
-<h1>Ez a kapcsolat!</h1>
 
 <div class="container">
+
     <div class="row">
-        <div class="col-6 border border-primary m-3 p-4">
+        <div class="col-6">
+            <h1>Kapcsolat!</h1>
             <div class="mb-3">
-                <label for="exampleFormControlInput1" class="form-label">Név</label>
+                <label for="exampleFormControlInput1" class="form-label">Név:</label>
                 <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Név">
             </div>
             <div class="mb-3">
-                <label for="exampleFormControlInput1" class="form-label">Email cím</label>
-                <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="nev@nev.hu">
+                <label for="exampleFormControlInput1" class="form-label">Email-cím:</label>
+                <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="nev@nev.com">
             </div>
             <div class="mb-3">
-                <label for="exampleFormControlTextarea1" class="form-label">Szöveg</label>
+                <label for="exampleFormControlTextarea1" class="form-label">Szöveg:</label>
                 <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"
-                    placeholder="valamilyen szöveg"></textarea>
+                    placeholder="Valamilyen szöveg..."></textarea>
             </div>
             <div class="d-grid gap-2 col-6 mx-auto mb-3">
-
-                <button type="button" class="btn btn-success">Beküld</button>
+                <button type="button" class="btn">Beküld!</button>
             </div>
+        </div>
 
+        <div class="col-6">
+            <h1>Feliratkozás a hírlevélre!</h1>
+            <div class="mb-3">
+                <label class="form-label" for="nev">Név: </label>
+                <input class="form-control" type="text" name="nev" placeholder="Név">
+            </div>
+            <div class="mb-3">
+                <label class="form-label" for="email">Email-cím: </label>
+                <input class="form-control" type="email" name="email" placeholder="nev@nev.com">
+            </div>
+            <div class="d-grid gap-2 col-6 mx-auto mb-3">
+                <button type="button" class="btn">Kérem a hírlevelet!</button>
+            </div>
         </div>
 
     </div>
