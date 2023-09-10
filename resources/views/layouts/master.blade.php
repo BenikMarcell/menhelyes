@@ -15,7 +15,9 @@
 <body>
 
     <nav id="navbar" class="navbar">
+        <h1 id="focim">MenhelyHub</h1>
         <div class="container-fluid">
+            
             <div class="col-3">
                 <a href="./fooldal"><img id="logokep" src="./images/logo.png" alt="Logo"></a>
             </div>

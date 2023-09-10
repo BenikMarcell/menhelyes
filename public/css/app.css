@@ -1,6 +1,12 @@
+#focim {
+    font-family: 'Merienda', cursive;
+    padding-left: 43%;
+    color: #D3D04F;
+}
+
 .navbar {
     background-color: #17594A;
-    height: 100px;
+    height: 150px;
 }
 
 nav {
