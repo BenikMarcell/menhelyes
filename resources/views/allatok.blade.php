@@ -26,8 +26,6 @@
                     <option value="barna">Barna</option>
                 </select>
             </div>
-        </div>
-        <div class="col-6 p-3 m-3 text-center">
             <div class="inputMezo">
                 <label for="allatNeme">Állat neme:</label>
                 <select class="form-control" name="allatNeme" id="allatNemeValaszto">
