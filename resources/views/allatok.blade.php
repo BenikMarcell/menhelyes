@@ -7,18 +7,18 @@
     <form class="form form-control p-3 m-3 text-center" action="#" method="post">
         <div class="col-6 p-3 m-3 text-center">
             <div class="inputMezo">
-                <label for="allatfajta">Állat fajta:</label>
-                <select class="form-control" name="allatfajta" id="allatfajtaValaszto" aria-placeholder="Válassz fajt">
+                <label for="allatFajta">Állat fajta:</label>
+                <select class="form-control" name="allatFajta" id="allatFajtaValaszto">
                     <option selected value="none">Válassz fajt</option>
                     <option value="kutya">Kutya</option>
                     <option value="macska">Macska</option>
-                    <option value="kutya">Kutya</option>
+                    <option value="horcsog">Hörcsög</option>
                     <option value="medve">Medve</option>
                 </select>
             </div>
             <div class="inputMezo">
-                <label for="allatszine">Állat színe:</label>
-                <select class="form-control" name="allatszine" id="allatszineValaszto" aria-placeholder="Válassz színt">
+                <label for="allatSzine">Állat színe:</label>
+                <select class="form-control" name="allatSzine" id="allatSzineValaszto">
                     <option selected value="none">Válassz színt</option>
                     <option value="fekete">Fekete</option>
                     <option value="feher">Fehér</option>
@@ -29,16 +29,24 @@
         </div>
         <div class="col-6 p-3 m-3 text-center">
             <div class="inputMezo">
-                <label for="allatneme">Állat neme:</label>
-                <select class="form-control" name="allatneme" id="allatnemeValaszto" aria-placeholder="Válassz nemet">
+                <label for="allatNeme">Állat neme:</label>
+                <select class="form-control" name="allatNeme" id="allatNemeValaszto">
                     <option selected value="none">Válassz nemet</option>
                     <option value="him">Hím</option>
                     <option value="nosteny">Nőstény</option>
                 </select>
             </div>
             <div class="inputMezo">
-                <label for="allatkora">Állat kora:</label>
+                <label for="allatKora">Állat kora:</label>
                 <input class="form-control" type="number" placeholder="Kor">
+            </div>
+            <div class="inputMezo">
+                <label for="allatIvara">Állat ivarállapota:</label>
+                <select class="form-control" name="allatIvara" id="allatIvaraValaszto">
+                    <option selected value="none">Válassz ivarállapotot</option>
+                    <option value="ivaros">Ivaros</option>
+                    <option value="ivartalanitott">Ivartalanított</option>
+                </select>
             </div>
         </div>
         <button class="btn btn-primary rounded">Keress!</button>
