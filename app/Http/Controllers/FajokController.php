@@ -50,30 +50,47 @@ class FajokController extends Controller
      */
     public function show(string $id)
     {
-        //
+       //
     }
-
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(string $id)
+    public function edit(string $af_id)
     {
-        //
+        $faj = faj::find($af_id);
+
+        return view('fajok.edit', compact('faj'));
     }
 
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, string $id)
+    public function update(Request $request, string $af_id)
     {
-        //
+        $request->validate([
+
+            
+            'faj'=>'required|min:3|max:20',
+            
+  
+        ]);  
+
+        $faj = faj::find($af_id);
+        $faj->faj =$request->faj;
+
+        $faj->save();
+        
+        return redirect()->route('fajok.index')->with('success', 'A faj sikeresen szerkesztve.');
+
     }
 
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(string $id)
+    public function destroy(string $af_id)
     {
-        //
+        $faj = faj::find($af_id);
+        $faj->delete();
+        return redirect()->route('fajok.index')->with('success', 'A faj sikeresen törölve.');
     }
 }

@@ -24,11 +24,12 @@
       <a href="{{route('bevitel_menhelyek.show', $menhely->m_id)}}" class="button">Megjelenítés</a>
       <a href="{{route('bevitel_menhelyek.edit', $menhely->m_id)}}" class="button">Módosítás</a>
    
-   <form action="{{route('bevitel_menhelyek.destroy', $menhely->m_id)}}" method="post">
-    @csrf
-    @method('DELETE')
-    <button type="submit" onclick="return confirm ('Biztosan törlöd?')">Törlés</button>
-   </form>
+      <form action="{{route('bevitel_menhelyek.destroy', $menhely->m_id)}}" method="POST">
+       @csrf
+       @method('DELETE')
+       <button type="submit" onclick="return confirm ('Biztosan törlöd?')">Törlés</button>
+       </form>
+
     </li>
         
     @endforeach

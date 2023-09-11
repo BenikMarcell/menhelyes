@@ -20,6 +20,17 @@
     @foreach($fajok as $faj)
     <li>
         {{$faj->af_id}} --- {{$faj->faj}}
+
+        
+        <a href="{{route('fajok.edit', $faj->af_id)}}" class="button">Módosítás</a>
+   
+        <form action="{{route('fajok.destroy', $faj->af_id)}}" method="POST">
+         @csrf
+         @method('DELETE')
+         <button type="submit" onclick="return confirm ('Biztosan törlöd?')">Törlés</button>
+        </form>
+
+
     </li>
         
     @endforeach
