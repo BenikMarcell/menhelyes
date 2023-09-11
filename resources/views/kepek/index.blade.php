@@ -1,5 +1,5 @@
-@extends('layouts.app5')
-
+@extends('layouts.master')
+@section('title',"Állatok")
 @section('content')
 
 
@@ -25,3 +25,4 @@
         
     @endforeach
 </ul>
+@endsection

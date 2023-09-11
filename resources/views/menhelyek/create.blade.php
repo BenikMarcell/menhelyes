@@ -1,5 +1,5 @@
-@extends('layouts.app1')
-
+@extends('layouts.master')
+@section('title',"Állatok")
 @section('content')
 
 <h1>Ez a menhelyregisztráció!</h1>

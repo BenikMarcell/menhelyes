@@ -1,5 +1,5 @@
-@extends('layouts.app4')
-
+@extends('layouts.master')
+@section('title',"Állatok")
 @section('content')
 
 <h1>Faj regisztrációja!</h1>
@@ -32,3 +32,8 @@
 </div>
 </form>
 @endsection
+
+
+                
+
+                

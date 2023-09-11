@@ -109,7 +109,9 @@ class MenhelyekController extends Controller
 
         $menhely->save();
         
+        
         return redirect()->route('menhelyek.index')->with('success', 'Menhely sikeresen létrehozva.');
+
     }
 
     /**

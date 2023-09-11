@@ -11,7 +11,7 @@ class Kep extends Model
     public $table = "allat_kep";
     public $primaryKey = "ak_id";
     public $timestamps = false;
-    public function category()
+    public function kep()
     {
         return $this->belongsTo(Allat::class);
     

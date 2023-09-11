@@ -11,7 +11,7 @@ class Faj extends Model
     public $table = "allat_faj";
     protected $primaryKey = 'af_id';
     public $timestamps = false;
-    public function category()
+    public function faj()
     {
           
         return $this->hasMany(Allat::class);

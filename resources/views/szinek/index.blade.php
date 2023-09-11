@@ -1,9 +1,6 @@
-@extends('layouts.app3')
-
+@extends('layouts.master')
+@section('title',"Állatok")
 @section('content')
-
-
-<h1>Szín lista</h1>
 <br>
 <h3>views/szinek/index</h3>
 
@@ -25,3 +22,4 @@
         
     @endforeach
 </ul>
+@endsection
