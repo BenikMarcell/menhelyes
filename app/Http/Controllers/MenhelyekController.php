@@ -230,8 +230,10 @@ class MenhelyekController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(string $id)
+    public function destroy(string $m_id)
     {
-        //
+        $menhely = menhely::find($m_id);
+        $menhely->delete();
+        return redirect()->route('bevitel_menhelyek.index')->with('success', 'Menhely sikeresen törölve.');
     }
 }
