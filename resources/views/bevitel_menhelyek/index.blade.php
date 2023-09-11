@@ -4,7 +4,7 @@
 
 <h1>Menhely lista </h1>
 <br>
-<h3>views/menhelyek/index</h3>
+<h3>views/bevitel_menhelyek/index</h3>
 
 @if (session('success'))
 <div class="alert alert-success">
