@@ -21,8 +21,8 @@
                 <label for="irsz" class="form-label">Postai irányítószám</label>
                 <input type="text" class="form-control" id="irsz" name="irsz" placeholder="Postai irányítószám">
                 @error('irsz')
-<div class="alert alert-warning">{{$message}} </div>
-@enderror
+                <div class="alert alert-warning">{{$message}} </div>
+                @enderror
             </div>
             <div class="mb-3">
                 <label for="telepules" class="form-label">Település neve</label>
@@ -83,10 +83,10 @@
             <div class="mb-3">
                 <label for="menhely_leiras" class="form-label">A menhely leírása</label>
                 <textarea class="form-control" id="menhely_leiras"  name="menhely_leiras" rows="10"
-                    placeholder="A leírás szövege"></textarea>
-                    @error('menhely_leiras')
-                    <div class="alert alert-warning">{{$message}} </div>
-                    @enderror
+                placeholder="A leírás szövege"></textarea>
+                @error('menhely_leiras')
+                <div class="alert alert-warning">{{$message}} </div>
+                @enderror
             </div>
 
             <div class="d-grid gap-2 col-6 mx-auto mb-3">
