@@ -18,7 +18,7 @@ use App\Http\Controllers\SzinekController;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
-Route::resource('menhelyek', MenhelyekController::class);
+Route::resource('bevitel_menhelyek', MenhelyekController::class);
 Route::resource('allatok', AllatokController::class);
 Route::resource('szinek', SzinekController::class);
 Route::resource('fajok', FajokController::class);
@@ -66,9 +66,7 @@ Route::get('/allatTorles', function () {
 });
 
 
-Route::get('/menhelyek/index', function () {
-    return view('menhelyProfil');
-});
+
 
 
 

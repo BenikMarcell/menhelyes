@@ -13,7 +13,7 @@ class MenhelyekController extends Controller
     public function index()
     {
         $menhelyek = Menhely::all();
-        return view('menhelyek.index', compact('menhelyek'));
+        return view('bevitel_menhelyek.index', compact('menhelyek'));
     }
 
     /**
@@ -21,7 +21,7 @@ class MenhelyekController extends Controller
      */
     public function create()
     {
-        return view('menhelyek.create');
+        return view('bevitel_menhelyek.create');
     }
 
     /**
@@ -110,7 +110,7 @@ class MenhelyekController extends Controller
         $menhely->save();
         
         
-        return redirect()->route('menhelyek.index')->with('success', 'Menhely sikeresen létrehozva.');
+        return redirect()->route('bevitel_menhelyek.index')->with('success', 'Menhely sikeresen létrehozva.');
 
     }
 

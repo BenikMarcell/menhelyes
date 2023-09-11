@@ -3,7 +3,8 @@
 @section('content')
 
 <h1>Ez a menhelyregisztráció!</h1>
-<form action="{{route('menhelyek.store')}}" method="POST">
+<form action="{{route('bevitel_menhelyek.store')}}" method="POST">
+    
 
     @csrf
 <div class="container bg-primry">
