@@ -6,7 +6,7 @@
 <form action="{{route('kepek.store')}}" method="POST">
 
     @csrf
-<div class="container bg-primry">
+<div class="container">
     <div class="row">
         <div class="col-6 border border-primary m-3 p-4">
             <div class="mb-3">

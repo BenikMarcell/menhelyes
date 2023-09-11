@@ -29,50 +29,41 @@ Route::get('/', function () {
     return view('welcome');
 });
 Route::get('/fooldal', function () {
-    return view('fooldal');
+    return view('welcome');
 });
 Route::get('/kapcsolat', function () {
     return view('kapcsolat');
 });
-Route::get('/kapcsolat2', function () {
-    return view('kapcsolat2');
-});
 Route::get('/gyik', function () {
     return view('gyik');
 });
-Route::get('/szerkesztesalatt', function () {
-    return view('szerkesztesalatt');
-});
-
 Route::get('/menhelyregisztracio', function () {
     return view('menhelyregisztracio');
-});
-Route::get('/menkapcsolat', function () {
-    return view('menkapcsolat');
-});
-Route::get('/mengyik', function () {
-    return view('mengyik');
 });
 Route::get('/allatregisztracio', function () {
     return view('allatregisztracio');
 });
-Route::get('/szinregisztracio', function () {
-    return view('szinregisztracio');
-});
-Route::get('/fajregisztracio', function () {
-    return view('fajregisztracio');
-});
 Route::get('/kepregisztracio', function () {
     return view('kepregisztracio');
 });
-Route::get('/allatgyik', function () {
-    return view('allatgyik');
+Route::get('/menhelyek', function () {
+    return view('menhelyek');
 });
-Route::get('/allatkapcsolat', function () {
-    return view('allatkapcsolat');
+Route::get('/allatok', function () {
+    return view('allatok');
 });
-
-
+Route::get('/egyMenhely', function () {
+    return view('egyMenhely');
+});
+Route::get('/egyAllat', function () {
+    return view('egyAllat');
+});
+Route::get('/tamogatoiProfil', function () {
+    return view('tamogatoiProfil');
+});
+Route::get('/menhelyProfil', function () {
+    return view('menhelyProfil');
+});
 
 
 
