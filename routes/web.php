@@ -64,6 +64,9 @@ Route::get('/tamogatoiProfil', function () {
 Route::get('/menhelyProfil', function () {
     return view('menhelyProfil');
 });
+Route::get('/allatTorles', function () {
+    return view('allatTorles');
+});
 
 
 

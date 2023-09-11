@@ -47,7 +47,7 @@
                 </select>
             </div>
         </div>
-        <button class="btn btn-primary rounded">Keress!</button>
+        <button class="btn rounded">Keress!</button>
     </form>
 </div>
 

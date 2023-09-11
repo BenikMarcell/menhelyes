@@ -112,3 +112,8 @@ li {
 .card-body {
     background-color: #F3F2AF;
 }
+
+.deleteBtn {
+    background-color: red;
+    z-index: 1;
+}

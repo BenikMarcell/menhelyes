@@ -1,4 +1,4 @@
-@extends('layouts.app2')
+@extends('layouts.master')
 
 @section('content')
 
@@ -6,7 +6,7 @@
 
 <div class="container bg-primry">
     <div class="row">
-        <div class="col-6 border border-primary m-3 p-4">
+        <div class="col-6 m-3 p-4">
             <div class="mb-3">
                 <label for="exampleFormControlInput1" class="form-label">Az állat neve</label>
                 <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="pl. Buksi">
@@ -23,16 +23,16 @@
                 <p>Az állat neme</p>
                 <select class="form-select" aria-label="Default select example">
                     <option selected>Válassz...</option>
-                    <option value="1">Fiú</option>
-                    <option value="2">Lány</option>
+                    <option value="1">Hím</option>
+                    <option value="2">Nőstény</option>
                 </select>
             </div>
             <div class="mb-3">
                 <p>Ivar-állapot</p>
                 <select class="form-select" aria-label="Default select example">
                     <option selected>Válassz...</option>
-                    <option value="1">ivartalanított</option>
-                    <option value="2">Nem ivartalanított</option>
+                    <option value="1">Ivartalanított</option>
+                    <option value="2">Ivaros</option>
                 </select>
             </div>
             <div class="mb-3">
