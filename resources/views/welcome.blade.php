@@ -39,7 +39,7 @@
                         totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae
                         dicta sunt explicabo.
                     </p>
-                    <a href="#" class="btn btn-primary">Bővebben</a>
+                    <a href="./egyAllat" class="btn rounded">Bővebben</a>
                 </div>
             </div>
         </div>
@@ -57,7 +57,7 @@
                         totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae
                         dicta sunt explicabo.
                     </p>
-                    <a href="#" class="btn btn-primary">Bővebben</a>
+                    <a href="./egyAllat" class="btn rounded">Bővebben</a>
                 </div>
             </div>
         </div>
@@ -75,7 +75,7 @@
                         totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae
                         dicta sunt explicabo.
                     </p>
-                    <a href="#" class="btn btn-primary">Bővebben</a>
+                    <a href="./egyAllat" class="btn rounded">Bővebben</a>
                 </div>
             </div>
         </div>
@@ -93,7 +93,7 @@
                         totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae
                         dicta sunt explicabo.
                     </p>
-                    <a href="#" class="btn btn-primary">Bővebben</a>
+                    <a href="./egyAllat" class="btn rounded">Bővebben</a>
                 </div>
             </div>
         </div>
@@ -118,7 +118,7 @@
                         totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae
                         dicta sunt explicabo.
                     </p>
-                    <a href="#" class="btn btn-primary">Bővebben</a>
+                    <a href="./egyAllat" class="btn rounded">Bővebben</a>
                 </div>
             </div>
         </div>
@@ -135,7 +135,7 @@
                         totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae
                         dicta sunt explicabo.
                     </p>
-                    <a href="#" class="btn btn-primary">Bővebben</a>
+                    <a href="./egyAllat" class="btn rounded">Bővebben</a>
                 </div>
             </div>
         </div>
@@ -152,7 +152,7 @@
                         totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae
                         dicta sunt explicabo.
                     </p>
-                    <a href="#" class="btn btn-primary">Bővebben</a>
+                    <a href="./egyAllat" class="btn rounded">Bővebben</a>
                 </div>
             </div>
         </div>
@@ -169,7 +169,7 @@
                         totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae
                         dicta sunt explicabo.
                     </p>
-                    <a href="#" class="btn btn-primary">Bővebben</a>
+                    <a href="./egyAllat" class="btn rounded">Bővebben</a>
                 </div>
             </div>
         </div>

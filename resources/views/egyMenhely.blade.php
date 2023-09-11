@@ -15,18 +15,19 @@
         <div class="col-6">
             <h3>Leírás:</h3>
             <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Officiis reprehenderit excepturi facere incidunt recusandae quod tempore totam, temporibus autem sit, corrupti repellat reiciendis aspernatur. Commodi reiciendis sint quaerat? Harum, praesentium!</p>
+            <a class="btn rounded" href="./menhelyProfil"> PROFIL </a>
         </div>
         
     </div>
 
-    <div class="row">
+    <div class="row mt-5">
 
-        <div class="col-6">
+        <div class="col-4">
             <h3>Adatok:</h3>
             <p>Menhely adatai...</p>
         </div>
 
-        <div class="col-6 text-center">
+        <div class="col-4 text-center">
             <form class="form form-control" action="#">
                 <h3>Adakoznék:</h3>
                 <div>
@@ -35,15 +36,32 @@
                 </div>
                 <div>
                     <label for="osszeg">Összeg:</label>
-                    <input class="form-control" type="text" name="osszeg">
+                    <input class="form-control" type="number" name="osszeg">
                 </div>
                 <button id="donateBtn" class="btn rounded mt-3">Küldés!</button>
             </form>
         </div>
 
+        <div class="col-4 text-center">
+            <h3>Örökbefogadnék:</h3>
+                <div>
+                    <label for="nev">Név:</label>
+                    <input class="form-control" type="text" name="nev">
+                </div>
+                <div>
+                    <label for="email">Email-cím:</label>
+                    <input class="form-control" type="email" name="email">
+                </div>
+                <div>
+                    <label for="uzenet">Üzenet:</label>
+                    <textarea type="text" class="form-control" name="text" placeholder="Itt jelezheted az örökbefogadási szándékodat..."></textarea>
+                </div>
+                <button id="adoptBtn" class="btn rounded mt-3">Küldés!</button>
+        </div>
+
     </div>
 
-    <div class="row">
+    <div class="row mt-5">
         <h2>Állataink:</h2>
         <div class="col-3 mt-5">
             <div class="card">

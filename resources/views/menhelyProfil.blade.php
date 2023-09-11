@@ -28,23 +28,15 @@
 
         <div class="col-6 text-center">
             <form class="form form-control" action="#">
-                <h3>Adakoznék:</h3>
-                <div>
-                    <label for="bankszamlaSzam">Bankszámlaszám:</label>
-                    <input class="form-control" type="text" name="bankszamlaSzam">
-                </div>
-                <div>
-                    <label for="osszeg">Összeg:</label>
-                    <input class="form-control" type="text" name="osszeg">
-                </div>
-                <button id="donateBtn" class="btn rounded mt-3">Küldés!</button>
+                <h3>Állat hozzáadás:</h3>
+                <a href="./allatregisztracio" class="btn rounded mt-3">Hozzáadás!</a>
             </form>
         </div>
 
     </div>
 
     <div class="row">
-        <h2>Állataink:</h2>
+        <h2>Állataim:</h2>
         <div class="col-3 mt-5">
             <div class="card">
                 <img class="card-img-top" src="./images/kutya1.jpg" alt="Card image">
@@ -58,7 +50,16 @@
                         totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae
                         dicta sunt explicabo.
                     </p>
-                    <a href="./egyAllat" class="btn rounded">Bővebben</a>
+                    <div class="row">
+                        <div class="col-6">
+                            <a href="./egyAllat" class="btn rounded">Bővebben</a>
+                        </div>
+                        <div class="col-6">
+                            <a href="./allatTorles" class="btn rounded">Törlés</a>
+                        </div>
+                    </div>
+
+
                 </div>
             </div>
         </div>
@@ -76,7 +77,14 @@
                         totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae
                         dicta sunt explicabo.
                     </p>
-                    <a href="./egyAllat" class="btn rounded">Bővebben</a>
+                    <div class="row">
+                        <div class="col-6">
+                            <a href="./egyAllat" class="btn rounded">Bővebben</a>
+                        </div>
+                        <div class="col-6">
+                            <a href="#" class="btn rounded">Törlés</a>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -94,8 +102,14 @@
                         totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae
                         dicta sunt explicabo.
                     </p>
-                    <a href="./egyAllat" class="btn rounded">Bővebben</a>
-                    <a href="./egyAllat" class="btn rounded">Törlés</a>
+                    <div class="row">
+                        <div class="col-6">
+                            <a href="./egyAllat" class="btn rounded">Bővebben</a>
+                        </div>
+                        <div class="col-6">
+                            <a href="#" class="btn rounded">Törlés</a>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -113,7 +127,14 @@
                         totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae
                         dicta sunt explicabo.
                     </p>
-                    <a href="./egyAllat" class="btn rounded">Bővebben</a>
+                    <div class="row">
+                        <div class="col-6">
+                            <a href="./egyAllat" class="btn rounded">Bővebben</a>
+                        </div>
+                        <div class="col-6">
+                            <a href="#" class="btn rounded">Törlés</a>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -131,7 +152,14 @@
                         totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae
                         dicta sunt explicabo.
                     </p>
-                    <a href="./egyAllat" class="btn rounded">Bővebben</a>
+                    <div class="row">
+                        <div class="col-6">
+                            <a href="./egyAllat" class="btn rounded">Bővebben</a>
+                        </div>
+                        <div class="col-6">
+                            <a href="#" class="btn rounded">Törlés</a>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -149,7 +177,14 @@
                         totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae
                         dicta sunt explicabo.
                     </p>
-                    <a href="./egyAllat" class="btn rounded">Bővebben</a>
+                    <div class="row">
+                        <div class="col-6">
+                            <a href="./egyAllat" class="btn rounded">Bővebben</a>
+                        </div>
+                        <div class="col-6">
+                            <a href="#" class="btn rounded">Törlés</a>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -167,7 +202,14 @@
                         totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae
                         dicta sunt explicabo.
                     </p>
-                    <a href="./egyAllat" class="btn rounded">Bővebben</a>
+                    <div class="row">
+                        <div class="col-6">
+                            <a href="./egyAllat" class="btn rounded">Bővebben</a>
+                        </div>
+                        <div class="col-6">
+                            <a href="#" class="btn rounded">Törlés</a>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -185,7 +227,14 @@
                         totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae
                         dicta sunt explicabo.
                     </p>
-                    <a href="./egyAllat" class="btn rounded">Bővebben</a>
+                    <div class="row">
+                        <div class="col-6">
+                            <a href="./egyAllat" class="btn rounded">Bővebben</a>
+                        </div>
+                        <div class="col-6">
+                            <a href="#" class="btn rounded">Törlés</a>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -203,7 +252,14 @@
                         totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae
                         dicta sunt explicabo.
                     </p>
-                    <a href="./egyAllat" class="btn rounded">Bővebben</a>
+                    <div class="row">
+                        <div class="col-6">
+                            <a href="./egyAllat" class="btn rounded">Bővebben</a>
+                        </div>
+                        <div class="col-6">
+                            <a href="#" class="btn rounded">Törlés</a>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -221,7 +277,14 @@
                         totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae
                         dicta sunt explicabo.
                     </p>
-                    <a href="./egyAllat" class="btn rounded">Bővebben</a>
+                    <div class="row">
+                        <div class="col-6">
+                            <a href="./egyAllat" class="btn rounded">Bővebben</a>
+                        </div>
+                        <div class="col-6">
+                            <a href="#" class="btn rounded">Törlés</a>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -239,7 +302,14 @@
                         totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae
                         dicta sunt explicabo.
                     </p>
-                    <a href="./egyAllat" class="btn rounded">Bővebben</a>
+                    <div class="row">
+                        <div class="col-6">
+                            <a href="./egyAllat" class="btn rounded">Bővebben</a>
+                        </div>
+                        <div class="col-6">
+                            <a href="#" class="btn rounded">Törlés</a>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -257,7 +327,14 @@
                         totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae
                         dicta sunt explicabo.
                     </p>
-                    <a href="./egyAllat" class="btn rounded">Bővebben</a>
+                    <div class="row">
+                        <div class="col-6">
+                            <a href="./egyAllat" class="btn rounded">Bővebben</a>
+                        </div>
+                        <div class="col-6">
+                            <a id="" href="#" class="btn rounded">Törlés</a>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>

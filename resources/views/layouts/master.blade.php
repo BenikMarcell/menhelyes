@@ -31,7 +31,7 @@
                     @guest
                     @if (Route::has('login'))
                     <li class="nav-item">
-                        <a class="nav-link" href="{{ route('login') }}">{{ __('Bejelentkezés') }}</a>
+                        <a class="nav-link" href="{{ route('login') }}">{{ __('Bejelentkezés/Regisztráció') }}</a>
                     </li>
                     @endif
                     <!-- @if (Route::has('register'))

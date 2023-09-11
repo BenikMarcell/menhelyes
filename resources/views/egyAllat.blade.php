@@ -35,7 +35,7 @@
                 </div>
                 <div>
                     <label for="osszeg">Összeg:</label>
-                    <input class="form-control" type="text" name="osszeg">
+                    <input class="form-control" type="number" name="osszeg">
                 </div>
                 <div>
                     <label for="uzenet">Üzenet:</label>
