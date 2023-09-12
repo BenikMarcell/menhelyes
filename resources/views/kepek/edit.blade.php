@@ -50,8 +50,8 @@
                 <div class="mb-3">
                     <label for="src" class="form-label">src</label>
                     <input type="src" class="form-control" id="src" name="src" value="{{ old('src', $kep->src)}}">
-                    
                 </div>
+
                 <div class="mb-3">
                     <label for="alt" class="form-label">Alt</label>
                     <input type="text" class="form-control" id="alt" name="alt" value="{{ old('alt', $kep->alt)}}">
