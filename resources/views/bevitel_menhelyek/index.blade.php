@@ -19,7 +19,7 @@
 
     @foreach($menhelyek as $menhely)
     <li>
-      m_id:  {{$menhely->m_id}}  // Név: {{$menhely->nev}} // Telephely: {{$menhely->telepules}} // Cím: {{$menhely->utca_hsz}}
+      m_id:  {{$menhely->m_id}}  // Név: {{$menhely->nev}} 
 
       <a href="{{route('bevitel_menhelyek.show', $menhely->m_id)}}" class="button">Megjelenítés</a>
       <a href="{{route('bevitel_menhelyek.edit', $menhely->m_id)}}" class="button">Módosítás</a>

@@ -15,7 +15,7 @@ return new class extends Migration
             $table->id("ak_id");
             $table->foreignId("a_id")->references("a_id")->on("allat") ->onDelete('cascade')->onUpdate('cascade');
             $table->string("kep_cim", 50);
-            $table->string("src")->nullable();
+            $table->text("src")->nullable();
             $table->string("alt")->nullable();
             $table->text("leiras")->nullable();
             $table->timestamps();

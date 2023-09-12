@@ -50,6 +50,9 @@ class DatabaseSeeder extends Seeder
           $this->call([
             BarionSeeder::class,
           ]);
+          $this->call([
+            KepTableSeeder::class,
+          ]);
 
 
 

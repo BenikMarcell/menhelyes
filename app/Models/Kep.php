@@ -2,8 +2,9 @@
 
 namespace App\Models;
 
-use Illuminate\Database\Eloquent\Factories\HasFactory;
+use App\Models\Allat;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Factories\HasFactory;
 
 class Kep extends Model
 {
@@ -11,6 +12,7 @@ class Kep extends Model
     public $table = "allat_kep";
     public $primaryKey = "ak_id";
     public $timestamps = false;
+    protected $guarded = [];
     public function kep()
     {
         return $this->belongsTo(Allat::class);

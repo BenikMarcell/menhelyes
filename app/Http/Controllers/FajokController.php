@@ -32,7 +32,7 @@ class FajokController extends Controller
         $request->validate([
 
             
-            'faj'=>'required|min:3|max:20',
+            'faj'=>'required|min:3|max:100',
             
   
         ]);  
@@ -70,7 +70,7 @@ class FajokController extends Controller
         $request->validate([
 
             
-            'faj'=>'required|min:3|max:20',
+            'faj'=>'required|min:3|max:100',
             
   
         ]);  

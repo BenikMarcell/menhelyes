@@ -32,7 +32,7 @@ class SzinekController extends Controller
         $request->validate([
 
             
-            'szin'=>'required|min:2|max:20',
+            'szin'=>'required|min:2|max:100',
             
   
         ]);  
@@ -56,24 +56,41 @@ class SzinekController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(string $id)
+    public function edit(string $szin_id)
     {
-        //
+        $szin = szin::find($szin_id);
+
+        return view('szinek.edit', compact('szin'));
     }
 
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, string $id)
+    public function update(Request $request, string $szin_id)
     {
-        //
+        $request->validate([
+
+            
+            'szin'=>'required|min:3|max:100',
+            
+  
+        ]);  
+
+        $szin = szin::find($szin_id);
+        $szin->szin =$request->szin;
+
+        $szin->save();
+        
+        return redirect()->route('szinek.index')->with('success', 'A szin sikeresen szerkesztve.');
     }
 
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(string $id)
+    public function destroy(string $szin_id)
     {
-        //
+        $szin = szin::find($szin_id);
+        $szin->delete();
+        return redirect()->route('szinek.index')->with('success', 'A szin sikeresen szerkesztve.');
     }
 }
