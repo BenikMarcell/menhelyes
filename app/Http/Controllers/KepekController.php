@@ -73,19 +73,24 @@ class KepekController extends Controller
 
         
 
-        $kep = Kep::create([
+       $kep = Kep::create([
 
         'a_id' => $request->input('a_id'),
         'kep_cim' => $request->input('kep_cim'),
         'src' => $ujSrc,
         'alt' => $request->input('alt'),
-        'leiras' => $request->input('leiras'),    
-        /*$kep->a_id =$request->a_id;
+        'leiras' => $request->input('leiras'), 
+        
+          ]);
+      
+        /*$kep = new Kep();
+        $kep->a_id =$request->a_id;
         $kep->kep_cim =$request->kep_cim;
-        $kep->src =$request->src;
+        $kep-> UjSrc;
         $kep->alt =$request->alt;
-        $kep->leiras =$request->leiras;*/
-        ]);
+        $kep->leiras =$request->leiras;
+        $kep->save();*/
+      
         
         
         
