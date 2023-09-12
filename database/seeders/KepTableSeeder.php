@@ -23,27 +23,7 @@ class KepTableSeeder extends Seeder
                 'leiras'=>'Etiam facilisis gravida neque id porta. In quis diam facilisis massa elementum auctor nec',
             ],
 
-            [
-                'a_id'=>'2',
-                'kep_cim'=>'Kutya2',
-                'src'=>'images\kutya1.jpg',
-                'alt'=>'Kutya1',
-                'leiras'=>'Etiam facilisis gravida neque id porta. In quis diam facilisis massa elementum auctor nec',
-            ],
-            [
-                'a_id'=>'3',
-                'kep_cim'=>'Kutya3',
-                'src'=>'images\kutya1.jpg',
-                'alt'=>'Kutya1',
-                'leiras'=>'Etiam facilisis gravida neque id porta. In quis diam facilisis massa elementum auctor nec',
-            ],
-            [
-                'a_id'=>'4',
-                'kep_cim'=>'Kutya4',
-                'src'=>'images\kutya1.jpg',
-                'alt'=>'Kutya1',
-                'leiras'=>'Etiam facilisis gravida neque id porta. In quis diam facilisis massa elementum auctor nec',
-            ],
+            
 
 
         ]);
