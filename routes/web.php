@@ -19,7 +19,7 @@ use App\Http\Controllers\SzinekController;
 |
 */
 Route::resource('bevitel_menhelyek', MenhelyekController::class);
-Route::resource('allatok', AllatokController::class);
+Route::resource('bevitel_allatok', AllatokController::class);
 Route::resource('szinek', SzinekController::class);
 Route::resource('fajok', FajokController::class);
 Route::resource('kepek', KepekController::class);

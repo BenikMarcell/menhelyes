@@ -12,7 +12,7 @@ class Menhely extends Model
     public $primaryKey = "m_id";
     public $timestamps = false;
 
-    public function menhely()
+    public function allat()
     {
         return $this->hasMany(Allat::class);
     }

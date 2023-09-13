@@ -15,7 +15,7 @@ class AllatokController extends Controller
     public function index()
     {
         $allatok = Allat::all();
-        return view('allatok.index', compact('allatok'));
+        return view('bevitel_allatok.index', compact('allatok'));
     }
 
     /**
@@ -26,7 +26,7 @@ class AllatokController extends Controller
         $fajok = Faj::all();
         $szinek = Szin::all();
 
-        return view('allatok.create', compact('fajok', 'szinek'));
+        return view('bevitel_allatok.create', compact('fajok', 'szinek'));
     }
 
     
@@ -38,87 +38,100 @@ class AllatokController extends Controller
      */
     public function store(Request $request)
     {
+        //dd($request->all());
         $request->validate([
 
             
             'nev'=>'required|min:3|max:100',
+            'faj'=>'required'
             
-            'af_id '=>'required',
 
-            /*
-            'ivar_allapot'=>'required',
-            
-            'nem'=>'required',
-            'chip '=>'required',
-            'leiras'=>'required|min:3',*/
- /*
-        ],
-
-      [
-        "nev.required" => "A mező kitöltése kötelező!",
-                "nev.min" => "Minimum 3 karaktert adj meg!",
-                "nev.max" => "Maximum 100 karaktert adhatsz meg!", 
-                
-                "kor.required" => "A mező kitöltése kötelező!",
-
-                "ivar_allapot.required" => "A mező kitöltése kötelező!",
-
-                
-                
-                "nem.required" => "A mező kitöltése kötelező!",
-
-                "chip.min" => "A mező kitöltése kötelező!",
-
-                "leiras.required" => "A mező kitöltése kötelező!",
-                "leiras.min" => "Minimum 10 karaktert adj meg!",*/
+           
   
         ]);  
         
         $allat = new Allat();
         $allat->nev =$request->nev;
-        $allat->af_id =$request->af_id;
+        $allat->af_id =$request->faj;
+        $allat->m_id =$request->m_id;
        
-        $allat->ivar_allapot =$request->ivar_allapot;
-        $allat-> chip=$request->chip;
-        $allat->kor =$request->kor;
-        $allat->leiras =$request->leiras;
+       // $allat->szin_id=$request->szin_id;
+       // $allat->ivar_allapot =$request->ivar_allapot;
+       // $allat-> chip=$request->chip;
+        //$allat->kor =$request->kor;
+        //$allat->leiras =$request->leiras;
         
         
         $allat->save();
         
-        return redirect()->route('allatok.index')->with('success', 'Állat sikeresen létrehozva.');
-        
+        return redirect()->route('bevitel_allatok.index')->with('success', 'Állat sikeresen létrehozva.');
     }
 
     /**
      * Display the specified resource.
      */
-    public function show(string $id)
+    public function show(string $a_id)
     {
-        //
+        //a find itt megkeresi a kijelölt id-t, amit meg akarok mutatni
+        $allat = allat::find($a_id);
+
+        // a return megmutatja azt az id-t, amit megtaláltam
+        return view('bevitel_allatok.show', compact('allat'));
     }
 
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(string $id)
+    public function edit(string $m_id)
     {
-        //
+        $allat = allat::find($m_id);
+        $fajok = Faj::all();
+        $szinek = Szin::all();
+
+        return view('bevitel_allatok.edit', compact('allat','fajok', 'szinek'));
     }
 
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, string $id)
+    public function update(Request $request, string $m_id)
     {
-        //
+        //dd($request->all());
+        $request->validate([
+
+            
+            'nev'=>'required|min:3|max:100',
+            'faj'=>'required'
+            
+
+           
+  
+        ]);  
+        
+        $allat = allat::find($m_id);
+        $allat->nev =$request->nev;
+        $allat->af_id =$request->faj;
+        $allat->m_id =$request->m_id;
+       
+       // $allat->szin_id=$request->szin_id;
+       // $allat->ivar_allapot =$request->ivar_allapot;
+       // $allat-> chip=$request->chip;
+        //$allat->kor =$request->kor;
+        //$allat->leiras =$request->leiras;
+        
+        
+        $allat->save();
+        
+        return redirect()->route('bevitel_allatok.index')->with('success', 'Állat sikeresen létrehozva.');
     }
 
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(string $id)
+    public function destroy(string $m_id)
     {
-        //
+        $allat = allat::find($m_id);
+        $allat->delete();
+        return redirect()->route('bevitel_allatok.index')->with('success', 'Állat sikeresen létrehozva.');
     }
 }

@@ -13,7 +13,7 @@ class Kep extends Model
     public $primaryKey = "ak_id";
     public $timestamps = false;
     protected $guarded = [];
-    public function kep()
+    public function allat_kep()
     {
         return $this->belongsTo(Allat::class);
     

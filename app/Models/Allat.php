@@ -14,14 +14,27 @@ class Allat extends Model
     public $table = "allat";
     public $primaryKey = "a_id";
     public $timestamps = false;
-    public function allat()
+
+    public function menhely()
     {
         return $this->belongsTo(Menhely::class);
-    
+    }
+
+    public function allat_szin()
+    {
         return $this->belongsTo(Szin::class);
 
+    }
+    
+    public function allat_faj()
+    {
         return $this->belongsTo(Faj::class);
 
+    }
+
+    public function allat_kep()
+    {
         return $this->hasMany(Kep::class);
+
     }
 }
