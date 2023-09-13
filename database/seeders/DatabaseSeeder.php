@@ -21,26 +21,24 @@ class DatabaseSeeder extends Seeder
         // ]);
 
         $this->call([
-            MenhelySeeder::class,
+            MenhelyTableSeeder::class,
         ]);
         $this->call([
-            AllatFajSeeder::class,
+            AllatFajTableSeeder::class,
         ]);
         $this->call([
-            AllatSzinSeeder::class,
+            AllatSzinTableSeeder::class,
         ]);
         $this->call([
-          AllatSeeder::class,
+          AllatTableSeeder::class,
         ]);
-        $this->call([
-            AllatnakSzineSeeder::class,
-          ]);
+        
 
           $this->call([
-            TamogatasMenhelySeeder::class,
+            TamogatasMenhelyTableSeeder::class,
           ]);
           $this->call([
-            TamogatasAllatSeeder::class,
+            TamogatasAllatTableSeeder::class,
           ]);
 
           $this->call([
@@ -48,7 +46,7 @@ class DatabaseSeeder extends Seeder
           ]);
 
           $this->call([
-            BarionSeeder::class,
+            BarionTableSeeder::class,
           ]);
           $this->call([
             KepTableSeeder::class,

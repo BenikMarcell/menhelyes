@@ -7,7 +7,7 @@ use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Str;
 
-class AllatSzinSeeder extends Seeder
+class AllatSzinTableSeeder extends Seeder
 {
     /**
      * Run the database seeds.

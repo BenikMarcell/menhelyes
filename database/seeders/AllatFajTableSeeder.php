@@ -5,32 +5,27 @@ namespace Database\Seeders;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
-use Illuminate\Support\Str;
 
-class AllatnakSzineSeeder extends Seeder
+class AllatFajTableSeeder extends Seeder
 {
     /**
      * Run the database seeds.
      */
     public function run(): void
     {
-        DB::table('allatnak_szine')->insert ([
+        DB::table('allat_faj')->insert ([
 
             [
-                'a_id'=>'1',
-                'szin_id'=>'1',
+                'faj'=>'kutya',
             ],
             [
-                'a_id'=>'2',
-                'szin_id'=>'2',
+                'faj'=>'macska',
             ],
             [
-                'a_id'=>'3',
-                'szin_id'=>'3',
+                'faj'=>'egér',
             ],
             [
-                'a_id'=>'4',
-                'szin_id'=>'4',
+                'faj'=>'mókus',
             ],
 
 

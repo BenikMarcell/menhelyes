@@ -7,7 +7,7 @@ use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Str;
 
-class BarionSeeder extends Seeder
+class BarionTableSeeder extends Seeder
 {
     /**
      * Run the database seeds.

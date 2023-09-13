@@ -14,6 +14,7 @@ return new class extends Migration
         Schema::create('allat', function (Blueprint $table) {
             $table->id("a_id");
             $table->foreignId("af_id")->references("af_id")->on("allat_faj")->onDelete('cascade')->onUpdate('cascade');
+            $table->foreignId("szin_id")->references("szin_id")->on("allat_szin")->onDelete('cascade')->onUpdate('cascade');
             $table->foreignId("m_id")->references("m_id")->on("menhely")->onDelete('cascade')->onUpdate('cascade');
             $table->smallInteger("kor");
             $table->tinyInteger("ivar_allapot");
