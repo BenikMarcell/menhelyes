@@ -17,10 +17,10 @@ return new class extends Migration
             $table->foreignId("szin_id")->references("szin_id")->on("allat_szin")->onDelete('cascade')->onUpdate('cascade');
             $table->foreignId("m_id")->references("m_id")->on("menhely")->onDelete('cascade')->onUpdate('cascade');
             $table->smallInteger("kor");
-            $table->tinyInteger("ivar_allapot");
+            $table->string("ivar_allapot", 50);
             $table->string("nev", 50);
             $table->string("nem", 50);
-            $table->tinyInteger("chip");
+            $table->string("chip", 50);
             $table->text("leiras");
         });
     }

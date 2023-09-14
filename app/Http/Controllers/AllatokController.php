@@ -43,30 +43,35 @@ class AllatokController extends Controller
 
             
             'nev'=>'required|min:3|max:100',
-            'faj'=>'required'
-            
-
-           
-  
+            'faj'=>'required',
+            'szin'=>'required',
+            'kor'=>'required',
+            'leiras'=>'required',
+            'chip'=>'required',
+            'ivar_allapot'=>'required',
+            'nem'=>'required'
+ 
         ]);  
         
         $allat = new Allat();
         $allat->nev =$request->nev;
         $allat->af_id =$request->faj;
+        $allat->szin_id =$request->szin;
         $allat->m_id =$request->m_id;
+        $allat->kor =$request->kor;
+        $allat->leiras =$request->leiras;
+        $allat-> nem=$request->nem;
+        $allat->ivar_allapot =$request->ivar_allapot;
+        $allat-> chip=$request->chip;
+
        
-       // $allat->szin_id=$request->szin_id;
-       // $allat->ivar_allapot =$request->ivar_allapot;
-       // $allat-> chip=$request->chip;
-        //$allat->kor =$request->kor;
-        //$allat->leiras =$request->leiras;
-        
         
         $allat->save();
         
         return redirect()->route('bevitel_allatok.index')->with('success', 'Állat sikeresen létrehozva.');
     }
 
+    
     /**
      * Display the specified resource.
      */
@@ -74,6 +79,7 @@ class AllatokController extends Controller
     {
         //a find itt megkeresi a kijelölt id-t, amit meg akarok mutatni
         $allat = allat::find($a_id);
+       
 
         // a return megmutatja azt az id-t, amit megtaláltam
         return view('bevitel_allatok.show', compact('allat'));
@@ -101,7 +107,13 @@ class AllatokController extends Controller
 
             
             'nev'=>'required|min:3|max:100',
-            'faj'=>'required'
+            'faj'=>'required',
+            'szin'=>'required',
+            'kor'=>'required',
+            'leiras'=>'required',
+            'chip'=>'required',
+            'ivar_allapot'=>'required',
+            'nem'=>'required'
             
 
            
@@ -111,14 +123,13 @@ class AllatokController extends Controller
         $allat = allat::find($m_id);
         $allat->nev =$request->nev;
         $allat->af_id =$request->faj;
+        $allat->szin_id =$request->szin;
         $allat->m_id =$request->m_id;
-       
-       // $allat->szin_id=$request->szin_id;
-       // $allat->ivar_allapot =$request->ivar_allapot;
-       // $allat-> chip=$request->chip;
-        //$allat->kor =$request->kor;
-        //$allat->leiras =$request->leiras;
-        
+        $allat->kor =$request->kor;
+        $allat->leiras =$request->leiras;
+        $allat-> nem=$request->nem;
+        $allat->ivar_allapot =$request->ivar_allapot;
+        $allat-> chip=$request->chip;
         
         $allat->save();
         

@@ -14,7 +14,6 @@
     
 @endif
 
-
 <ul>
 
     @foreach($allatok as $allat)

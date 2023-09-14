@@ -6,9 +6,39 @@
 <br>
 <h3>views/bevitel_allatok/edit</h3>
 
-@error('allat')
+             
+
+@error('m_id')
 <div class="alert alert-warning">{{$message}} </div>
-@enderror                  
+@enderror
+@error('nev')
+<div class="alert alert-warning">{{$message}} </div>
+@enderror
+@error('faj')
+<div class="alert alert-warning">{{$message}} </div>
+@enderror
+@error('szin')
+<div class="alert alert-warning">{{$message}} </div>
+@enderror
+@error('nem')
+</select>
+@error('ivar_allapot')
+<div class="alert alert-warning">{{$message}} </div>
+@enderror
+<div class="alert alert-warning">{{$message}} </div>
+@enderror
+@error('chip')
+<div class="alert alert-warning">{{$message}} </div>
+@enderror
+@error('kor')
+<div class="alert alert-warning">{{$message}} </div>
+@enderror
+@error('leiras')
+<div class="alert alert-warning">{{$message}} </div>
+@enderror
+
+
+
 
 <form action="{{route('bevitel_allatok.update', $allat->a_id)}}" method="POST">
 
@@ -24,72 +54,68 @@
                 <div class="mb-3">
                     <label for="m_id" class="form-label">m_id</label>
                     <input type="text" class="form-control" name="m_id" id="m_id" value="{{ old('m_id', $allat->m_id)}}">
-                    @error('m_id')
-                    <div class="alert alert-warning">{{$message}} </div>
-                    @enderror
+                   
                 </div>
                 <div class="mb-3">
                     <label for="nev" class="form-label">Az állat neve</label>
                     <input type="text" class="form-control" name="nev" id="nev" value="{{ old('nev', $allat->nev)}}">
-                    @error('nev')
-                    <div class="alert alert-warning">{{$message}} </div>
-                    @enderror
                 </div>
     
                 <div class="mb-3">
-                    <h5>Válassz állatfajtát!</h5>
-                    <label for="faj">Állatfaj</label>  
+                    <h5>Válassz állatfajtát!</h5> 
+                    <label for="faj"></label>  
                     <select name="faj" id="faj">
-                    @foreach ($fajok as $faj)
+                     @foreach ($fajok as $faj)
                     <option value="{{$faj->af_id}}">{{$faj->faj}}</option>
                     @endforeach
                     </select>
-                    @error('faj')
-                    <div class="alert alert-warning">{{$message}} </div>
-                    @enderror
                 </div>
+
                 <div class="mb-3">
-                    <label for="szin">Állat szín</label>  
+                    <h5>Válassz színt!</h5>
+                    <label for="szin"></label>  
                     <select name="szin" id="szin">
-                    <option value="0">{{ old('szin', $allat->szin)}}</option>
                      @foreach ($szinek as $szin)
                     <option value="{{$szin->szin_id}}">{{$szin->szin}}</option>
                     @endforeach
                     </select>
                 </div>
-     
+
                 <div class="mb-3">
-                    <label for="nem">Lány? Ha igen, bejelölni!</label>
-                    <input type="checkbox" name="nem" id="nem">
+                    <h5>Válassz a nemek közül!</h5>
+                    <select class="form-select" value="{{ old('nem', $allat->nem)}}" id="nem" name="nem" size="2" aria-label="size 2 select example" >
+                    <option value="1">Lány</option>
+                    <option value="2">Fiú</option>
+                    </select>
                 </div>
-    
+
                 <div class="mb-3">
-                    <label for="ivar_allapot">Ivartalanított? Ha igen, bejelölni!</label>
-                    <input type="checkbox" name="ivar_allapot" id="ivar_allapot">
+                    <h5>Válassz a nemzőképesség szerint!</h5>
+                    <select class="form-select" id="ivar_allapot" name="ivar_allapot" size="2" aria-label="size 2 select example">
+                    <option value="1">Ivartalanított</option>
+                    <option value="2">Nem ivartalanított</option>
+                    </select>
                 </div>
-    
+
                 <div class="mb-3">
-                   <label for="chip">Rendelkezik chippel? Ha igen, bejelölni!</label>
-                   <input type="checkbox" name="chip" id="chip">
+                    <h5>Rendelkezik chippel?</h5>
+                    <select class="form-select" id="chip" name="chip" size="2" aria-label="size 2 select example">
+                    <option value="1">Igen</option>
+                    <option value="2">Nem</option>
+                    </select>
                 </div>
-                
+            
                 <div class="mb-3">
                     <label for="kor" class="form-label">Az állat kora (hónapokban megadva)</label>
-                    <input type="text" class="form-control" name="kor" id="kor" placeholder="pl. 12 ">
-                    @error('kor')
-                    <div class="alert alert-warning">{{$message}} </div>
-                    @enderror
+                    <input type="text" class="form-control" name="kor" id="kor" value="{{ old('kor', $allat->kor)}}">
                 </div>
                 
                 
                 <div class="mb-3">
                     <label for="leiras" class="form-label">Az állat leírása</label>
-                    <textarea class="form-control" id="leiras" rows="10"
-                        placeholder="A leírás szövege"></textarea>
-                        @error('leiras')
-                    <div class="alert alert-warning">{{$message}} </div>
-                    @enderror
-                </div>
+                    <textarea class="form-control" name="leiras" id="leiras" rows="10"
+                    >{{ old('leiras', $allat->leiras)}}</textarea>
+             </div>
     
                 <div class="d-grid gap-2 col-6 mx-auto mb-3">
     
