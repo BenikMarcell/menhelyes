@@ -3,7 +3,7 @@
 @section('content')
 <div class="container">
     <h1 class="text-center">Főoldal</h1>
-    <h6>A belépés: vagyunk@gmail.com és  12345678</h6>
+    
 </div>
 <div class="container">
     <div class="row">
@@ -11,12 +11,23 @@
             <img id="fooldalkep" src="./images/macska2.jpg" alt="fooldalkep">
         </div>
         <div class="col-6">
-            <h2>Rólunk</h2>
+            <h2>Linkek a CRUD műveletekhez</h2> <br><br>
             <p>
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolorum, minus nihil deserunt pariatur dicta provident incidunt, <br>
-                 expedita sunt doloremque veniam reiciendis temporibus dignissimos recusandae sit explicabo ipsam distinctio quas beatae. <br>
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolore nihil error commodi, adipisci nam voluptates expedita! <br>
-                 Eius qui possimus molestiae pariatur, esse veritatis numquam libero, deleniti, a illum unde quidem!
+                Menhelyek form:    http://localhost/menhelyes/public/bevitel_menhelyek/create <br><br>
+                Menhelyek index:  http://localhost/menhelyes/public/bevitel_menhelyek <br><br>
+                Állatok 
+                regisztrálása:     http://localhost/menhelyes/public/bevitel_allatok/create <br><br>
+                Állatok index:     http://localhost/menhelyes/public/bevitel_allatok <br><br>
+                Képek felvétele: http://localhost/menhelyes/public/kepek/create <br><br>
+                Képek index: http://localhost/menhelyes/public/kepek (itt jelennek meg most a képek!) <br><br>
+                Színek bevitele: http://localhost/menhelyes/public/szinek/create <br><br>
+                Színek index: http://localhost/menhelyes/public/szinek <br><br>
+                Fajok felvétele: http://localhost/menhelyes/public/fajok/create <br><br>
+                Fajok: index: http://localhost/menhelyes/public/fajok <br><br>
+
+
+
+
             </p>
         </div>
     </div>
