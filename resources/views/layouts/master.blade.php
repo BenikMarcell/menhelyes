@@ -19,7 +19,7 @@
         <div class="container-fluid">
             
             <div class="col-3">
-                <a href="./fooldal"><img id="logokep" src="./images/logo.png" alt="Logo"></a>
+                <a href="./fooldal"><img id="logokep" src="{{asset('images/logo.png')}}" alt="Logo"></a>
             </div>
             <div id="nav-gombok" class="col-6">
                 <a class="btn rounded" href="./menhelyek">Menhelyek</a>
@@ -32,15 +32,7 @@
 
                     @if (Route::has('login'))
                     <li class="nav-item">
-                        <a class="nav-link" href="{{ route('login') }}">{{ __('Bejelentkezés/Regisztráció') }}</a>
-                    </li>
-                    @endif
-
-                    
-                   
-                    @if (Route::has('register'))
-                    <li class="nav-item">
-                        <a class="nav-link" href="{{ route('register') }}">{{ __('Regisztrálás') }}</a>
+                        <a class="nav-link" href="{{ route('login') }}">Bejelentkezés/Regisztráció</a>
                     </li>
                     @endif
                     @else
