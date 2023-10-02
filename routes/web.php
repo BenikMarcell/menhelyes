@@ -60,11 +60,16 @@ Route::get('/tamogatoiProfil', function () {
 });
 Route::get('/menhelyProfil', function () {
     return view('menhelyProfil');
-});
+})->name('menhelyProfil');
 Route::get('/allatTorles', function () {
     return view('allatTorles');
 });
-
+Route::get('/menhelyAllatai', function () {
+    return view('menhelyAllatai');
+})->name('menhelyAllatai');
+Route::get('/menhelyAdomanyai', function () {
+    return view('menhelyAdomanyai');
+})->name('menhelyAdomanyai');
 
 
 

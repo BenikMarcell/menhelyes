@@ -14,7 +14,7 @@
 
 <body>
 
-    <nav id="navbar" class="navbar">
+    <nav id="navbar" class="navbar myNavbar">
         <h1 id="focim">MenhelyHub</h1>
         <div class="container-fluid">
             
@@ -27,7 +27,7 @@
                 <a class="btn rounded" href="./kapcsolat">Kapcsolat</a>
             </div>
             <div class="col-3 center">
-                <button id="login-btn" class="btn rounded">
+                <button id="login-btn" class=" rounded">
                     @guest
 
                     @if (Route::has('login'))
@@ -42,10 +42,12 @@
                             {{ Auth::user()->name }}
                         </a>
                         <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-                            <a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault();
+                            <a class="dropdown-item btn m-1" href="menhelyProfil">Profilom</a>
+                            <a class="dropdown-item btn m-1" href="{{ route('logout') }}" onclick="event.preventDefault();
                                              document.getElementById('logout-form').submit();">
                                 {{ __('Kijelentkezés') }}
                             </a>
+                            
                             <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
                                 @csrf
                             </form>

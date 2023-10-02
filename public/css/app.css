@@ -4,13 +4,18 @@
     color: #D3D04F;
 }
 
-.navbar {
+.myNavbar {
     background-color: #17594A;
     height: 150px;
 }
 
+.navbar {
+    color: #D3D04F;
+    background-color: #17594A;
+}
+
 nav {
-    margin-bottom: 25pxpx;
+    margin-bottom: 25px;
 }
 
 body {
@@ -116,4 +121,8 @@ li {
 .deleteBtn {
     background-color: red;
     z-index: 1;
+}
+
+.dropdown-menu , .dropdown-menu:hover {
+    z-index: 990000;
 }

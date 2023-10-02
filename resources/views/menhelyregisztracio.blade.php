@@ -4,7 +4,7 @@
 
 <h1>Ez a menhelyregisztráció!</h1>
 
-<div class="container bg-primry">
+<div class="container bg-primary">
     <div class="row">
         <div class="col-6 border border-primary m-3 p-4">
             <div class="mb-3">

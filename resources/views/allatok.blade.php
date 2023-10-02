@@ -3,7 +3,7 @@
 @section('content')
 
 <div class="container">
-    <h1 class="text-center">Állat Kereső</h1>
+    <h1 class="text-center ps-5">Állat Kereső</h1>
     <form class="form form-control p-3 m-3 text-center" action="#" method="post">
         <div class="col-6 p-3 m-3 text-center">
             <div class="inputMezo">
