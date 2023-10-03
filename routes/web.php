@@ -64,9 +64,9 @@ Route::get('/menhelyProfil', function () {
 Route::get('/allatTorles', function () {
     return view('allatTorles');
 });
-Route::get('/menhelyAllatai', function () {
-    return view('menhelyAllatai');
-})->name('menhelyAllatai');
+
+Route::get('/menhelyAllatai',[MenhelyekController::class,'menhelyAllataiLista'])->name('menhelyAllatai');
+
 Route::get('/menhelyAdomanyai', function () {
     return view('menhelyAdomanyai');
 })->name('menhelyAdomanyai');

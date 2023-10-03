@@ -19,8 +19,7 @@ class MenhelyTableSeeder extends Seeder
             [
                 
                 
-                'id'=>'1',
-                'bt_id'=>'1',
+                'u_id'=>'1',
                 'nev'=>'Napfény',
                 'irsz'=>'1141',
                 'telepules'=>'Budapest',
@@ -36,8 +35,7 @@ class MenhelyTableSeeder extends Seeder
             [
                 
                 
-                'id'=>'2',
-                'bt_id'=>'2',
+                'u_id'=>'2',
                 'nev'=>'Vagyunk',
                 'irsz'=>'1341',
                 'telepules'=>'Budapest',
@@ -52,8 +50,7 @@ class MenhelyTableSeeder extends Seeder
             ],
             [
                 
-                'id'=>'3',
-                'bt_id'=>'3',
+                'u_id'=>'3',
                 'nev'=>'Hasznos',
                 'irsz'=>'1041',
                 'telepules'=>'Budapest',
@@ -68,8 +65,7 @@ class MenhelyTableSeeder extends Seeder
             ],
             [
                 
-                'id'=>'4',
-                'bt_id'=>'4',
+                'u_id'=>'4',
                 'nev'=>'Világ',
                 'irsz'=>'1111',
                 'telepules'=>'Budapest',

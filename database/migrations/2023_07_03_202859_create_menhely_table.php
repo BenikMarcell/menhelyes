@@ -13,8 +13,7 @@ return new class extends Migration
     {
         Schema::create('menhely', function (Blueprint $table) {
             $table->id("m_id");
-            $table->string("id")->references("id")->on("users");
-            $table->string("bt_id")->references("bt_id")->on("barion_tranzakcio");
+            $table->string("u_id")->references("id")->on("users");
             $table->string("nev");
             $table->string("irsz");
             $table->string("telepules");

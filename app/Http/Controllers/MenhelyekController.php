@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Menhely;
+use App\Models\Allat;
 use Illuminate\Http\Request;
 
 class MenhelyekController extends Controller
@@ -235,5 +236,18 @@ class MenhelyekController extends Controller
         $menhely = menhely::find($m_id);
         $menhely->delete();
         return redirect()->route('bevitel_menhelyek.index')->with('success', 'Menhely sikeresen törölve.');
+    }
+
+    public function menhelyAllataiLista()
+    {
+
+        $menhely = Menhely::where("u_id",auth()->user()->id)->first();
+        if($menhely != NULL){
+            $menhelyId = $menhely->m_id;
+            $allatok = Allat::where('m_id',$menhelyId)->paginate(3);
+            return view('menhelyAllatai',["allatok" => $allatok]);
+        }else{
+            //redirect főoldalra
+        }
     }
 }
