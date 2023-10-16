@@ -18,11 +18,9 @@ use App\Http\Controllers\SzinekController;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
-Route::resource('bevitel_menhelyek', MenhelyekController::class);
-Route::resource('bevitel_allatok', AllatokController::class);
-Route::resource('szinek', SzinekController::class);
-Route::resource('fajok', FajokController::class);
-Route::resource('kepek', KepekController::class);
+Route::get('/welcome', [AllatokController::class, 'lista'])->name('lista');
+
+
 
 Route::get('/', function () {
     return view('welcome');
@@ -61,6 +59,7 @@ Route::get('/tamogatoiProfil', function () {
 Route::get('/menhelyProfil', function () {
     return view('menhelyProfil');
 })->name('menhelyProfil');
+
 Route::get('/allatTorles', function () {
     return view('allatTorles');
 });
