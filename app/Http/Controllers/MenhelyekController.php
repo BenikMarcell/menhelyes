@@ -250,4 +250,17 @@ class MenhelyekController extends Controller
             //redirect főoldalra
         }
     }
+
+    public function menhelyAdomanyaiLista()
+    {
+
+        $menhely = Menhely::where("u_id",auth()->user()->id)->first();
+        if($menhely != NULL){
+            $menhelyId = $menhely->m_id;
+            $adomanyok = Adomany::where('m_id',$menhelyId)->paginate(3);
+            return view('menhelyAdomanyai',["adomanyok" => $adomanyok]);
+        }else{
+            //redirect főoldalra
+        }
+    }
 }
