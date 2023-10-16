@@ -31,225 +31,31 @@
 <div class="container">
 
     <div class="row">
-        <h2>Találatok:</h2>
-        <div class="col-3 mt-5">
-            <div class="card">
-                <img class="card-img-top" src="./images/menhelykep.jpg" alt="Card image">
-                <div class="card-body">
-                    <h4 class="card-title">John Doe</h4>
-                    <p> Az adatbázisból<br> 
-                        Név:<br> 
-                        Kor:<br> 
-                        Leírás:<br>
-                        Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium,
-                        totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae
-                        dicta sunt explicabo.
-                    </p>
-                    <a href="./egyMenhely" class="btn rounded">Bővebben</a>
+        
+        <div class="container">
+
+            @foreach ($menhelyek as $key => $menhely) 
+            @if ($key % 3 === 0)
+                <div class="row">
+            @endif
+            <div class="col-md-3 m-4">
+                <div class="card">
+                    <img class="card-img-top" src="./images/menhelykep.jpg" alt="Card image">
+                    <div class="card-body">
+                        <h4 class="card-title">{{$menhely->nev}}</h4>
+                        <h6>{{$menhely->telepules}}</h6>
+                        <h6>{{$menhely->menhely_leiras}}</h6>  
+                            
+                        </p>
+                        <a href="./egyAllat" class="btn rounded">Bővebben</a>
+                    </div>
                 </div>
             </div>
-        </div>
-
-        <div class="col-3 mt-5">
-            <div class="card">
-                <img class="card-img-top" src="./images/menhelykep.jpg" alt="Card image">
-                <div class="card-body">
-                    <h4 class="card-title">John Doe</h4>
-                    <p> Az adatbázisból<br> 
-                        Név:<br> 
-                        Kor:<br> 
-                        Leírás:<br>
-                        Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium,
-                        totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae
-                        dicta sunt explicabo.
-                    </p>
-                    <a href="./egyMenhely" class="btn rounded">Bővebben</a>
+            @if (($key + 1) % 3 === 0 || $loop->last)
                 </div>
-            </div>
-        </div>
+            @endif
+        @endforeach   
 
-        <div class="col-3 mt-5">
-            <div class="card">
-                <img class="card-img-top" src="./images/menhelykep.jpg" alt="Card image">
-                <div class="card-body">
-                    <h4 class="card-title">John Doe</h4>
-                    <p> Az adatbázisból<br> 
-                        Név:<br> 
-                        Kor:<br> 
-                        Leírás:<br>
-                        Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium,
-                        totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae
-                        dicta sunt explicabo.
-                    </p>
-                    <a href="./egyMenhely" class="btn rounded">Bővebben</a>
-                </div>
-            </div>
-        </div>
-
-        <div class="col-3 mt-5">
-            <div class="card">
-                <img class="card-img-top" src="./images/menhelykep.jpg" alt="Card image">
-                <div class="card-body">
-                    <h4 class="card-title">John Doe</h4>
-                    <p> Az adatbázisból<br> 
-                        Név:<br> 
-                        Kor:<br> 
-                        Leírás:<br>
-                        Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium,
-                        totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae
-                        dicta sunt explicabo.
-                    </p>
-                    <a href="./egyMenhely" class="btn rounded">Bővebben</a>
-                </div>
-            </div>
-        </div>
-
-        <div class="col-3 mt-5">
-            <div class="card">
-                <img class="card-img-top" src="./images/menhelykep.jpg" alt="Card image">
-                <div class="card-body">
-                    <h4 class="card-title">John Doe</h4>
-                    <p> Az adatbázisból<br> 
-                        Név:<br> 
-                        Kor:<br> 
-                        Leírás:<br>
-                        Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium,
-                        totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae
-                        dicta sunt explicabo.
-                    </p>
-                    <a href="./egyMenhely" class="btn rounded">Bővebben</a>
-                </div>
-            </div>
-        </div>
-
-        <div class="col-3 mt-5">
-            <div class="card">
-                <img class="card-img-top" src="./images/menhelykep.jpg" alt="Card image">
-                <div class="card-body">
-                    <h4 class="card-title">John Doe</h4>
-                    <p> Az adatbázisból<br> 
-                        Név:<br> 
-                        Kor:<br> 
-                        Leírás:<br>
-                        Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium,
-                        totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae
-                        dicta sunt explicabo.
-                    </p>
-                    <a href="./egyMenhely" class="btn rounded">Bővebben</a>
-                </div>
-            </div>
-        </div>
-
-        <div class="col-3 mt-5">
-            <div class="card">
-                <img class="card-img-top" src="./images/menhelykep.jpg" alt="Card image">
-                <div class="card-body">
-                    <h4 class="card-title">John Doe</h4>
-                    <p> Az adatbázisból<br> 
-                        Név:<br> 
-                        Kor:<br> 
-                        Leírás:<br>
-                        Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium,
-                        totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae
-                        dicta sunt explicabo.
-                    </p>
-                    <a href="./egyMenhely" class="btn rounded">Bővebben</a>
-                </div>
-            </div>
-        </div>
-
-        <div class="col-3 mt-5">
-            <div class="card">
-                <img class="card-img-top" src="./images/menhelykep.jpg" alt="Card image">
-                <div class="card-body">
-                    <h4 class="card-title">John Doe</h4>
-                    <p> Az adatbázisból<br> 
-                        Név:<br> 
-                        Kor:<br> 
-                        Leírás:<br>
-                        Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium,
-                        totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae
-                        dicta sunt explicabo.
-                    </p>
-                    <a href="./egyMenhely" class="btn rounded">Bővebben</a>
-                </div>
-            </div>
-        </div>
-
-        <div class="col-3 mt-5">
-            <div class="card">
-                <img class="card-img-top" src="./images/menhelykep.jpg" alt="Card image">
-                <div class="card-body">
-                    <h4 class="card-title">John Doe</h4>
-                    <p> Az adatbázisból<br> 
-                        Név:<br> 
-                        Kor:<br> 
-                        Leírás:<br>
-                        Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium,
-                        totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae
-                        dicta sunt explicabo.
-                    </p>
-                    <a href="./egyMenhely" class="btn rounded">Bővebben</a>
-                </div>
-            </div>
-        </div>
-
-        <div class="col-3 mt-5">
-            <div class="card">
-                <img class="card-img-top" src="./images/menhelykep.jpg" alt="Card image">
-                <div class="card-body">
-                    <h4 class="card-title">John Doe</h4>
-                    <p> Az adatbázisból<br> 
-                        Név:<br> 
-                        Kor:<br> 
-                        Leírás:<br>
-                        Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium,
-                        totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae
-                        dicta sunt explicabo.
-                    </p>
-                    <a href="./egyMenhely" class="btn rounded">Bővebben</a>
-                </div>
-            </div>
-        </div>
-
-        <div class="col-3 mt-5">
-            <div class="card">
-                <img class="card-img-top" src="./images/menhelykep.jpg" alt="Card image">
-                <div class="card-body">
-                    <h4 class="card-title">John Doe</h4>
-                    <p> Az adatbázisból<br> 
-                        Név:<br> 
-                        Kor:<br> 
-                        Leírás:<br>
-                        Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium,
-                        totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae
-                        dicta sunt explicabo.
-                    </p>
-                    <a href="./egyMenhely" class="btn rounded">Bővebben</a>
-                </div>
-            </div>
-        </div>
-
-        <div class="col-3 mt-5">
-            <div class="card">
-                <img class="card-img-top" src="./images/menhelykep.jpg" alt="Card image">
-                <div class="card-body">
-                    <h4 class="card-title">John Doe</h4>
-                    <p> Az adatbázisból<br> 
-                        Név:<br> 
-                        Kor:<br> 
-                        Leírás:<br>
-                        Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium,
-                        totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae
-                        dicta sunt explicabo.
-                    </p>
-                    <a href="./egyMenhely" class="btn rounded">Bővebben</a>
-                </div>
-            </div>
-        </div>
-
-    </div>
-</div>
-
+        
 
 @endsection

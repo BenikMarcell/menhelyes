@@ -18,13 +18,12 @@ use App\Http\Controllers\SzinekController;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
-Route::get('/welcome', [AllatokController::class, 'lista'])->name('lista');
+Route::get('/', [AllatokController::class, 'lista'])->name('lista');
+Route::get('menhelyek', [MenhelyekController::class, 'menhelyLista'])->name('menhelyLista');
+//Route::get('menhelyAllatai', [AllatokController::class, 'allatIndex'])->name('allatIndex');
 
 
 
-Route::get('/', function () {
-    return view('welcome');
-});
 Route::get('/fooldal', function () {
     return view('welcome');
 });
@@ -41,9 +40,9 @@ Route::get('/allatregisztracio', function () {
 Route::get('/kepregisztracio', function () {
     return view('kepregisztracio');
 });
-Route::get('/menhelyek', function () {
-    return view('menhelyek');
-});
+//Route::get('/menhelyek', function () {
+ //   return view('menhelyek');
+//});
 Route::get('/allatok', function () {
     return view('allatok');
 });

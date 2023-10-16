@@ -12,11 +12,20 @@ class AllatokController extends Controller
 {
     public function lista()
 {
-    Log::info('lista metódus meghív');
+    
     
     $allatok = Allat::all();
-    dd($allatok); 
+    
     return view('welcome', ["allatok" => $allatok]);
+}
+
+public function allatIndex()
+{
+    
+    
+    $allatok = Allat::all();
+    
+    return view('menhelyAllatai', ["allatok" => $allatok]);
 }
 
 }

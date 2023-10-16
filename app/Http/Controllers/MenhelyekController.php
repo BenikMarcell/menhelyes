@@ -11,10 +11,10 @@ class MenhelyekController extends Controller
     /**
      * Display a listing of the resource.
      */
-    public function index()
+    public function menhelyLista()
     {
         $menhelyek = Menhely::all();
-        return view('bevitel_menhelyek.index', compact('menhelyek'));
+        return view('menhelyek', ["menhelyek" => $menhelyek]);
     }
 
     /**
@@ -238,6 +238,8 @@ class MenhelyekController extends Controller
         return redirect()->route('bevitel_menhelyek.index')->with('success', 'Menhely sikeresen törölve.');
     }
 
+
+
     public function menhelyAllataiLista()
     {
 
@@ -250,4 +252,5 @@ class MenhelyekController extends Controller
             //redirect főoldalra
         }
     }
+    
 }

@@ -28,7 +28,8 @@
             <img class="card-img-top" src="./images/kutya1.jpg" alt="Card image">
             <div class="card-body">
                 <h4 class="card-title">{{$allat->nev}}</h4>
-                <p> Az adatbázisból<br> 
+                <h6>{{$allat->kor}} hónapos</h6>
+                <h6>{{$allat->nem}}</h6>  
                     
                 </p>
                 <a href="./egyAllat" class="btn rounded">Bővebben</a>
