@@ -4,6 +4,8 @@
 
 <div class="container">
 
+    
+
     <div class="row">
 
         <h1 class="text-center mb-5">Állat Neve</h1>
