@@ -7,6 +7,7 @@ use App\Http\Controllers\FajokController;
 use App\Http\Controllers\KepekController;
 use App\Http\Controllers\MenhelyekController;
 use App\Http\Controllers\SzinekController;
+use App\Http\Controllers\BarionController;
 
 /*
 |--------------------------------------------------------------------------
@@ -40,9 +41,12 @@ Route::get('/allatregisztracio', function () {
 Route::get('/kepregisztracio', function () {
     return view('kepregisztracio');
 });
+<<<<<<< HEAD
 //Route::get('/menhelyek', function () {
   // return view('menhelyek');
 // });
+=======
+>>>>>>> 09a88ed226b9e83171de036a06716a176fff551b
 Route::get('/allatok', function () {
     return view('allatok');
 });
@@ -65,9 +69,7 @@ Route::get('/allatTorles', function () {
 
 Route::get('/menhelyAllatai',[MenhelyekController::class,'menhelyAllataiLista'])->name('menhelyAllatai');
 
-Route::get('/menhelyAdomanyai', function () {
-    return view('menhelyAdomanyai');
-})->name('menhelyAdomanyai');
+Route::get('/menhelyAdomanyai',[BarionController::class,"lista"])->name('menhelyAdomanyai');
 
 
 

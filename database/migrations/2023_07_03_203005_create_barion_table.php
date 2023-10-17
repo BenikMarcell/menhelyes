@@ -20,7 +20,7 @@ return new class extends Migration
             $table->string("total");
             $table->string("fizetes_ideje");
             $table->string("get_data");
-            $table->timestamps();
+            $table->datetime("beerkezes_idopontja");
         });
     }
 
