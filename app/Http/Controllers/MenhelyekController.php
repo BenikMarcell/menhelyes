@@ -252,9 +252,6 @@ class MenhelyekController extends Controller
             //redirect főoldalra
         }
     }
-<<<<<<< HEAD
-    
-=======
 
     public function menhelyAdomanyaiLista()
     {
@@ -268,5 +265,4 @@ class MenhelyekController extends Controller
             //redirect főoldalra
         }
     }
->>>>>>> 457efad461a2d07957a7e971745c47dbc4a7cea0
 }

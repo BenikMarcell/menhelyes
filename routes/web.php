@@ -19,7 +19,7 @@ use App\Http\Controllers\SzinekController;
 |
 */
 Route::get('/', [AllatokController::class, 'lista'])->name('lista');
-Route::get('menhelyek', [MenhelyekController::class, 'menhelyLista'])->name('menhelyLista');
+Route::get('/menhelyek', [MenhelyekController::class, 'menhelyLista'])->name('menhelyLista');
 //Route::get('menhelyAllatai', [AllatokController::class, 'allatIndex'])->name('allatIndex');
 
 
@@ -41,8 +41,8 @@ Route::get('/kepregisztracio', function () {
     return view('kepregisztracio');
 });
 //Route::get('/menhelyek', function () {
- //   return view('menhelyek');
-//});
+  // return view('menhelyek');
+// });
 Route::get('/allatok', function () {
     return view('allatok');
 });

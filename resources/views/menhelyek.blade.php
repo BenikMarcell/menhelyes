@@ -47,7 +47,7 @@
                         <h6>{{$menhely->menhely_leiras}}</h6>  
                             
                         </p>
-                        <a href="./egyAllat" class="btn rounded">Bővebben</a>
+                        <a href="./egyMenhely" class="btn rounded">Bővebben</a>
                     </div>
                 </div>
             </div>
