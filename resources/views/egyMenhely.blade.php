@@ -15,7 +15,7 @@
         <div class="col-6">
             <h3>Leírás:</h3>
             <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Officiis reprehenderit excepturi facere incidunt recusandae quod tempore totam, temporibus autem sit, corrupti repellat reiciendis aspernatur. Commodi reiciendis sint quaerat? Harum, praesentium!</p>
-            <a class="btn rounded" href="./menhelyProfil"> PROFIL </a>
+            
         </div>
         
     </div>

@@ -41,12 +41,6 @@ Route::get('/allatregisztracio', function () {
 Route::get('/kepregisztracio', function () {
     return view('kepregisztracio');
 });
-<<<<<<< HEAD
-//Route::get('/menhelyek', function () {
-  // return view('menhelyek');
-// });
-=======
->>>>>>> 09a88ed226b9e83171de036a06716a176fff551b
 Route::get('/allatok', function () {
     return view('allatok');
 });
