@@ -3,23 +3,23 @@ document.addEventListener("DOMContentLoaded", function () {
     let sorSzam = 0;
 
     function updatePage() {
-        const allatok = document.querySelectorAll(".allat-card");
+        const menhelyek = document.querySelectorAll(".menhely-card"); 
 
-        allatok.forEach((allat, index) => {
+        menhelyek.forEach((menhely, index) => {
             if (index >= sorSzam * elemekSzamaSoronkent && index < (sorSzam + 1) * elemekSzamaSoronkent) {
-                allat.style.display = "block";
+                menhely.style.display = "block";
             } else {
-                allat.style.display = "none";
+                menhely.style.display = "none";
             }
         });
 
         sorSzam++;
-        if (sorSzam * elemekSzamaSoronkent>= allatok.length) {
+        if (sorSzam * elemekSzamaSoronkent>= menhelyek.length) {
             sorSzam = 0;
         }
     }
 
     updatePage();
 
-    const autoPaginationInterval = setInterval(updatePage, 5000); // 60000 milliszekundum = 1 perc
+    const autoPaginationInterval = setInterval(updatePage, 10000); // 60000 milliszekundum = 1 perc
 });

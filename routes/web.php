@@ -18,8 +18,11 @@ use App\Http\Controllers\SzinekController;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
-Route::get('/', [AllatokController::class, 'lista'])->name('lista');
-Route::get('menhelyek', [MenhelyekController::class, 'menhelyLista'])->name('menhelyLista');
+
+//Route::get('/', [AllatokController::class, 'lista'])->name('lista');
+
+Route::get('/', [MenhelyekController::class, 'menhelyLista'])->name('menhelyLista');
+
 //Route::get('menhelyAllatai', [AllatokController::class, 'allatIndex'])->name('allatIndex');
 
 

@@ -17,23 +17,16 @@
     </div> <!-- </div> hozzáadva itt -->
 </div>
 
-
 <div class="container">
-
-
     @php
-    $kartyaSoronkent = 3; // A soronkénti elemek számát itt állíthatod be
-    $oldalSorSzam = 2; // A megjelenítendő sorok számát itt állíthatod be
-    $Szamlalo = 0;
-    $sorSzam = 0;
+    $elemekSzamaSoronkent = 3; // elemekSzamaSoronkent; // Soronkénti elemek száma
+    $sorokSzama = 1; // sorokSzama; // A megjelenítendő sorok számát itt állíthatod be
+    $sorSzam =  0;  //sorSzam;
     @endphp
     
-    @foreach ($allatok as $key => $allat)
-        @if ($sorSzam < $oldalSorSzam)
-            @if ($Szamlalo % $kartyaSoronkent === 0)
-        <div class="row">
-            @endif
-            <div class="col-md-3 m-4">
+    <div class="row">
+        @foreach ($allatok as $key => $allat)
+            <div class="col-md-4  allat-card">
                 <div class="card">
                     <img class="card-img-top" src="./images/kutya1.jpg" alt="Card image">
                     <div class="card-body">
@@ -46,33 +39,63 @@
                 </div>
             </div>
             @php
-            $Szamlalo++;
+            $sorSzam++;
             @endphp
-            @if ($Szamlalo % $kartyaSoronkent === 0)
-                </div>
-                @php
-                $sorSzam++;
-                @endphp
-            @endif
-        @endif
+            @if ($sorSzam % ($elemekSzamaSoronkent * $sorokSzama) === 0)
+    </div>
+    <div class="row">
+    @endif
     @endforeach
-    
-
-
+    </div>
 </div>
 
 
+<div class="container">
+    @php
+    $elemekSzamaSoronkent = 3; // elemekSzamaSoronkent; // Soronkénti elemek száma
+    $sorokSzama = 1; // sorokSzama; // A megjelenítendő sorok számát itt állíthatod be
+    $sorSzam =  0;  //sorSzam;
+    @endphp
+    
+    <div class="row">
+        @foreach ($menhelyek as $key => $menhely)
+        <div class="col-md-4  menhely-card">
+            <div class="card">
+                    <img class="card-img-top" src="./images/menhely.jpg" alt="Card image">
+                    <div class="card-body">
+                        <h4 class="card-title">{{$menhely->nev}}</h4>
+                        <h6>{{$menhely->telepules}}</h6>
+                        <h6>{{$menhely->telefon }}</h6>
+                        <!-- Egyéb adatok megjelenítése -->
+                        <a href="./egyAllat" class="btn rounded">Bővebben</a>
+                    </div>
+                </div>
+            </div>
+            @php
+            $sorSzam++;
+            @endphp
+            @if ($sorSzam % ($elemekSzamaSoronkent * $sorokSzama) === 0)
+    </div>
+    <div class="row">
+    @endif
+    @endforeach
+    </div>
+</div>
+
+    
 
 
-
-  
-
-     
 
 
 
 
 <script src="{{ asset('js/pagination.js') }}"></script>
+<script src="{{ asset('js/menhelyPagination.js') }}"></script>
+
+
+
+
+
 
 
   <!-- Modal -->

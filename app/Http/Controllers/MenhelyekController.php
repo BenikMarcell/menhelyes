@@ -5,17 +5,25 @@ namespace App\Http\Controllers;
 use App\Models\Menhely;
 use App\Models\Allat;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Log;
 
 class MenhelyekController extends Controller
 {
     /**
      * Display a listing of the resource.
      */
-    public function menhelyLista()
-    {
-        $menhelyek = Menhely::all();
-        return view('menhelyek', ["menhelyek" => $menhelyek]);
-    }
+   
+     public function menhelyLista()
+     {
+         $menhelyek = Menhely::all();
+         $allatok = Allat::all();
+         
+     
+         return view('welcome', ["menhelyek" => $menhelyek, "allatok" => $allatok]);
+     }
+     
+
+
 
     /**
      * Show the form for creating a new resource.
@@ -252,6 +260,9 @@ class MenhelyekController extends Controller
             //redirect főoldalra
         }
     }
+    
+    
+}    /*
 <<<<<<< HEAD
     
 =======
@@ -269,4 +280,4 @@ class MenhelyekController extends Controller
         }
     }
 >>>>>>> 457efad461a2d07957a7e971745c47dbc4a7cea0
-}
+}*/
