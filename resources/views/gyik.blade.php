@@ -6,69 +6,46 @@
 @section('content')
 <h1 class="text-center">Ez a GY.I.K. !</h1>
 
-<div  class="container-fluid">
+<div  class="container-fluid ">
 
-    <ol class="gyik list-group list-group-numbered">
-        <li class="gyik list-group-item d-flex justify-content-between align-items-start">
-            <div class="gyik ms-2 me-auto">
-                <div class="gyik fw-bold">Ez egy első kérdés?</div>
-                Vivamus hendrerit tempus dui, at pharetra arcu vestibulum at. Sed volutpat metus vitae velit condimentum
-                vestibulum. Suspendisse in feugiat diam. Ut laoreet ex tellus, vel condimentum ex semper ac. Etiam purus
-                nunc, commodo quis eleifend ut, sagittis non massa. Donec consectetur orci tincidunt mauris venenatis
-                elementum vitae at lectus. Quisque est velit, consectetur at blandit eu, vehicula non urna.
+    <div class="accordion px-5" id="accordionExample">
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingOne">
+            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+              Accordion Item #1
+            </button>
+          </h2>
+          <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+            <div class="accordion-body">
+              <strong>This is the first item's accordion body.</strong> It is shown by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
             </div>
-        </li>
-
-        <li class="gyik list-group-item d-flex justify-content-between align-items-start">
-            <div class="gyik ms-2 me-auto">
-                <div class="gyik fw-bold">Ez egy második kérdés?</div>
-                Vivamus hendrerit tempus dui, at pharetra arcu vestibulum at. Sed volutpat metus vitae velit condimentum
-                vestibulum. Suspendisse in feugiat diam. Ut laoreet ex tellus, vel condimentum ex semper ac. Etiam purus
-                nunc, commodo quis eleifend ut, sagittis non massa. Donec consectetur orci tincidunt mauris venenatis
-                elementum vitae at lectus. Quisque est velit, consectetur at blandit eu, vehicula non urna.
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingTwo">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+              Accordion Item #2
+            </button>
+          </h2>
+          <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+            <div class="accordion-body">
+              <strong>This is the second item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
             </div>
-        </li>
-
-        <li class="gyik list-group-item d-flex justify-content-between align-items-start">
-            <div class="gyik ms-2 me-auto">
-                <div class="gyik fw-bold">Ez egy harmadik kérdés?</div>
-                Vivamus hendrerit tempus dui, at pharetra arcu vestibulum at. Sed volutpat metus vitae velit condimentum
-                vestibulum. Suspendisse in feugiat diam. Ut laoreet ex tellus, vel condimentum ex semper ac. Etiam purus
-                nunc, commodo quis eleifend ut, sagittis non massa. Donec consectetur orci tincidunt mauris venenatis
-                elementum vitae at lectus. Quisque est velit, consectetur at blandit eu, vehicula non urna.
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingThree">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+              Accordion Item #3
+            </button>
+          </h2>
+          <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+            <div class="accordion-body">
+              <strong>This is the third item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
             </div>
-        </li>
-
-        <li class="gyik list-group-item d-flex justify-content-between align-items-start">
-            <div class="gyik ms-2 me-auto">
-                <div class="gyik fw-bold">Ez egy negyedik kérdés?</div>
-                Vivamus hendrerit tempus dui, at pharetra arcu vestibulum at. Sed volutpat metus vitae velit condimentum
-                vestibulum. Suspendisse in feugiat diam. Ut laoreet ex tellus, vel condimentum ex semper ac. Etiam purus
-                nunc, commodo quis eleifend ut, sagittis non massa. Donec consectetur orci tincidunt mauris venenatis
-                elementum vitae at lectus. Quisque est velit, consectetur at blandit eu, vehicula non urna.
-            </div>
-        </li>
-
-        <li class="gyik list-group-item d-flex justify-content-between align-items-start">
-            <div class="gyik ms-2 me-auto">
-                <div class="gyik fw-bold">Ez egy ötödik kérdés?</div>
-                Vivamus hendrerit tempus dui, at pharetra arcu vestibulum at. Sed volutpat metus vitae velit condimentum
-                vestibulum. Suspendisse in feugiat diam. Ut laoreet ex tellus, vel condimentum ex semper ac. Etiam purus
-                nunc, commodo quis eleifend ut, sagittis non massa. Donec consectetur orci tincidunt mauris venenatis
-                elementum vitae at lectus. Quisque est velit, consectetur at blandit eu, vehicula non urna.
-            </div>
-        </li>
-
-        <li class="gyik list-group-item d-flex justify-content-between align-items-start">
-            <div class="gyik ms-2 me-auto">
-                <div class="gyik fw-bold">Ez egy hatodik kérdés?</div>
-                Vivamus hendrerit tempus dui, at pharetra arcu vestibulum at. Sed volutpat metus vitae velit condimentum
-                vestibulum. Suspendisse in feugiat diam. Ut laoreet ex tellus, vel condimentum ex semper ac. Etiam purus
-                nunc, commodo quis eleifend ut, sagittis non massa. Donec consectetur orci tincidunt mauris venenatis
-                elementum vitae at lectus. Quisque est velit, consectetur at blandit eu, vehicula non urna.
-            </div>
-        </li>
-    </ol>
+          </div>
+        </div>
+      </div>
 </div>
 
 @endsection

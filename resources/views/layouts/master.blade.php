@@ -19,7 +19,7 @@
         <div class="container-fluid">
             
             <div class="col-3">
-                <a href="./fooldal"><img id="logokep" src="{{asset('images/logo.png')}}" alt="Logo"></a>
+                <a href="./"><img id="logokep" src="{{asset('images/logo.png')}}" alt="Logo"></a>
             </div>
             <div id="nav-gombok" class="col-6">
                 <a class="btn rounded" href="./menhelyek">Menhelyek</a>
@@ -96,7 +96,7 @@
           
                         <div class="col-3 center">
                             <div class="ml-5">
-                                <a class="btn" href="./fooldal">Rólunk</a>
+                                <a class="btn" href="./">Rólunk</a>
                             </div>
                         </div>
                     </div>

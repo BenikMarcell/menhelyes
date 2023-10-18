@@ -260,9 +260,8 @@ class MenhelyekController extends Controller
             //redirect főoldalra
         }
     }
-    
-    
-}    /*
+
+    /*
 <<<<<<< HEAD
     
 =======
@@ -280,4 +279,7 @@ class MenhelyekController extends Controller
         }
     }
 >>>>>>> 457efad461a2d07957a7e971745c47dbc4a7cea0
-}*/
+
+*/
+
+}
