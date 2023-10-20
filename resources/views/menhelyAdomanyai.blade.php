@@ -5,8 +5,9 @@
 @include('menhelyProfilNav')
 
 
-<h1>ITT LESZNEK A MENHELYEM ADOMÁNYAI LISTÁZVA</h1>
 <div class="container">
+    <h1 class="text-center mb-5">Adományaim:</h1>
+
     <table class="table table-striped">
         <tr>
             <th>Adomány ID</th>

@@ -27,7 +27,9 @@
             <h3>Adatok:</h3>
             <p>Menhely adatai...</p>
         </div>
-
+        <div class="col-6">
+            <a href="menhelyregisztracio" class="btn">Szerkesztés</a>
+        </div>
     </div>
 
 </div>
