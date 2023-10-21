@@ -51,7 +51,10 @@ Route::get('/gyik', function () {
 
 Route::get('/allatregisztracio', function () {
     return view('allatregisztracio');
-});
+})->name('allatregisztracio');
+Route::get('/menhelyregisztracio', function () {
+    return view('menhelyregisztracio');
+})->name('menhelyregisztracio');
 Route::get('/kepregisztracio', function () {
     return view('kepregisztracio');
 });
@@ -73,7 +76,7 @@ Route::get('/menhelyProfil', function () {
 
 Route::get('/allatTorles', function () {
     return view('allatTorles');
-});
+})->name('allatTorles');
 
 Route::get('/menhelyAllatai',[MenhelyekController::class,'menhelyAllataiLista'])->name('menhelyAllatai');
 

@@ -27,7 +27,7 @@ public function allatIndex()
 {
     
     
-    $allatok = Allat::all();
+    $allatok = Allat::Paginate(5);
     
     return view('menhelyAllatai', ["allatok" => $allatok]);
 }
