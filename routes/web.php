@@ -23,6 +23,7 @@ use App\Http\Controllers\BarionController;
 
 
 
+
 Route::get('/', [MenhelyekController::class, 'menhelyLista'])->name('menhelyLista');
 
 
@@ -31,6 +32,12 @@ Route::get('/', [MenhelyekController::class, 'menhelyLista'])->name('menhelyList
 Route::get('menhelyAllatai', [AllatokController::class, 'allatIndex'])->name('allatIndex');
 
 
+
+Route::resource('fajok', FajokController::class);
+Route::resource('szinek', SzinekController::class);
+Route::resource('bevmen', MenhelyekController::class);
+Route::resource('bevall', AllatokController::class);
+Route::resource('kepek', KepekController::class);
 
 Route::get('/fooldal', function () {
     return view('welcome');

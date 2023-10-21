@@ -30,7 +30,7 @@ class MenhelyekController extends Controller
      */
     public function create()
     {
-        return view('bevitel_menhelyek.create');
+        return view('bevmen.create');
     }
 
     /**
@@ -120,7 +120,7 @@ class MenhelyekController extends Controller
         $menhely->save();
         
         
-        return redirect()->route('bevitel_menhelyek.index')->with('success', 'Menhely sikeresen létrehozva.');
+        return redirect()->route('bevmen.index')->with('success', 'Menhely sikeresen létrehozva.');
 
     }
 
@@ -133,7 +133,7 @@ class MenhelyekController extends Controller
         $menhely = menhely::find($m_id);
 
         // a return megmutatja azt az id-t, amit megtaláltam
-        return view('bevitel_menhelyek.show', compact('menhely'));
+        return view('bevmen.show', compact('menhely'));
     }
 
     /**
@@ -143,7 +143,7 @@ class MenhelyekController extends Controller
     {
         $menhely = menhely::find($m_id);
 
-        return view('bevitel_menhelyek.edit', compact('menhely'));
+        return view('bevmen.edit', compact('menhely'));
     }
 
     /**
@@ -233,7 +233,7 @@ class MenhelyekController extends Controller
         $menhely->save();
         
         
-        return redirect()->route('bevitel_menhelyek.index')->with('success', 'Menhely sikeresen szerkesztve.');
+        return redirect()->route('bevmen.index')->with('success', 'Menhely sikeresen szerkesztve.');
     }
 
     /**
@@ -243,10 +243,10 @@ class MenhelyekController extends Controller
     {
         $menhely = menhely::find($m_id);
         $menhely->delete();
-        return redirect()->route('bevitel_menhelyek.index')->with('success', 'Menhely sikeresen törölve.');
+        return redirect()->route('bevmen.index')->with('success', 'Menhely sikeresen törölve.');
     }
 
-
+/*
 
     public function menhelyAllataiLista()
     {
@@ -261,10 +261,8 @@ class MenhelyekController extends Controller
         }
     }
 
-    /*
-<<<<<<< HEAD
     
-=======
+
 
     public function menhelyAdomanyaiLista()
     {
@@ -277,9 +275,6 @@ class MenhelyekController extends Controller
         }else{
             //redirect főoldalra
         }
-    }
->>>>>>> 457efad461a2d07957a7e971745c47dbc4a7cea0
-
-*/
+    }*/
 
 }
