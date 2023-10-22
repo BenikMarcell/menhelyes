@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Faj;
+use App\Models\Kep;
 use App\Models\Szin;
 use App\Models\Allat;
 use App\Models\Menhely;
@@ -46,6 +47,7 @@ public function index()
     {
         $fajok = Faj::all();
         $szinek = Szin::all();
+        $menhelyek = Menhely::all();
 
         return view('bevall.create', compact('fajok', 'szinek'));
     }
@@ -63,8 +65,15 @@ public function index()
 
             
             'nev'=>'required|min:3|max:100',
+            'faj'=>'required',
+            'szin'=>'required',
+            'kor'=>'required',
+            'leiras'=>'required',
+            'chip'=>'required',
+            'ivar_allapot'=>'required',
+            'nem'=>'required',
             
-            'af_id '=>'required',
+            
 
             /*
             'ivar_allapot'=>'required',
@@ -97,12 +106,21 @@ public function index()
         
         $allat = new Allat();
         $allat->nev =$request->nev;
+        $allat->af_id =$request->faj;
+        $allat->szin_id =$request->szin;
+        $allat->m_id =$request->m_id;
+        $allat->kor =$request->kor;
+        $allat->leiras =$request->leiras;
+        $allat-> nem=$request->nem;
+        $allat->ivar_allapot =$request->ivar_allapot;
+        $allat-> chip=$request->chip;
+        /*
         $allat->af_id =$request->af_id;
-       
+        $allat->m_id =$request->m_id;
         $allat->ivar_allapot =$request->ivar_allapot;
         $allat-> chip=$request->chip;
         $allat->kor =$request->kor;
-        $allat->leiras =$request->leiras;
+        $allat->leiras =$request->leiras;*/
         
         
         $allat->save();
@@ -114,9 +132,15 @@ public function index()
     /**
      * Display the specified resource.
      */
-    public function show(string $id)
+    public function show(string $a_id)
     {
-        //
+        //a find itt megkeresi a kijelölt id-t, amit meg akarok mutatni
+        $allat = allat::find($a_id);
+
+
+        // a return megmutatja azt az id-t, amit megtaláltam
+        return view('bevall.show', compact('allat'));
+          
     }
 
     /**
@@ -142,5 +166,22 @@ public function index()
     {
         //
     }
+    public function kartyaKep(string $a_id)
+{
+    $allat = Allat::find($a_id);
+    
+    if ($allat && $allat->kep) {
+        $image = $allat->kep;
+        return view('welcome', compact('allat', 'image'));
+    }
+    $error = 'Kép nem található';
+    return view('welcome', compact('allat', 'error'));
+    
+}
 
 }
+
+
+    
+
+

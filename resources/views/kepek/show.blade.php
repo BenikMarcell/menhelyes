@@ -17,7 +17,8 @@
       //   Kép id:         {{$kep->ak_id}}  <br>
       //   Állat id        {{$kep->a_id}}  <br>
       //   Cím             {{$kep->kep_cim}}  <br>
-      //   src             <img  src="{{ asset('storage/images/'. $kep->src) }}" alt="alt ={{$kep->src}}"> <br>    
+                           <img src="{{ asset('storage/images/'. $kep->src) }}" alt="{{$kep->src}}"> <br>
+                           <img src="{{ url('storage/images/'.$kep->src) }}" alt="{{$kep->src}}"> <br>    
       //   alt             {{$kep->alt}}  <br>
       //   Leírás          {{$kep->leiras}}  <br>
       

@@ -2,8 +2,9 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Menhely;
+use App\Models\Kep;
 use App\Models\Allat;
+use App\Models\Menhely;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Log;
 
@@ -17,9 +18,9 @@ class MenhelyekController extends Controller
      {
          $menhelyek = Menhely::all();
          $allatok = Allat::all();
-         
+         $kepek = Kep::all();
      
-         return view('welcome', ["menhelyek" => $menhelyek, "allatok" => $allatok]);
+         return view('welcome', ["menhelyek" => $menhelyek, "allatok" => $allatok, "kepek" => $kepek]);
      }
      
 

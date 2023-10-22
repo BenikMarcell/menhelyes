@@ -22,6 +22,7 @@ use App\Http\Controllers\BarionController;
 
 
 
+Route::get('/allat/{id}/kep', 'AllatokController@kartyaKep')->name('allat.image');
 
 
 Route::get('/', [MenhelyekController::class, 'menhelyLista'])->name('menhelyLista');

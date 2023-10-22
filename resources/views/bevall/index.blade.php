@@ -1,6 +1,10 @@
-@extends('layouts.app2')
-
+@extends('layouts.master')
+@section('title',"Állatok")
 @section('content')
+
+
+
+<div class="container">
 
 
 <h1>Állat lista </h1>
@@ -25,3 +29,5 @@
         
     @endforeach
 </ul>
+</div>
+@endsection

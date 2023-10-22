@@ -28,12 +28,11 @@
         @foreach ($allatok as $key => $allat)
             <div class="col-md-4  allat-card">
                 <div class="card">
-                    <img class="card-img-top" src="./images/kutya1.jpg" alt="Card image">
-                    <div class="card-body">
+                    <img class="card-img-top" src="{{ asset('storage/images/' . $allat->kep->src) }}" alt="Próba {{ $allat->kep->src }}">
+                        <div class="card-body">
                         <h4 class="card-title">{{$allat->nev}}</h4>
                         <h6>{{$allat->kor}} hónapos</h6>
                         <h6>{{$allat->nem}}</h6>
-                        <!-- Egyéb adatok megjelenítése -->
                         <a href="./egyAllat" class="btn rounded">Bővebben</a>
                     </div>
                 </div>
@@ -66,7 +65,6 @@
                         <h4 class="card-title">{{$menhely->nev}}</h4>
                         <h6>{{$menhely->telepules}}</h6>
                         <h6>{{$menhely->telefon }}</h6>
-                        <!-- Egyéb adatok megjelenítése -->
                         <a href="./egyAllat" class="btn rounded">Bővebben</a>
                     </div>
                 </div>
@@ -89,14 +87,8 @@
 
 
 
-<script src="{{ asset('js/pagination.js') }}"></script>
+<script src="{{ asset('js/pagination.js') }}"></script> 
 <script src="{{ asset('js/menhelyPagination.js') }}"></script>
-
-
-
-
-
-
 
   <!-- Modal -->
   <script

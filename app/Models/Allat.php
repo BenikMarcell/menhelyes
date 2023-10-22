@@ -37,4 +37,9 @@ class Allat extends Model
         return $this->hasMany(Kep::class);
 
     }
+
+    public function kep()
+{
+    return $this->hasOne(Kep::class, 'a_id', 'a_id');
+}
 }
