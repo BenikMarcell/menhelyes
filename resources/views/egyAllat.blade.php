@@ -24,13 +24,12 @@
     <div class="row">
 
         <div class="col-6">
-            <h6>Kor:.................{{$allat->kor}} hónapos</h6>
-            <h6>Nem:...............{{$allat->nem}}</h6>
-            <h6>Itt az id mentődik el! Ez nem jó!</h6>
-            <h6>Ivar-állapot:..{{$allat->ivar_allapot}}</h6>
-            <h6>Chip:...............{{$allat->chip}}</h6>
-            <h6>Szín:...............{{$allat->szin_id}}</h6>
-            <h6>Faj:.................{{$allat->af_id}}</h6>
+            <h6>{{$allat->kor}} hónapos</h6>
+            <h6>{{$allat->nem}}</h6>
+            <h6> {{$allat->ivar_allapot}}</h6>
+            <h6>Chip: {{$allat->chip}}</h6>
+            <h6>Színe: {{$allat->allat_szin->szin}}</h6>
+            <h6>Faj: {{$allat->allat_faj->faj}}</h6>
         </div>
 
         <div class="col-6 text-center">

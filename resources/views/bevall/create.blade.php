@@ -57,10 +57,10 @@
         
  
              <div class="mb-3">
-                <h5>Válassz a nemek közül!</h5>
+                <h5>Nem</h5>
                 <select class="form-select" id="nem" name="nem" size="2" aria-label="size 2 select example">
-                <option value="1">Lány</option>
-                <option value="2">Fiú</option>
+                <option value="Lány">Lány</option>
+                <option value="Fiú">Fiú</option>
                 </select>
                 @error('nem')
                 <div class="alert alert-warning">{{$message}} </div>
@@ -70,8 +70,8 @@
             <div class="mb-3">
                 <h5>Válassz a nemzőképesség szerint!</h5>
                 <select class="form-select" id="ivar_allapot" name="ivar_allapot" size="2" aria-label="size 2 select example">
-                <option value="1">Ivartalanított</option>
-                <option value="2">Nem ivartalanított</option>
+                <option value="Ivartalanított">Ivartalanított</option>
+                <option value="Nem ivartalanított">Nem ivartalanított</option>
                 </select>
                  @error('ivar_allapot')
                 <div class="alert alert-warning">{{$message}} </div>
@@ -81,8 +81,8 @@
             <div class="mb-3">
                 <h5>Rendelkezik chippel?</h5>
                 <select class="form-select" id="chip" name="chip" size="2" aria-label="size 2 select example">
-                <option value="1">Igen</option>
-                <option value="2">Nem</option>
+                <option value="Igen">Igen</option>
+                <option value="Nem">Nem</option>
                 </select>
                  @error('chip')
                 <div class="alert alert-warning">{{$message}} </div>

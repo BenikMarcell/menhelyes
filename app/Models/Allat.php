@@ -22,13 +22,13 @@ class Allat extends Model
 
     public function allat_szin()
     {
-        return $this->belongsTo(Szin::class);
+        return $this->belongsTo(Szin::class, 'szin_id', 'szin_id');
 
     }
     
     public function allat_faj()
     {
-        return $this->belongsTo(Faj::class);
+        return $this->belongsTo(Faj::class, 'af_id', 'af_id');
 
     }
 
