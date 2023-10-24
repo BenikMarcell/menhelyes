@@ -20,18 +20,13 @@ use App\Http\Controllers\BarionController;
 |
 */
 
-
+// KG routok kezdete -----------------------------------------------------------------------------------------
 
 Route::get('/allat/{id}/kep', 'AllatokController@kartyaKep')->name('allat.image');
-
-
 Route::get('/', [MenhelyekController::class, 'menhelyLista'])->name('menhelyLista');
-
-
-
-
 Route::get('menhelyAllatai', [AllatokController::class, 'allatIndex'])->name('allatIndex');
-
+Route::get('/egyAllat/{a_id}', [AllatokController::class, 'egyAllat'])->name('egyAllat');
+Route::get('/menhelyAllatai',[MenhelyekController::class,'menhelyAllataiLista'])->name('menhelyAllatai');
 
 
 Route::resource('fajok', FajokController::class);
@@ -39,6 +34,11 @@ Route::resource('szinek', SzinekController::class);
 Route::resource('bevmen', MenhelyekController::class);
 Route::resource('bevall', AllatokController::class);
 Route::resource('kepek', KepekController::class);
+// KG routok vége ----------------------------------------------------------------------------------
+
+
+
+
 
 Route::get('/fooldal', function () {
     return view('welcome');
@@ -66,7 +66,7 @@ Route::get('/egyMenhely', function () {
     return view('egyMenhely');
 });
 Route::get('/egyAllat', function () {
-    return view('egyAllat');
+  return view('egyAllat');
 });
 Route::get('/tamogatoiProfil', function () {
     return view('tamogatoiProfil');
@@ -79,7 +79,7 @@ Route::get('/allatTorles', function () {
     return view('allatTorles');
 })->name('allatTorles');
 
-Route::get('/menhelyAllatai',[MenhelyekController::class,'menhelyAllataiLista'])->name('menhelyAllatai');
+
 
 Route::get('/menhelyAdomanyai',[BarionController::class,"lista"])->name('menhelyAdomanyai');
 

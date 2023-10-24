@@ -8,15 +8,15 @@
 
     <div class="row">
 
-        <h1 class="text-center mb-5">Állat Neve</h1>
+        <h1 class="text-center mb-5">{{$allat->nev}}</h1>
 
         <div class="col-6">
             <img class="profilkep" src="./images/kutya1.jpg" alt="profilkep">
         </div>
 
         <div class="col-6">
-            <h3>Leírás:</h3>
-            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Officiis reprehenderit excepturi facere incidunt recusandae quod tempore totam, temporibus autem sit, corrupti repellat reiciendis aspernatur. Commodi reiciendis sint quaerat? Harum, praesentium!</p>
+            
+            <p>{{$allat->leiras}}</p>
         </div>
         
     </div>
@@ -24,8 +24,10 @@
     <div class="row">
 
         <div class="col-6">
-            <h3>Adatok:</h3>
-            <p>Állat adatai...</p>
+            <h6>{{$allat->kor}} hónapos</h6>
+            <h6>{{$allat->nem}}</h6>
+            <h6>{{$allat->ivar_allapot}}</h6>
+            <h6>{{$allat->chip}}</h6>
         </div>
 
         <div class="col-6 text-center">
@@ -49,7 +51,8 @@
 
     </div>
 
-    <a id="visszaBtn" href="./egyMenhely" class="btn rounded">Vissza a menhelyhez!</a>
+    <a id="visszaBtn" href="{{ url('/') }}" class="btn rounded">Vissza a Főoldalra!</a>
+
 </div>
 
 @endsection

@@ -33,7 +33,10 @@
                         <h4 class="card-title">{{$allat->nev}}</h4>
                         <h6>{{$allat->kor}} hónapos</h6>
                         <h6>{{$allat->nem}}</h6>
-                        <a href="./egyAllat" class="btn rounded">Bővebben</a>
+                        <a href="{{ route('egyAllat', ['a_id' => $allat->a_id]) }}" class="btn rounded">Bővebben</a>
+
+
+
                     </div>
                 </div>
             </div>
@@ -65,7 +68,7 @@
                         <h4 class="card-title">{{$menhely->nev}}</h4>
                         <h6>{{$menhely->telepules}}</h6>
                         <h6>{{$menhely->telefon }}</h6>
-                        <a href="./egyAllat" class="btn rounded">Bővebben</a>
+                        <a href="" class="btn rounded">Bővebben</a>
                     </div>
                 </div>
             </div>

@@ -13,6 +13,23 @@ use Illuminate\Support\Facades\Log;
 class AllatokController extends Controller
 {
 
+
+    public function egyAllat($a_id)
+{
+    $allat = Allat::find($a_id);
+
+ /*   if (!$allat) {
+        // Kezeljük az esetet, ha az állat nem található
+        return redirect()->route('/')->with('error', 'Az állat nem található.');
+    }*/
+
+    return view('egyAllat', compact('allat'));
+}
+
+
+
+
+
     public function lista()
 {
     $allatok = Allat::all();
