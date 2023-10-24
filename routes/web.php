@@ -28,12 +28,13 @@ Route::get('menhelyAllatai', [AllatokController::class, 'allatIndex'])->name('al
 Route::get('/egyAllat/{a_id}', [AllatokController::class, 'egyAllat'])->name('egyAllat');
 Route::get('/menhelyAllatai',[MenhelyekController::class,'menhelyAllataiLista'])->name('menhelyAllatai');
 
-
+// Ezeket átdolgozni, a Tanár kérése szerint!
 Route::resource('fajok', FajokController::class);
 Route::resource('szinek', SzinekController::class);
 Route::resource('bevmen', MenhelyekController::class);
 Route::resource('bevall', AllatokController::class);
 Route::resource('kepek', KepekController::class);
+
 // KG routok vége ----------------------------------------------------------------------------------
 
 

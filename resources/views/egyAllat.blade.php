@@ -11,7 +11,7 @@
         <h1 class="text-center mb-5">{{$allat->nev}}</h1>
 
         <div class="col-6">
-            <img class="profilkep" src="./images/kutya1.jpg" alt="profilkep">
+            <img class="profilkep" src="{{ asset('storage/images/' . $allat->kep->src) }}" alt="Próba {{ $allat->kep->src }}">
         </div>
 
         <div class="col-6">
