@@ -21,8 +21,7 @@ use App\Http\Controllers\BarionController;
 */
 
 // KG routok kezdete -----------------------------------------------------------------------------------------
-
-Route::get('/allat/{id}/kep', 'AllatokController@kartyaKep')->name('allat.image');
+Route::get('/allat/{id}/kep', [AllatokController::class, 'kartyaKep'])->name('allat.image');
 Route::get('/', [MenhelyekController::class, 'menhelyLista'])->name('menhelyLista');
 Route::get('menhelyAllatai', [AllatokController::class, 'allatIndex'])->name('allatIndex');
 Route::get('/egyAllat/{a_id}', [AllatokController::class, 'egyAllat'])->name('egyAllat');
