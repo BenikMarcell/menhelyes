@@ -24,9 +24,17 @@ use App\Http\Controllers\BarionController;
 Route::get('/allat/{id}/kep', [AllatokController::class, 'kartyaKep'])->name('allat.image');
 Route::get('/', [MenhelyekController::class, 'menhelyLista'])->name('menhelyLista');
 Route::get('menhelyAllatai', [AllatokController::class, 'allatIndex'])->name('allatIndex');
-Route::get('/egyAllat/{a_id}', [AllatokController::class, 'egyAllat'])->name('egyAllat');
-Route::get('/menhelyAllatai',[MenhelyekController::class,'menhelyAllataiLista'])->name('menhelyAllatai');
 
+Route::get('/menhelyAllatai',[MenhelyekController::class,'menhelyAllataiLista'])->name('menhelyAllatai');
+Route::get('/menhelyek', [MenhelyekController::class, 'menhelyListaMenhelyek'])->name('menhelyListaMenhelyek');
+
+Route::get('/egyMenhely/{m_id}', [MenhelyekController::class, 'egyMenhely'])->name('egyMenhely');
+Route::get('/egyAllat/{a_id}', [AllatokController::class, 'egyAllat'])->name('egyAllat');
+
+Route::get('/menhelyek/{telepules}', [MenhelyekController::class, 'menhelyekByTelepules'])->name('menhelyekByTelepules');
+
+Route::post('/menhelyek/kereses', [MenhelyekController::class, 'kereses'])->name('menhelyekKereses');
+Route::get('/megkeresettMenhely/{m_id}', [MenhelyekController::class, 'kereses'])->name('kereses');
 // Ezeket átdolgozni, a Tanár kérése szerint!
 Route::resource('fajok', FajokController::class);
 Route::resource('szinek', SzinekController::class);
@@ -62,15 +70,12 @@ Route::get('/kepregisztracio', function () {
 Route::get('/allatok', function () {
     return view('allatok');
 });
-Route::get('/egyMenhely', function () {
-    return view('egyMenhely');
-});
-Route::get('/egyAllat', function () {
-  return view('egyAllat');
-});
+
+
 Route::get('/tamogatoiProfil', function () {
     return view('tamogatoiProfil');
 });
+
 Route::get('/menhelyProfil', function () {
     return view('menhelyProfil');
 })->name('menhelyProfil');

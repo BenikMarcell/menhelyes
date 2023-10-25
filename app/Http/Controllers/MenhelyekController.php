@@ -6,6 +6,7 @@ use App\Models\Kep;
 use App\Models\Allat;
 use App\Models\Menhely;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Log;
 
 class MenhelyekController extends Controller
@@ -22,6 +23,43 @@ class MenhelyekController extends Controller
      
          return view('welcome', ["menhelyek" => $menhelyek, "allatok" => $allatok, "kepek" => $kepek]);
      }
+
+     
+     public function menhelyListaMenhelyek()
+     {
+        $menhelyek = Menhely::all();
+
+        $telepulesek = Menhely::select('telepules', DB::raw('count(*) as count'))
+        ->groupBy('telepules')
+        ->orderBy('telepules', 'asc')
+        ->get();
+     
+         return view('menhelyek', ["menhelyek" => $menhelyek, "telepulesek" => $telepulesek]);
+     }
+
+     public function menhelyekByTelepules($telepules)
+{
+    $menhelyek = Menhely::where('telepules', $telepules)->get();
+    return view('menhelyekbytelepules', compact('menhelyek', 'telepules'));
+}
+
+   public function egyMenhely($m_id)
+{
+    $menhely = Menhely::find($m_id);
+    return view('egyMenhely', ['menhely' => $menhely]);
+}
+
+public function kereses(Request $request)
+{
+    $kereses = $request->input('nev');
+    
+    $menhelyek = Menhely::where('nev', 'like', '%' . $kereses . '%')->get();
+
+    return view('megkeresettMenhely', ['menhelyek' => $menhelyek]);
+}
+
+     
+     
      
 
 
@@ -52,7 +90,7 @@ class MenhelyekController extends Controller
             'email'=>'required|email',
             'telefon'=>'required|numeric',
             'menhely_leiras'=>'required|min:3',
-            'weblink'=>'required|url'
+            'weblink'=>'required'
            
         ],
 
@@ -98,7 +136,7 @@ class MenhelyekController extends Controller
                 "menhely_leiras.min" => "Minimum 3 karaktert adj meg!",
 
                 "weblink.required" => "A mező kitöltése kötelező!",
-                "weblink.url" => "A  linknek valósnak kell lenni!",
+                
                 
                 
         ]);   
@@ -247,35 +285,6 @@ class MenhelyekController extends Controller
         return redirect()->route('bevmen.index')->with('success', 'Menhely sikeresen törölve.');
     }
 
-/*
 
-    public function menhelyAllataiLista()
-    {
-
-        $menhely = Menhely::where("u_id",auth()->user()->id)->first();
-        if($menhely != NULL){
-            $menhelyId = $menhely->m_id;
-            $allatok = Allat::where('m_id',$menhelyId)->paginate(3);
-            return view('menhelyAllatai',["allatok" => $allatok]);
-        }else{
-            //redirect főoldalra
-        }
-    }
-
-    
-
-
-    public function menhelyAdomanyaiLista()
-    {
-
-        $menhely = Menhely::where("u_id",auth()->user()->id)->first();
-        if($menhely != NULL){
-            $menhelyId = $menhely->m_id;
-            $adomanyok = Adomany::where('m_id',$menhelyId)->paginate(3);
-            return view('menhelyAdomanyai',["adomanyok" => $adomanyok]);
-        }else{
-            //redirect főoldalra
-        }
-    }*/
 
 }

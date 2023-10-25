@@ -9,6 +9,7 @@
     
 
 
+
 <div class="container">
     <div class="row">
         <div class="col-6">
@@ -16,6 +17,10 @@
         </div>
     </div> <!-- </div> hozzáadva itt -->
 </div>
+
+
+<
+
 
 <div class="container">
     @php
@@ -34,9 +39,6 @@
                         <h6>{{$allat->kor}} hónapos</h6>
                         <h6>{{$allat->nem}}</h6>
                         <a href="{{ route('egyAllat', ['a_id' => $allat->a_id]) }}" class="btn rounded">Bővebben</a>
-
-
-
                     </div>
                 </div>
             </div>

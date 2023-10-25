@@ -18,10 +18,7 @@ class AllatokController extends Controller
 {
     $allat = Allat::find($a_id);
 
- /*   if (!$allat) {
-        // Kezeljük az esetet, ha az állat nem található
-        return redirect()->route('/')->with('error', 'Az állat nem található.');
-    }*/
+ 
 
     return view('egyAllat', compact('allat'));
 }
