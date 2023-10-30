@@ -14,38 +14,47 @@ class AllatokController extends Controller
 {
 
 
-    public function egyAllat($a_id)
-{
+    public function egyAllat($a_id) // Egy állat adatai
+    {
     $allat = Allat::find($a_id);
 
  
 
     return view('egyAllat', compact('allat'));
-}
-
-
-
-
-
-    public function lista()
-{
-    $allatok = Allat::all();
+    }
+public function kartyaKep(string $a_id) // állat kartyán a kép
+ 
+    {
+    $allat = Allat::find($a_id);
     
-
-    return view('welcome', ["allatok" => $allatok]);
-}
-
-
+    if ($allat && $allat->kep) {
+        $image = $allat->kep;
+        return view('welcome', compact('allat', 'image'));
+    }
+    $error = 'Kép nem található';
+    return view('welcome', compact('allat', 'error'));
     
+    }
 
-public function allatIndex()
-{
+
+    public function allatokLista()
+    {
+        $allatok = Allat::all();
+        
+    
+        return view('allatok',  ["allatok" => $allatok]);
+    }
+    
+   
+
+    public function allatIndex()
+    {
     
     
     $allatok = Allat::Paginate(5);
     
     return view('menhelyAllatai', ["allatok" => $allatok]);
-}
+    }
 
 
 public function index()
@@ -89,32 +98,7 @@ public function index()
             
             
 
-            /*
-            'ivar_allapot'=>'required',
             
-            'nem'=>'required',
-            'chip '=>'required',
-            'leiras'=>'required|min:3',*/
- /*
-        ],
-
-      [
-        "nev.required" => "A mező kitöltése kötelező!",
-                "nev.min" => "Minimum 3 karaktert adj meg!",
-                "nev.max" => "Maximum 100 karaktert adhatsz meg!", 
-                
-                "kor.required" => "A mező kitöltése kötelező!",
-
-                "ivar_allapot.required" => "A mező kitöltése kötelező!",
-
-                
-                
-                "nem.required" => "A mező kitöltése kötelező!",
-
-                "chip.min" => "A mező kitöltése kötelező!",
-
-                "leiras.required" => "A mező kitöltése kötelező!",
-                "leiras.min" => "Minimum 10 karaktert adj meg!",*/
   
         ]);  
         
@@ -128,15 +112,6 @@ public function index()
         $allat-> nem=$request->nem;
         $allat->ivar_allapot =$request->ivar_allapot;
         $allat-> chip=$request->chip;
-        /*
-        $allat->af_id =$request->af_id;
-        $allat->m_id =$request->m_id;
-        $allat->ivar_allapot =$request->ivar_allapot;
-        $allat-> chip=$request->chip;
-        $allat->kor =$request->kor;
-        $allat->leiras =$request->leiras;*/
-        
-        
         $allat->save();
         
         return redirect()->route('bevall.index')->with('success', 'Állat sikeresen létrehozva.');
@@ -180,18 +155,9 @@ public function index()
     {
         //
     }
-    public function kartyaKep(string $a_id)
-{
-    $allat = Allat::find($a_id);
+
+
     
-    if ($allat && $allat->kep) {
-        $image = $allat->kep;
-        return view('welcome', compact('allat', 'image'));
-    }
-    $error = 'Kép nem található';
-    return view('welcome', compact('allat', 'error'));
-    
-}
 
 }
 

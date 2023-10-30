@@ -51,6 +51,9 @@ class DatabaseSeeder extends Seeder
           $this->call([
             KepTableSeeder::class,
           ]);
+          $this->call([
+            KepMenhelyTableSeeder::class,
+          ]);
 
 
 

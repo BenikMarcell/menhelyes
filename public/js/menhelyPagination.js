@@ -1,25 +1,36 @@
-document.addEventListener("DOMContentLoaded", function () {
-    const elemekSzamaSoronkent = 3; // Soronkénti elemek száma
-    let sorSzam = 0;
+// Menhelyekre vonatkozó JavaScript kód
+// addig lapozható vissza, amíg az elejére nem érünk
+// jQuery csak az egyszerűség kedvéért 
+// Online jQuery betöltése master.balde
+const elemekSzamaSoronkentMenhelyek = 3;
+let jelenlegiOldalMenhelyek = 0;
+const jsMenhelyek = $(".menhely-card");
 
-    function updatePage() {
-        const menhelyek = document.querySelectorAll(".menhely-card"); 
-
-        menhelyek.forEach((menhely, index) => {
-            if (index >= sorSzam * elemekSzamaSoronkent && index < (sorSzam + 1) * elemekSzamaSoronkent) {
-                menhely.style.display = "block";
-            } else {
-                menhely.style.display = "none";
-            }
-        });
-
-        sorSzam++;
-        if (sorSzam * elemekSzamaSoronkent>= menhelyek.length) {
-            sorSzam = 0;
+function updatePageMenhelyek() {
+    jsMenhelyek.each(function (index) {
+        if (index >= jelenlegiOldalMenhelyek * elemekSzamaSoronkentMenhelyek && index < (jelenlegiOldalMenhelyek + 1) * elemekSzamaSoronkentMenhelyek) {
+            $(this).show();
+        } else {
+            $(this).hide();
         }
+    });
+}
+
+updatePageMenhelyek();
+
+const autoPaginationIntervalMenhelyek = setInterval(function () {
+    if (jelenlegiOldalMenhelyek < Math.ceil(jsMenhelyek.length / elemekSzamaSoronkentMenhelyek) - 1) {
+        jelenlegiOldalMenhelyek++;
+    } else {
+        jelenlegiOldalMenhelyek = 0;
     }
+    updatePageMenhelyek();
+}, 5000);
 
-    updatePage();
-
-    const autoPaginationInterval = setInterval(updatePage, 10000); // 60000 milliszekundum = 1 perc
+$(".menhelyVissza").click(function () {
+    if (jelenlegiOldalMenhelyek > 0) {
+        jelenlegiOldalMenhelyek--;
+        updatePageMenhelyek();
+        console.log("Vissza gombra kattintás történt menhelyeknél.");
+    }
 });

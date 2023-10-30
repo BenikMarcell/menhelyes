@@ -1,25 +1,38 @@
-document.addEventListener("DOMContentLoaded", function () {
-    const elemekSzamaSoronkent = 3; // Soronkénti elemek száma
-    let sorSzam = 0;
+// Állatokra vonatkozó JavaScript kód 
+// addig lapozható vissza, amíg az elejére nem érünk
+// jQuery csak az egyszerűség kedvéért 
+// Online jQuery betöltése master.balde
 
-    function updatePage() {
-        const allatok = document.querySelectorAll(".allat-card");
+const elemekSzamaSoronkentAllatok = 3;
+let jelenlegiOldalAllatok = 0;
+const jsAllatok = $(".allat-card");
 
-        allatok.forEach((allat, index) => {
-            if (index >= sorSzam * elemekSzamaSoronkent && index < (sorSzam + 1) * elemekSzamaSoronkent) {
-                allat.style.display = "block";
-            } else {
-                allat.style.display = "none";
-            }
-        });
-
-        sorSzam++;
-        if (sorSzam * elemekSzamaSoronkent>= allatok.length) {
-            sorSzam = 0;
+function updatePageAllatok() {
+    jsAllatok.each(function (index) {
+        if (index >= jelenlegiOldalAllatok * elemekSzamaSoronkentAllatok && index < (jelenlegiOldalAllatok + 1) * elemekSzamaSoronkentAllatok) {
+            $(this).show();
+        } else {
+            $(this).hide();
         }
+    });
+}
+
+updatePageAllatok();
+
+const autoPaginationIntervalAllatok = setInterval(function () {
+    if (jelenlegiOldalAllatok < Math.ceil(jsAllatok.length / elemekSzamaSoronkentAllatok) - 1) {
+        jelenlegiOldalAllatok++;
+    } else {
+        jelenlegiOldalAllatok = 0;
     }
+    updatePageAllatok();
+}, 5000);
 
-    updatePage();
-
-    const autoPaginationInterval = setInterval(updatePage, 5000); // 60000 milliszekundum = 1 perc
+$(".vissza").click(function () {
+    if (jelenlegiOldalAllatok > 0) {
+        jelenlegiOldalAllatok--;
+        updatePageAllatok();
+        console.log("Vissza gombra kattintás történt állatoknál.");
+    }
 });
+

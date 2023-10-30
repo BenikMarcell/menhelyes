@@ -1,16 +1,16 @@
 @extends('layouts.master')
-@section('title',"Állatok")
+@section('title',"Menhelyek")
 @section('content')
 
 
 <h1>Szerkesztés </h1>
 <br>
-<h3>views/kepek/edit</h3>
+<h3>views/menhelykepek/edit</h3>
 
-@error('a_id')
+@error('m_id')
 <div class="alert alert-warning">{{$message}} </div>
 @enderror
-@error('kep_cim')
+@error('kepCim')
 <div class="alert alert-warning">{{$message}} </div>
 @enderror
 @error('src')
@@ -26,7 +26,7 @@
                     
 
 
-<form action="{{route('kepek.update', $kep->ak_id)}}" method="POST">
+<form action="{{route('menhelykepek.update', $kep->mk_id)}}" method="POST">
 
     
     @csrf
@@ -38,13 +38,13 @@
         <div class="row">
             <div class="col-6 border border-primary m-3 p-4">
                 <div class="mb-3">
-                    <label for="a_id" class="form-label">állat id - ez csak egy múló rosszullét</label>
-                    <input type="text" class="form-control" name="a_id" id="a_id" value="{{ old('a_id', $kep->a_id)}}">
+                    <label for="m_id" class="form-label">menhely id - ez csak egy múló rosszullét</label>
+                    <input type="text" class="form-control" name="m_id" id="m_id" value="{{ old('m_id', $kep->m_id)}}">
                     
                 </div>
                 <div class="mb-3">
-                    <label for="kep_cim" class="form-label">A kép címe</label>
-                    <input type="text" class="form-control" id="kep_cim" name="kep_cim" value="{{ old('kep_cim', $kep->kep_cim)}}">
+                    <label for="kepCim" class="form-label">A kép címe</label>
+                    <input type="text" class="form-control" id="kepCim" name="kepCim" value="{{ old('kepCim', $kep->kepCim)}}">
                     
                 </div>
                 <div class="mb-3">

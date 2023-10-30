@@ -7,7 +7,7 @@
     <div class="row">
         <div class="col-6">
             <h1>Menhely Kereső</h1>
-            <<form class="form form-control" form action="{{route('menhelyekKereses')}}" method="POST">
+            <form class="form form-control" form action="{{route('menhelyekKereses')}}" method="POST">
                 @csrf
                 <div>
                     <label for="nev">Szűkítés név alapján:</label>
@@ -52,7 +52,7 @@
             @endif
             <div class="col-md-3 m-4">
                 <div class="card">
-                    <img class="card-img-top" src="./images/menhelykep.jpg" alt="Card image">
+                    <img class="card-img-top" src="{{ asset('storage/images/' . $menhely->kep->src) }}" alt="Próba {{ $menhely->kep->src }}">
                     <div class="card-body">
                         <h4 class="card-title">{{$menhely->nev}}</h4>
                         <h6>{{$menhely->telepules}}</h6>

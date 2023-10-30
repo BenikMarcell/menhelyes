@@ -15,7 +15,7 @@ class MenhelyekController extends Controller
      * Display a listing of the resource.
      */
    
-     public function menhelyLista()
+     public function menhelyLista() // welcome oldalon a kártyák: állatok és menhelyek
      {
          $menhelyek = Menhely::all();
          $allatok = Allat::all();
@@ -24,8 +24,21 @@ class MenhelyekController extends Controller
          return view('welcome', ["menhelyek" => $menhelyek, "allatok" => $allatok, "kepek" => $kepek]);
      }
 
+     public function getAllatok() // AJAX
+{
+    $allatok = Allat::all();
+    return response()->json($allatok);
+}
+
+public function getMenhelyek() //AJAX
+{
+    $menhelyek = Menhely::all();
+    return response()->json($menhelyek);
+}
+
+
      
-     public function menhelyListaMenhelyek()
+     public function menhelyListaMenhelyek()  //menhelyek oldlon kilistázza a menhelyeket, előtte megszámolja mennyi van egy településen
      {
         $menhelyek = Menhely::all();
 
@@ -57,7 +70,18 @@ public function kereses(Request $request)
 
     return view('megkeresettMenhely', ['menhelyek' => $menhelyek]);
 }
-
+public function menhelyKep(string $m_id)
+{
+    $menhely = Menhely::find($m_id);
+    
+    if ($menhely && $menhely->kep) {
+        $image = $menhely->kep;
+        return view('welcome', compact('menhely', 'image'));
+    }
+    $error = 'Kép nem található';
+    return view('welcome', compact('menhely', 'error'));
+    
+}
      
      
      

@@ -1,11 +1,11 @@
 @extends('layouts.master')
-@section('title',"Állatok")
+@section('title',"Menhelyek")
 @section('content')
 
-<h1>Állatok képeinek regisztrációja!</h1>
+<h1>Menhely képek regisztrációja!</h1>
 
 
-<form action="{{route('kepek.store')}}" method="POST" enctype="multipart/form-data">
+<form action="{{route('menhelykepek.store')}}" method="POST" enctype="multipart/form-data">
   
     @csrf
     
@@ -13,16 +13,16 @@
         <div class="row">
             <div class="col-6 border border-primary m-3 p-4">
                 <div class="mb-3">
-                    <label for="a_id" class="form-label">állat id - ez csak egy múló rosszullét</label>
-                    <input type="text" class="form-control" name="a_id" id="a_id" placeholder="1---4">
-                    @error('a_id')
+                    <label for="m_id" class="form-label">menhely id - ez csak egy múló rosszullét</label>
+                    <input type="text" class="form-control" name="m_id" id="m_id" placeholder="1---4">
+                    @error('m_id')
                     <div class="alert alert-warning">{{$message}} </div>
                     @enderror
                 </div>
                 <div class="mb-3">
-                    <label for="kep_cim" class="form-label">A kép címe</label>
-                    <input type="text" class="form-control" id="kep_cim" name="kep_cim" placeholder="A kép címe">
-                    @error('kep_cim')
+                    <label for="kepCim" class="form-label">A kép címe</label>
+                    <input type="text" class="form-control" id="kepCim" name="kepCim" placeholder="A kép címe">
+                    @error('kepCim')
                     <div class="alert alert-warning">{{$message}} </div>
                     @enderror
                 </div>

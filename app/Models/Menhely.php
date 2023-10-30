@@ -16,6 +16,16 @@ class Menhely extends Model
     {
         return $this->hasMany(Allat::class);
     }
+    public function menhely_kep()
+    {
+        return $this->hasMany(MenhelyKep::class);
+
+    }
+
+    public function kep()
+{
+    return $this->hasOne(MenhelyKep::class, 'm_id', 'm_id');
+}
     
    
 }
