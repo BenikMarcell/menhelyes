@@ -23,6 +23,7 @@ class UsersTableSeeder extends Seeder
                 'name'=>'Napfeny',
                 'email'=>'napfeny@gmail.com',
                 'password'=> Hash::make('12345678'),
+                'type'=>'2'
                 
             ],
             [
@@ -30,6 +31,7 @@ class UsersTableSeeder extends Seeder
                 'name'=>'Vagyunk',
                 'email'=>'vagyunk@gmail.com',
                 'password'=> Hash::make('12345678'),
+                'type'=>'2'
                 
             ],
             [
@@ -37,6 +39,7 @@ class UsersTableSeeder extends Seeder
                 'name'=>'Hasznos',
                 'email'=>'hasznos@gmail.com',
                 'password'=> Hash::make('12345678'),
+                'type'=>'2'
                 
             ],
             [
@@ -44,6 +47,7 @@ class UsersTableSeeder extends Seeder
                 'name'=>'Vilag',
                 'email'=>'vilag@gmail.com',
                 'password'=> Hash::make('12345678'),
+                'type'=>'1'
                 
             ],
 

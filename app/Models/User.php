@@ -22,6 +22,7 @@ class User extends Authenticatable
         'email',
         'password',
     ];
+    public $timestamps = false;
 
     /**
      * The attributes that should be hidden for serialization.
@@ -42,4 +43,22 @@ class User extends Authenticatable
         'email_verified_at' => 'datetime',
         'password' => 'hashed',
     ];
+    public function isAdmin() {
+        return $this->type === 1;
+    }
+    
+    public function isMenhely() {
+        return $this->type === 2;
+    }
+    
+
+
+
+
+
+
 }
+
+
+    
+

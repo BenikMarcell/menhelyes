@@ -2,6 +2,13 @@
 @section('title',"Főoldal")
 
 @section('content')
+@php
+    $showLogo = true;
+    $showMenhely = true;
+    $showAllat = true;
+    $showKapcsolat = true;
+@endphp
+
 
 <div class="container">
 

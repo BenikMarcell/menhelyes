@@ -3,6 +3,12 @@
 
 
 @section('content')
+@php
+    $showLogo = true;
+    $showMenhely = true;
+    $showAllat = true;
+    $showKapcsolat = true;
+@endphp
 
 
 <h1 class="text-center">Főoldal</h1>
@@ -33,7 +39,9 @@
         @foreach ($allatok as $key => $allat)
             <div class="col-md-4  allat-card">
                 <div class="card">
-                    <img class="card-img-top" src="{{ asset('storage/images/' . $allat->kep->src) }}" alt="Próba {{ $allat->kep->src }}">
+                        @if($allat->kep)
+                       <img class="card-img-top" src="{{ asset('storage/images/' . $allat->kep->src) }}" alt="Próba {{ $allat->kep->src }}">
+                        @endif
                         <div class="card-body">
                         <h4 class="card-title">{{$allat->nev}}</h4>
                         <h6>{{$allat->kor}} hónapos</h6>
@@ -72,8 +80,10 @@
         @foreach ($menhelyek as $key => $menhely)
         <div class="col-md-4  menhely-card">
             <div class="card">
-                <img class="card-img-top" src="{{ asset('storage/images/' . $menhely->kep->src) }}" alt="Próba {{ $menhely->kep->src }}">
-                    <div class="card-body">
+                        @if($menhely->kep)
+                        <img class="card-img-top" src="{{ asset('storage/images/' . $menhely->kep->src) }}" alt="Próba {{ $menhely->kep->src }}">
+                        @endif
+                        <div class="card-body">
                         <h4 class="card-title">{{$menhely->nev}}</h4>
                         <h6>{{$menhely->telepules}}</h6>
                         <h6>{{$menhely->telefon }}</h6>

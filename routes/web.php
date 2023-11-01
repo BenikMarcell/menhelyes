@@ -24,9 +24,7 @@ use App\Http\Controllers\menhelyKepekController;
 
 
 // KG routok kezdete -----------------------------------------------------------------------------------------
-//AJAX
-Route::get('/allatok', [MenhelyekController::class, 'getAllatok']);
-Route::get('/menhelyek', [MenhelyekController::class, 'getMenhelyek']);
+
 
 
 
@@ -37,13 +35,13 @@ Route::get('/menhely/{id}/kep', [MenhelyekController::class, 'menhelyKep'])->nam
 //a kártyák: állatok és menhelyek
 Route::get('/', [MenhelyekController::class, 'menhelyLista'])->name('menhelyLista');
 // lapozás - Marci
-Route::get('menhelyAllatai', [AllatokController::class, 'allatIndex'])->name('allatIndex');
+//Route::get('menhelyAllatai', [AllatokController::class, 'allatIndex'])->name('allatIndex');
 // allatok oldalra kártyákban megjelenteti az állatokat
 Route::get('/allatok', [AllatokController::class,'allatokLista'])->name('allatokLista');
 // Egy állat adatai
 Route::get('/egyAllat/{a_id}', [AllatokController::class, 'egyAllat'])->name('egyAllat');
 
-Route::get('/menhelyAllatai',[MenhelyekController::class,'menhelyAllataiLista'])->name('menhelyAllatai');
+//Route::get('/menhelyAllatai',[MenhelyekController::class,'menhelyAllataiLista'])->name('menhelyAllatai');
 Route::get('/menhelyek', [MenhelyekController::class, 'menhelyListaMenhelyek'])->name('menhelyListaMenhelyek');
 
 Route::get('/egyMenhely/{m_id}', [MenhelyekController::class, 'egyMenhely'])->name('egyMenhely');
@@ -55,6 +53,9 @@ Route::get('/megkeresettMenhely/{m_id}', [MenhelyekController::class, 'kereses']
 
 
 // Ezeket átdolgozni, a Tanár kérése szerint!
+Route::get('allatregisztracio', [AllatokController::class, 'create'])->name('create');
+Route::get('menhelyAllatai', [AllatokController::class, 'index'])->name('menhelyAllatai');
+
 
 Route::resource('fajok', FajokController::class);
 Route::resource('szinek', SzinekController::class);

@@ -1,6 +1,12 @@
 @extends('layouts.master')
 @section('title',"Menhelyek")
 @section('content')
+@php
+    $showLogo = true;
+    $showMenhely = true;
+    $showAllat = true;
+    $showKapcsolat = true;
+@endphp
 
 
 <div class="container-fluid">
@@ -52,8 +58,10 @@
             @endif
             <div class="col-md-3 m-4">
                 <div class="card">
-                    <img class="card-img-top" src="{{ asset('storage/images/' . $menhely->kep->src) }}" alt="Próba {{ $menhely->kep->src }}">
-                    <div class="card-body">
+                        @if($menhely->kep)
+                        <img class="card-img-top" src="{{ asset('storage/images/' . $menhely->kep->src) }}" alt="Próba {{ $menhely->kep->src }}">
+                        @endif
+                        <div class="card-body">
                         <h4 class="card-title">{{$menhely->nev}}</h4>
                         <h6>{{$menhely->telepules}}</h6>
                         <h6>{{$menhely->menhely_leiras}}</h6>  

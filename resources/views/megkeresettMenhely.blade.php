@@ -1,6 +1,12 @@
 @extends('layouts.master')
 @section('title',"Egy menhely")
 @section('content')
+@php
+    $showLogo = true;
+    $showMenhely = true;
+    $showAllat = true;
+    $showKapcsolat = true;
+@endphp
 
 
 

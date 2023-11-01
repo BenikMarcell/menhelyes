@@ -2,8 +2,9 @@
 
 namespace App\Providers;
 
-// use Illuminate\Support\Facades\Gate;
+
 use Illuminate\Foundation\Support\Providers\AuthServiceProvider as ServiceProvider;
+use Illuminate\Support\Facades\Gate;
 
 class AuthServiceProvider extends ServiceProvider
 {
@@ -21,6 +22,18 @@ class AuthServiceProvider extends ServiceProvider
      */
     public function boot(): void
     {
-        //
+        $this->registerPolicies();
+
+    Gate::define('create-allat', function ($user) {
+        return $user->isMenhely();
+    });
+    Gate::define('update-allat', function ($user, $allat) {
+        return $user->isMenhely() || $user->id === $allat->user_id;
+    });
+    Gate::define('delete-allat', function ($user, $allat) {
+        return $user->isMenhely() || $user->id === $allat->user_id;
+    });
+
+        
     }
 }

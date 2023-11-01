@@ -4,6 +4,13 @@
 
 
 @section('content')
+@php
+    $showLogo = true;
+    $showMenhely = true;
+    $showAllat = true;
+    $showKapcsolat = true;
+@endphp
+
 <h1 class="text-center">Ez a GY.I.K. !</h1>
 
 <div  class="container-fluid ">

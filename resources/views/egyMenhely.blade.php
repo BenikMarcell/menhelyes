@@ -1,6 +1,12 @@
 @extends('layouts.master')
 @section('title',"Egy menhely")
 @section('content')
+@php
+    $showLogo = true;
+    $showMenhely = true;
+    $showAllat = true;
+    $showKapcsolat = true;
+@endphp
 
 
 
@@ -28,7 +34,7 @@
             <h4>Menhely neve:</h4>
             <h4>Irányítószám: </h4>
             <h4>Település</h4>
-            <h4> Utca, házszám:  </h4>
+            <h4>Utca, házszám:  </h4>
             <h4>Bankszámla:</h4>
             <h4>Nyilvántartási szám: </h4>
             <h4>Adószám:</h4>

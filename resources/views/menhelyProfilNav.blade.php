@@ -7,13 +7,19 @@
                     <div class="col-8">
                         <ul class="navbar-nav ps-5">
                             <li class="nav-item">
+                                <a class="btn" href="allatregisztracio">Állat regisztrációja</a>
+                            </li>
+                            <li class="nav-item">
                                 <a class="btn" href="menhelyAllatai">Állataim</a>
                             </li>
                             <li class="nav-item">
                                 <a class="btn" href="menhelyAdomanyai">Adományaim</a>
                             </li>
                             <li class="nav-item">
-                                <a class="btn" href="menhelyProfil">Profilom</a>
+                                <a class="btn" href="bevmen.create">Profil létrehozása</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="btn" href="bevmen.show">Profil megtekintése</a>
                             </li>
                         </ul>
                     </div>

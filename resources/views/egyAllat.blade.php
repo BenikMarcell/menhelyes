@@ -1,6 +1,12 @@
 @extends('layouts.master')
 @section('title',"Állatok")
 @section('content')
+@php
+    $showLogo = true;
+    $showMenhely = true;
+    $showAllat = true;
+    $showKapcsolat = true;
+@endphp
 
 <div class="container">
 
@@ -11,7 +17,9 @@
         <h1 class="text-center mb-5">{{$allat->nev}}</h1>
 
         <div class="col-6">
-            <img class="profilkep" src="{{ asset('storage/images/' . $allat->kep->src) }}" alt="Próba {{ $allat->kep->src }}">
+            @if($allat->kep)
+            <img class="card-img-top" src="{{ asset('storage/images/' . $allat->kep->src) }}" alt="Próba {{ $allat->kep->src }}">
+            @endif
         </div>
 
         <div class="col-6">

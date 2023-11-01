@@ -47,20 +47,13 @@ public function kartyaKep(string $a_id) // állat kartyán a kép
     
    
 
-    public function allatIndex()
-    {
     
-    
-    $allatok = Allat::Paginate(5);
-    
-    return view('menhelyAllatai', ["allatok" => $allatok]);
-    }
-
 
 public function index()
     {
-        $allatok = Allat::all();
-        return view('bevall.index', compact('allatok'));
+        
+        $allatok = Allat::Paginate(5);
+        return view('menhelyAllatai', compact('allatok'));
     }
 
     /**
@@ -68,11 +61,14 @@ public function index()
      */
     public function create()
     {
+
+        $this->authorize('create-allat');
         $fajok = Faj::all();
         $szinek = Szin::all();
         $menhelyek = Menhely::all();
+        $kepek = Kep::all();
 
-        return view('bevall.create', compact('fajok', 'szinek'));
+        return view('allatregisztracio', compact('fajok', 'szinek', 'kepek'));
     }
 
     
@@ -83,40 +79,34 @@ public function index()
      * Store a newly created resource in storage.
      */
     public function store(Request $request)
-    {
-        $request->validate([
+{
+    $request->validate([
+        'nev' => 'required|min:3|max:100',
+        'faj' => 'required',
+        'szin' => 'required',
+        'kor' => 'required',
+        'leiras' => 'required',
+        'chip' => 'required',
+        'ivar_allapot' => 'required',
+        'nem' => 'required',
+    ]);
 
-            
-            'nev'=>'required|min:3|max:100',
-            'faj'=>'required',
-            'szin'=>'required',
-            'kor'=>'required',
-            'leiras'=>'required',
-            'chip'=>'required',
-            'ivar_allapot'=>'required',
-            'nem'=>'required',
-            
-            
+    $allat = new Allat();
+    $allat->nev = $request->nev;
+    $allat->af_id = $request->faj;
+    $allat->szin_id = $request->szin;
+    $allat->m_id = $request->m_id;
+    $allat->kor = $request->kor;
+    $allat->leiras = $request->leiras;
+    $allat->nem = $request->nem;
+    $allat->ivar_allapot = $request->ivar_allapot;
+    $allat->chip = $request->chip;
+    $allat->save();
 
-            
-  
-        ]);  
-        
-        $allat = new Allat();
-        $allat->nev =$request->nev;
-        $allat->af_id =$request->faj;
-        $allat->szin_id =$request->szin;
-        $allat->m_id =$request->m_id;
-        $allat->kor =$request->kor;
-        $allat->leiras =$request->leiras;
-        $allat-> nem=$request->nem;
-        $allat->ivar_allapot =$request->ivar_allapot;
-        $allat-> chip=$request->chip;
-        $allat->save();
-        
-        return redirect()->route('bevall.index')->with('success', 'Állat sikeresen létrehozva.');
-        
-    }
+    $allatok = Allat::paginate(5);
+
+    return view('menhelyAllatai', ['allatok' => $allatok])->with('success', 'Regisztráció sikeresen létrehozva.');
+}
 
     /**
      * Display the specified resource.

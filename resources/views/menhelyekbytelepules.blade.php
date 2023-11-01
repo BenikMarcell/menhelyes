@@ -1,7 +1,12 @@
 @extends('layouts.master')
 @section('title',"Menhelyek")
 @section('content')
-
+@php
+    $showLogo = true;
+    $showMenhely = true;
+    $showAllat = true;
+    $showKapcsolat = true;
+@endphp
 
 <div class="container-fluid">
     <div class="col-12">
@@ -44,9 +49,7 @@
             </table>
         </div>
     </div>
-    <div>
-        <a id="visszaBtn" href="{{ url('/') }}" class="btn rounded">Vissza a Főoldalra!</a>
-    </div>
+    
 </div>
 
 

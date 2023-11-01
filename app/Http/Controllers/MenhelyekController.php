@@ -24,20 +24,7 @@ class MenhelyekController extends Controller
          return view('welcome', ["menhelyek" => $menhelyek, "allatok" => $allatok, "kepek" => $kepek]);
      }
 
-     public function getAllatok() // AJAX
-{
-    $allatok = Allat::all();
-    return response()->json($allatok);
-}
-
-public function getMenhelyek() //AJAX
-{
-    $menhelyek = Menhely::all();
-    return response()->json($menhelyek);
-}
-
-
-     
+          
      public function menhelyListaMenhelyek()  //menhelyek oldlon kilistázza a menhelyeket, előtte megszámolja mennyi van egy településen
      {
         $menhelyek = Menhely::all();

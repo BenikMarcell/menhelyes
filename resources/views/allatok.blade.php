@@ -1,6 +1,12 @@
 @extends('layouts.master')
 @section('title',"Állatok")
 @section('content')
+@php
+    $showLogo = true;
+    $showMenhely = true;
+    $showAllat = true;
+    $showKapcsolat = true;
+@endphp
 
 <div class="container">
     <h1 class="text-center ps-5">Állat Kereső</h1>
@@ -64,7 +70,9 @@
             @endif
             <div class="col-md-3 m-4">
                 <div class="card">
+                    @if($allat->kep)
                     <img class="card-img-top" src="{{ asset('storage/images/' . $allat->kep->src) }}" alt="Próba {{ $allat->kep->src }}">
+                    @endif
                     <div class="card-body">
                         <h4 class="card-title">{{$allat->nev}}</h4>
                         <h6>{{$allat->kor}}</h6>
@@ -79,6 +87,4 @@
           @endforeach   
 
         </div>
-
-
 @endsection
