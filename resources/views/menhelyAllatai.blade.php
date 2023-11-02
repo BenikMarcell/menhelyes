@@ -25,6 +25,11 @@
    
     
     <h1 class="text-center mb-5">Állataim:</h1>
+   
+    @if(isset($pendingAnimalId))
+    <p>{{ $pendingAnimalId }}</p>
+@endif
+   
     <table class="table table-striped">
         <tr>
             <th>ID</th>

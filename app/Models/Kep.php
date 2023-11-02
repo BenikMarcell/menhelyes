@@ -17,7 +17,7 @@ class Kep extends Model
 
     public function allat_kep()
     {
-        return $this->belongsTo(Allat::class);
+        return $this->belongsTo(Allat::class, 'a_id', 'a_id');
     
     }
 

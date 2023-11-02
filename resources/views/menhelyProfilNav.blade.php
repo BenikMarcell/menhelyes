@@ -7,13 +7,13 @@
                     <div class="col-8">
                         <ul class="navbar-nav ps-5">
                             <li class="nav-item">
-                                <a class="btn" href="allatregisztracio">Állat regisztrációja</a>
+                                <a class="btn" href="{{ url('allatregisztracio') }}">Állat regisztrációja</a>
                             </li>
                             <li class="nav-item">
-                                <a class="btn" href="menhelyAllatai">Állataim</a>
+                                <a class="btn" href="{{ url('menhelyAllatai') }}">Állataim</a>
                             </li>
                             <li class="nav-item">
-                                <a class="btn" href="menhelyAdomanyai">Adományaim</a>
+                                <a class="btn" href="{{ url('menhelyAdomanyai') }}">Adományaim</a>
                             </li>
                             <li class="nav-item">
                                 <a class="btn" href="bevmen.create">Profil létrehozása</a>

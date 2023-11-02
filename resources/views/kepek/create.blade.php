@@ -13,12 +13,14 @@
         <div class="row">
             <div class="col-6 border border-primary m-3 p-4">
                 <div class="mb-3">
-                    <label for="a_id" class="form-label">állat id - ez csak egy múló rosszullét</label>
-                    <input type="text" class="form-control" name="a_id" id="a_id" placeholder="1---4">
-                    @error('a_id')
-                    <div class="alert alert-warning">{{$message}} </div>
-                    @enderror
+                    <label for="a_id" class="form-label">Állat ID</label>
+                    @if(isset($pendingAnimalId))
+                        <input type="text" name="a_id" id="a_id" value="{{ $pendingAnimalId }}">
+                     @endif
                 </div>
+                
+                    
+
                 <div class="mb-3">
                     <label for="kep_cim" class="form-label">A kép címe</label>
                     <input type="text" class="form-control" id="kep_cim" name="kep_cim" placeholder="A kép címe">

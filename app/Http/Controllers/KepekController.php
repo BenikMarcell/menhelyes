@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use App\Models\Allat;
 use App\Models\Kep;
 use Illuminate\Http\Request;
 
@@ -19,13 +19,17 @@ class KepekController extends Controller
     /**
      * Show the form for creating a new resource.
      */
-    public function create()
+    public function create(Request $request)
     {
 
-        
-        
+        $pendingAnimalId = $request->input('a_id');
 
-        return view('kepek.create');
+        // Az "Allat" modellből lekérjük az állat adatait a kapott "a_id" alapján
+        $allat = Allat::find($pendingAnimalId);
+        
+        return view('kepek.create', compact('allat', 'pendingAnimalId'));
+
+       // return view('kepek.create', compact('pendingAnimalId'));
     
     }
 
@@ -78,21 +82,35 @@ class KepekController extends Controller
 
         
 
-        
+       
       
         $kep = new Kep();
-        $kep->a_id =$request->a_id;
+        $kep->a_id = $request->a_id;
         $kep->kep_cim =$request->kep_cim;
         $kep->src = $ujSrc;
         $kep->alt =$request->alt;
         $kep->leiras =$request->leiras;
         $kep->save();
       
+        $allatok = Allat::paginate(5);
+
+        return redirect()->route('ujAllat', ['a_id' => $request->a_id]);
+        //return view('menhelyAllatai', ['allatok' => $allatok]);
         
-        
-        
-        return redirect()->route('kepek.index')->with('success', 'Kép sikeresen mentve.');
+        //return redirect()->route('kepek.index')->with('success', 'Kép sikeresen mentve.');
     }
+
+    public function ujAllat($a_id)
+{
+    // Az "Allat" modellből lekérjük az állat adatait az "a_id" alapján
+    $allat = Allat::find($a_id);
+
+    // Az "Allat" modellből lekérjük a hozzárendelt képet az "a_id" alapján
+    $kep = Kep::where('a_id', $a_id)->first();
+
+    return view('ujAllat', compact('allat', 'kep'));
+}
+
 
     /**
      * Display the specified resource.

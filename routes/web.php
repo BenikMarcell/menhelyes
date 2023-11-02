@@ -25,23 +25,19 @@ use App\Http\Controllers\menhelyKepekController;
 
 // KG routok kezdete -----------------------------------------------------------------------------------------
 
-
-
-
 //Állat kártyán a kép
 Route::get('/allat/{id}/kep', [AllatokController::class, 'kartyaKep'])->name('allat.image');
 //Menhely kártyán a kép
 Route::get('/menhely/{id}/kep', [MenhelyekController::class, 'menhelyKep'])->name('menhely.image');
 //a kártyák: állatok és menhelyek
 Route::get('/', [MenhelyekController::class, 'menhelyLista'])->name('menhelyLista');
-// lapozás - Marci
-//Route::get('menhelyAllatai', [AllatokController::class, 'allatIndex'])->name('allatIndex');
 // allatok oldalra kártyákban megjelenteti az állatokat
 Route::get('/allatok', [AllatokController::class,'allatokLista'])->name('allatokLista');
 // Egy állat adatai
 Route::get('/egyAllat/{a_id}', [AllatokController::class, 'egyAllat'])->name('egyAllat');
 
-//Route::get('/menhelyAllatai',[MenhelyekController::class,'menhelyAllataiLista'])->name('menhelyAllatai');
+Route::get('/ujAllat/{a_id}', [KepekController::class, 'ujAllat'])->name('ujAllat');
+
 Route::get('/menhelyek', [MenhelyekController::class, 'menhelyListaMenhelyek'])->name('menhelyListaMenhelyek');
 
 Route::get('/egyMenhely/{m_id}', [MenhelyekController::class, 'egyMenhely'])->name('egyMenhely');
@@ -51,18 +47,20 @@ Route::get('/menhelyek/{telepules}', [MenhelyekController::class, 'menhelyekByTe
 Route::post('/menhelyek/kereses', [MenhelyekController::class, 'kereses'])->name('menhelyekKereses');
 Route::get('/megkeresettMenhely/{m_id}', [MenhelyekController::class, 'kereses'])->name('kereses');
 
-
-// Ezeket átdolgozni, a Tanár kérése szerint!
 Route::get('allatregisztracio', [AllatokController::class, 'create'])->name('create');
 Route::get('menhelyAllatai', [AllatokController::class, 'index'])->name('menhelyAllatai');
+Route::resource('menhelykepek', MenhelyKepekController::class);
 
 
+//Route::get('kepek/create', 'KepekController@create')->name('kepek.create');
+
+Route::get('kepek/create', [KepekController::class, 'create'])->name('kepek.create');
+// Ezeket átdolgozni, a Tanár kérése szerint!
 Route::resource('fajok', FajokController::class);
 Route::resource('szinek', SzinekController::class);
 Route::resource('bevmen', MenhelyekController::class);
 Route::resource('bevall', AllatokController::class);
 Route::resource('kepek', KepekController::class);
-Route::resource('menhelykepek', MenhelyKepekController::class);
 
 // KG routok vége ----------------------------------------------------------------------------------
 
