@@ -47,14 +47,16 @@ Route::get('/menhelyek/{telepules}', [MenhelyekController::class, 'menhelyekByTe
 Route::post('/menhelyek/kereses', [MenhelyekController::class, 'kereses'])->name('menhelyekKereses');
 Route::get('/megkeresettMenhely/{m_id}', [MenhelyekController::class, 'kereses'])->name('kereses');
 
-Route::get('allatregisztracio', [AllatokController::class, 'create'])->name('create');
+Route::get('allatregisztracio', [AllatokController::class, 'create'])->name('create')->middleware('menhely');
+
 Route::get('menhelyAllatai', [AllatokController::class, 'index'])->name('menhelyAllatai');
+
 Route::resource('menhelykepek', MenhelyKepekController::class);
 
-
-//Route::get('kepek/create', 'KepekController@create')->name('kepek.create');
+Route::resource('menhelyregisztracio', MenhelyekController::class);
 
 Route::get('kepek/create', [KepekController::class, 'create'])->name('kepek.create');
+
 // Ezeket átdolgozni, a Tanár kérése szerint!
 Route::resource('fajok', FajokController::class);
 Route::resource('szinek', SzinekController::class);

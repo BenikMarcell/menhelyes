@@ -78,9 +78,16 @@ public function menhelyKep(string $m_id)
     /**
      * Show the form for creating a new resource.
      */
+    public function index()
+    {
+        $menhelyek = Menhely::all();
+        return view('menhelyIndex', compact('menhelyek'));
+    }
+
     public function create()
     {
-        return view('bevmen.create');
+        $menhelyek = Menhely::all();
+        return view('menhelyregisztracio', compact('menhelyek'));
     }
 
     /**

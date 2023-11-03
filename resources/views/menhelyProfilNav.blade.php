@@ -16,7 +16,8 @@
                                 <a class="btn" href="{{ url('menhelyAdomanyai') }}">Adományaim</a>
                             </li>
                             <li class="nav-item">
-                                <a class="btn" href="bevmen.create">Profil létrehozása</a>
+                                <a class="btn" href="{{ route('menhelyregisztracio.create') }}">Profil létrehozása</a>
+
                             </li>
                             <li class="nav-item">
                                 <a class="btn" href="bevmen.show">Profil megtekintése</a>

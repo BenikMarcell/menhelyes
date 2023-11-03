@@ -73,33 +73,41 @@ class AllatokController extends Controller
         'ivar_allapot' => 'required',
         'nem' => 'required',
     ]);
-  
+    // Az aktuális bejelentkezett menhely "m_id"-jének lekérése
+
+       
+       // Ellenőrizzük, hogy a bejelentkezett felhasználó "menhely" típusú-e
+    if (auth()->check() && auth()->user()->type === 2) {
+        $email = auth()->user()->email;
+        $menhely = Menhely::where('email', $email)->first();
+        if ($menhely) {
+            // Ha találtunk egyezést, akkor beállítjuk az "m_id"-t a menhely "m_id"-jére
+            auth()->user()->m_id = $menhely->m_id;
+        }
+    }
+
         $allat = new Allat();
         $allat->nev = $request->nev;
         $allat->af_id = $request->faj;
         $allat->szin_id = $request->szin;
-        $allat->m_id = $request->m_id;
-        $allat->kor = $request->kor;
+        $allat->m_id = auth()->user()->m_id;; // Az aktuális menhely "m_id"-jének beállítása
+        $allat->kor = $request->kor; 
         $allat->leiras = $request->leiras;
         $allat->nem = $request->nem;
         $allat->ivar_allapot = $request->ivar_allapot;
         $allat->chip = $request->chip;
         $allat->save();
-
-        $allatok = Allat::paginate(5);
-
-
-       // Most már megvan az állat rekord a_id-ja, ami az automatikusan generált id
+   
+    // Most már megvan az állat rekord a_id-ja, ami az automatikusan generált id
     // El kell tárolni valahol az aktuális $allat->a_id-t
     $pendingAnimalId = $allat->a_id;
 
     // Átirányítjuk a "kepek.create" oldalra, és átadjuk az "a_id"-t
     return redirect()->route('kepek.create', ['a_id' => $pendingAnimalId]);
 
-    //return view('menhelyAllatai', compact('allatok', 'pendingAnimalId'))->with('success', 'Regisztráció sikeresen létrehozva.');
-
-       //return view('menhelyAllatai', ['allatok' => $allatok])->with('success', 'Regisztráció sikeresen létrehozva.');
+    
     }
+    
 
     /**
      * Display the specified resource.

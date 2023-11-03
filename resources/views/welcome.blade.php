@@ -63,7 +63,7 @@
     </div>
 
     <div class="row">
-        <button class="vissza" data-aid="{{ $allat->a_id }}">Vissza</button>
+        <button class="vissza" data-aid="{{ $allat->a_id }}"><<<<<<<<<<<<<<<<<<<<<<<<<< Vissza</button>
     </div>
 
 </div>
@@ -101,7 +101,7 @@
     @endforeach
     </div>
     <div class="row">
-        <button class="menhelyVissza" data-aid="{{ $menhely->m_id }}">Vissza</button>
+        <button class="menhelyVissza" data-aid="{{ $menhely->m_id }}"><<<<<<<<<<<<<<<<<<<<<<<<<< Vissza</button>
     </div>
 </div>
 

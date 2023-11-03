@@ -11,13 +11,7 @@
 <div class="container bg-primry">
     <div class="row">
 
-        <div class="col-6 border border-primary m-3 p-4">
-            <label for="m_id" class="form-label">m_id</label>
-            <input type="text" class="form-control" name="m_id" id="m_id" placeholder="m_id 1-4">
-             @error('m_id')
-            <div class="alert alert-warning">{{$message}} </div>
-            @enderror
-        </div>
+        
         
         <div class="col-6 border border-primary m-3 p-4">
             <div class="mb-3">
