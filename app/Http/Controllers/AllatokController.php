@@ -7,6 +7,7 @@ use App\Models\Kep;
 use App\Models\Szin;
 use App\Models\Allat;
 use App\Models\Menhely;
+use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Log;
@@ -40,12 +41,44 @@ class AllatokController extends Controller
         return view('allatok',  ["allatok" => $allatok]);
     }
     
+
+    /**
+     * Display a listing of the resource.
+     */
+/*
+public function index()
+{
+    $allatok = Allat::paginate(5);
+
+    $this->authorize('index-allat', $allatok->first(), $menhely);
+
+    return view('menhelyAllatai', compact('allatok'));
+}
+
+Itt a $allatok->first() az első állatot jelképezi a listából, míg a $menhely a menhely objektum. 
+Az authorize hívás során a megfelelő argumentumokat használva a záradékban definiált engedélyt lehet alkalmazni az első állatra és a menhelyre.
+
+
+
+
+
+*/ 
+    
     public function index()
     {
-    $allatok = Allat::Paginate(5);
-    return view('menhelyAllatai', compact('allatok'));
-    }
+        if (auth()->check() && auth()->user()->type === 2) {
+        $email = auth()->user()->email;
+        $menhely = Menhely::where('email', $email)->first();
+        if ($menhely) {
+            // Ha találtunk egyezést, akkor beállítjuk az "m_id"-t a menhely "m_id"-jére
+            $m_id = $menhely->m_id;
+             }
+             $allatok = Allat::where('m_id', $m_id)->paginate(5);
 
+            return view('menhelyAllatai', compact('allatok'));
+            }
+     }  
+    
     /**
      * Show the form for creating a new resource.
      */

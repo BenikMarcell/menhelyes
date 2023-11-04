@@ -3,8 +3,11 @@
 namespace App\Providers;
 
 
-use Illuminate\Foundation\Support\Providers\AuthServiceProvider as ServiceProvider;
+use App\Models\User;
+use App\Models\Allat;
+use App\Models\Menhely;
 use Illuminate\Support\Facades\Gate;
+use Illuminate\Foundation\Support\Providers\AuthServiceProvider as ServiceProvider;
 
 class AuthServiceProvider extends ServiceProvider
 {
@@ -27,12 +30,20 @@ class AuthServiceProvider extends ServiceProvider
     Gate::define('create-allat', function ($user) {
         return $user->isMenhely();
     });
-    Gate::define('update-allat', function ($user, $allat) {
-        return $user->isMenhely() || $user->id === $allat->user_id;
+    
+
+    /*Gate::define('index-allat', function ($user, $allat, $menhely) {
+    if ($user->isMenhely()) {
+        $menhely = Menhely::where('email', $user->email)->first();
+        return $menhely && $menhely->m_id === $allat->m_id;
+    }
+    return false;
     });
-    Gate::define('delete-allat', function ($user, $allat) {
-        return $user->isMenhely() || $user->id === $allat->user_id;
-    });
+           Hibát jelez!!!!!!!!!!!
+        
+    });*/  
+    
+    
 
         
     }
