@@ -145,14 +145,12 @@ Az authorize hívás során a megfelelő argumentumokat használva a záradékba
     /**
      * Display the specified resource.
      */
-    public function show(string $a_id)
+    public function sajatAllat(string $a_id)
     {
         //a find itt megkeresi a kijelölt id-t, amit meg akarok mutatni
-        $allat = allat::find($a_id);
-
-
-        // a return megmutatja azt az id-t, amit megtaláltam
-        return view('bevall.show', compact('allat'));
+        $allat = Allat::find($a_id);
+        return view('sajatAllat', compact('allat'));
+    
           
     }
 

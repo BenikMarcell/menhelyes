@@ -36,6 +36,8 @@ Route::get('/allatok', [AllatokController::class,'allatokLista'])->name('allatok
 // Egy állat adatai
 Route::get('/egyAllat/{a_id}', [AllatokController::class, 'egyAllat'])->name('egyAllat');
 
+Route::get('/sajatAllat/{a_id}', [AllatokController::class, 'sajatAllat'])->name('sajatAllat');
+
 Route::get('/ujAllat/{a_id}', [KepekController::class, 'ujAllat'])->name('ujAllat');
 
 Route::get('/menhelyek', [MenhelyekController::class, 'menhelyListaMenhelyek'])->name('menhelyListaMenhelyek');
