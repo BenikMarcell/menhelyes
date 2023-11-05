@@ -16,11 +16,10 @@
                                 <a class="btn" href="{{ url('menhelyAdomanyai') }}">Adományaim</a>
                             </li>
                             <li class="nav-item">
-                                <a class="btn" href="{{ route('menhelyregisztracio.create') }}">Profil létrehozása</a>
-
+                                <a class="btn" href="{{ route('menhely.edit') }}">Profil szerkesztése</a>
                             </li>
                             <li class="nav-item">
-                                <a class="btn" href="bevmen.show">Profil megtekintése</a>
+                                <a class="btn" href="bevmen.show">Képek szerkesztése</a>
                             </li>
                         </ul>
                     </div>

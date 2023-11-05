@@ -4,7 +4,7 @@
 
 <h1>Szerkesztés </h1>
 <br>
-<h3>views/bevmen/edit</h3>
+
 
                     @error('nev')
                     <div class="alert alert-warning">{{$message}} </div>

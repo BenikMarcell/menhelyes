@@ -55,7 +55,11 @@ Route::get('menhelyAllatai', [AllatokController::class, 'index'])->name('menhely
 
 Route::resource('menhelykepek', MenhelyKepekController::class);
 
-Route::resource('menhelyregisztracio', MenhelyekController::class);
+
+Route::get('/menhely/edit', [MenhelyekController::class, 'edit'])->name('menhely.edit');
+Route::put('/menhely/update/{m_id}', [MenhelyekController::class, 'update'])->name('menhely.update');
+
+
 
 Route::get('kepek/create', [KepekController::class, 'create'])->name('kepek.create');
 

@@ -40,13 +40,7 @@
             <h6>Színe: {{$allat->allat_szin->szin}}</h6>
             <h6>Faj: {{$allat->allat_faj->faj}}</h6>
         </div>
-
-        
-
     </div>
-
-    
-
 </div>
 
 @endsection

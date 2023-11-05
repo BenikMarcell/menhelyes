@@ -7,6 +7,10 @@
 
 <form action="{{route('kepek.store')}}" method="POST" enctype="multipart/form-data">
   
+
+<div class="d-grid gap-2 col-6 mx-auto mb-3">
+    <a href="{{ route('menhelyAllatai') }}" class="btn rounded">Nem töltök fel képet!</a>
+</div>    
     @csrf
     
 <div class="container bg-primry">

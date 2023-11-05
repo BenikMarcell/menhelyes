@@ -196,13 +196,22 @@ public function menhelyKep(string $m_id)
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(string $m_id)
-    {
-        $menhely = menhely::find($m_id);
 
-        return view('bevmen.edit', compact('menhely'));
+
+     public function edit()
+{
+    if (auth()->check() && auth()->user()->type === 2) {
+        $email = auth()->user()->email;
+        $menhely = Menhely::where('email', $email)->first();  // itt találom meg a menhelyet
+
+        // Most kinyerheted az m_id-t a megtalált menhely rekordból
+        $m_id = $menhely->m_id;
+
+        return view('menhelyszerkesztes', compact('menhely', 'm_id'));
+    } else {
+        $error = 'Menhely nem található';
     }
-
+}
     /**
      * Update the specified resource in storage.
      */
@@ -290,7 +299,7 @@ public function menhelyKep(string $m_id)
         $menhely->save();
         
         
-        return redirect()->route('bevmen.index')->with('success', 'Menhely sikeresen szerkesztve.');
+        return redirect()->route('menhelyAllatai')->with('success', 'Menhely sikeresen szerkesztve.');
     }
 
     /**

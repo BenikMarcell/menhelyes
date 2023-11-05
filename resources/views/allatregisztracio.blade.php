@@ -101,6 +101,7 @@
 
             <div class="d-grid gap-2 col-6 mx-auto mb-3">
                 <button type="submit" class="btn btn-success">Beküld</button>
+                <a href="{{ route('menhelyAllatai') }}" class="btn rounded">Mégsem</a>
             </div>
                 
         </div>
