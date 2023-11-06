@@ -58,6 +58,11 @@ Route::resource('menhelykepek', MenhelyKepekController::class);
 
 Route::get('/menhely/edit', [MenhelyekController::class, 'edit'])->name('menhely.edit');
 Route::put('/menhely/update/{m_id}', [MenhelyekController::class, 'update'])->name('menhely.update');
+Route::delete('/menhelykepek/{mk_id}', [MenhelyKepekController::class, 'destroy'])->name('menhelykepek.destroy');
+
+
+Route::put('/menhelykepek/{mk_id}', [MenhelyKepekController::class, 'update'])->name('menhelykepek.update');
+
 
 
 
@@ -69,6 +74,7 @@ Route::resource('szinek', SzinekController::class);
 Route::resource('bevmen', MenhelyekController::class);
 Route::resource('bevall', AllatokController::class);
 Route::resource('kepek', KepekController::class);
+Route::resource('menhelykepek', MenhelyKepekController::class);
 
 // KG routok vége ----------------------------------------------------------------------------------
 

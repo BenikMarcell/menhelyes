@@ -1,29 +1,21 @@
 @extends('layouts.master')
 @section('title',"Menhelyek")
 @section('content')
-
+@include('menhelyProfilNav')
 <h1>Megjelenítés </h1>
-<br>
-<h3>views/menhelykepek/show</h3>
 
 
 
 
 
-
-    --------------------------------- <br>
-    --------------------------------- <br>
-
-      //   Kép id:         {{$kep->mk_id}}  <br>
-      //   Állat id        {{$kep->m_id}}  <br>
-      //   Cím             {{$kep->kepCim}}  <br>
-                           <img src="{{ asset('storage/images/'. $kep->src) }}" alt="{{$kep->src}}"> <br>
-                           <img src="{{ url('storage/images/'.$kep->src) }}" alt="{{$kep->src}}"> <br>    
-      //   alt             {{$kep->alt}}  <br>
+      //   Menhely kép id:         {{$kep->mk_id}}  <br>
+      //   Cím:             {{$kep->kepCim}}  <br>
+      //   Alt             {{$kep->alt}}  <br>
       //   Leírás          {{$kep->leiras}}  <br>
+      <img src="{{ asset('storage/images/'. $kep->src) }}" alt="{{$kep->src}}"> <br>
       
       
-
+      <a class=" btn d-grid gap-2 col-1 mx-auto mb-3" href="{{ route('menhelykepek.index') }}">Képek listája</a>
       
 
 @endsection

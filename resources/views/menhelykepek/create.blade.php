@@ -1,24 +1,21 @@
 @extends('layouts.master')
 @section('title',"Menhelyek")
 @section('content')
-
+@include('menhelyProfilNav')
 <h1>Menhely képek regisztrációja!</h1>
 
 
-<form action="{{route('menhelykepek.store')}}" method="POST" enctype="multipart/form-data">
-  
+<form action="{{ route('menhelykepek.store') }}" method="POST" enctype="multipart/form-data">
     @csrf
+    <input type="hidden" name="m_id" id="m_id" value="{{ $m_id }}">
+  
+  <p>  Menhely id: {{ $m_id }}</p>
     
 <div class="container bg-primry">
         <div class="row">
             <div class="col-6 border border-primary m-3 p-4">
-                <div class="mb-3">
-                    <label for="m_id" class="form-label">menhely id - ez csak egy múló rosszullét</label>
-                    <input type="text" class="form-control" name="m_id" id="m_id" placeholder="1---4">
-                    @error('m_id')
-                    <div class="alert alert-warning">{{$message}} </div>
-                    @enderror
-                </div>
+                
+               
                 <div class="mb-3">
                     <label for="kepCim" class="form-label">A kép címe</label>
                     <input type="text" class="form-control" id="kepCim" name="kepCim" placeholder="A kép címe">
@@ -57,7 +54,7 @@
             </div>
 
         </div>
-
+        <a class=" btn d-grid gap-2 col-2 mx-auto mb-3" href="{{ route('menhelykepek.index') }}">Képek listája</a>
 </div>
 </form>
 @endsection

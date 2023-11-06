@@ -4,8 +4,8 @@
             <div class="container-fluid">
                 <div class="row w-100">
                     <div class="col-3"></div>
-                    <div class="col-8">
-                        <ul class="navbar-nav ps-5">
+                    <div class="col-12">
+                        <ul class="navbar-nav ">
                             <li class="nav-item">
                                 <a class="btn" href="{{ url('allatregisztracio') }}">Állat regisztrációja</a>
                             </li>
@@ -19,7 +19,9 @@
                                 <a class="btn" href="{{ route('menhely.edit') }}">Profil szerkesztése</a>
                             </li>
                             <li class="nav-item">
-                                <a class="btn" href="bevmen.show">Képek szerkesztése</a>
+                                <a class="btn" href="{{ route('menhelykepek.index') }}">Képek listája/szerkesztése</a>
+
+
                             </li>
                         </ul>
                     </div>
