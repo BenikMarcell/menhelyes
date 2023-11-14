@@ -2,10 +2,12 @@
 @section('title',"Adományaim")
 @section('content')
 
-@include('menhelyProfilNav')
 
 
 <div class="container">
+
+    @include('menhelyProfilNav')
+
     <h1 class="text-center mb-5">Adományaim:</h1>
 
     <table class="table table-striped">

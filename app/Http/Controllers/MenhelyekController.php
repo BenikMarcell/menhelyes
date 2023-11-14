@@ -17,8 +17,8 @@ class MenhelyekController extends Controller
    
      public function menhelyLista() // welcome oldalon a kártyák: állatok és menhelyek
      {
-         $menhelyek = Menhely::all();
-         $allatok = Allat::all();
+         $menhelyek = Menhely::inRandomOrder()->limit(4)->get();
+         $allatok = Allat::inRandomOrder()->limit(4)->get();
          $kepek = Kep::all();
      
          return view('welcome', ["menhelyek" => $menhelyek, "allatok" => $allatok, "kepek" => $kepek]);

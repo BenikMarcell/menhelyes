@@ -4,9 +4,9 @@
 
 <div class="container">
 
-    <div class="row">
+    @include('menhelyProfilNav')
 
-        @include('menhelyProfilNav')
+    <div class="row">
 
         <h1 class="text-center mb-5">Menhely Neve</h1>
 
@@ -28,7 +28,7 @@
             <p>Menhely adatai...</p>
         </div>
         <div class="col-6">
-            <a href="menhelyregisztracio" class="btn">Szerkesztés</a>
+            <a href="{{ route('menhely.edit') }}" class="btn">Szerkesztés</a>
         </div>
     </div>
 

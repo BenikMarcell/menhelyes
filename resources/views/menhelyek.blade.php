@@ -51,30 +51,25 @@
         <h3>Menhelyeink</h3>
         
         <div class="container">
-
-            @foreach ($menhelyek as $key => $menhely) 
-            @if ($key % 3 === 0)
-                <div class="row">
-            @endif
-            <div class="col-md-3 m-4">
-                <div class="card">
-                        @if($menhely->kep)
-                        <img class="card-img-top" src="{{ asset('storage/images/' . $menhely->kep->src) }}" alt="Próba {{ $menhely->kep->src }}">
-                        @endif
-                        <div class="card-body">
-                        <h4 class="card-title">{{$menhely->nev}}</h4>
-                        <h6>{{$menhely->telepules}}</h6>
-                        <h6>{{$menhely->menhely_leiras}}</h6>  
-                            
-                    
-                        <a href="{{ route('egyMenhely', ['m_id' => $menhely->m_id]) }}" class="btn rounded">Bővebben</a>
+            <div class="row">
+                @foreach ($menhelyek as $key => $menhely)
+                <div class="col-md-3">
+                    <div class="card mb-3">
+                            @if($menhely->kep)
+                            <img class="card-img-top myCardImg" src="{{ asset('storage/images/' . $menhely->kep->src) }}" alt="Próba {{ $menhely->kep->src }}">
+                            @endif
+                            <div class="card-body">
+                            <h4 class="card-title">{{$menhely->nev}}</h4>
+                            <h6>{{$menhely->telepules}}</h6>
+                            <h6>{{$menhely->menhely_leiras}}</h6>  
+                                
+                        
+                            <a href="{{ route('egyMenhely', ['m_id' => $menhely->m_id]) }}" class="btn rounded">Bővebben</a>
+                        </div>
                     </div>
                 </div>
-            </div>
-            @if (($key + 1) % 3 === 0 || $loop->last)
-                </div>
-            @endif
-          @endforeach   
+                @endforeach
+            </div> 
 
         </div>
 

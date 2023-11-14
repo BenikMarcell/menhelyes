@@ -18,8 +18,12 @@
 
 <div class="container">
     <div class="row">
-        <div class="col-6">
-            <img id="fooldalkep" src="./images/macska2.jpg" alt="fooldalkep">
+        <div class="col-12 col-md-6">
+            <img id="fooldalkep" src="./images/macska2.jpg" alt="fooldalkep" class="img-fluid">
+        </div>
+        <div class="col-12 col-md-6">
+            <h2 class="text-center">Rólunk</h2>
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Officia omnis minus dolor, ratione quia perferendis. Animi neque dolore, consequatur, debitis soluta voluptatum ipsam esse obcaecati aut, sit quae voluptates fugiat!
         </div>
     </div> <!-- </div> hozzáadva itt -->
 </div>
@@ -28,19 +32,14 @@
 
 
 
-<div class="container">
-    @php
-    $elemekSzamaSoronkent = 4; // elemekSzamaSoronkent; // Soronkénti elemek száma
-    $sorokSzama = 1; // sorokSzama; // A megjelenítendő sorok számát itt állíthatod be
-    $sorSzam =  0;  //sorSzam;
-    @endphp
-    
+<div class="container">    
     <div class="row">
+        <h2>Néhány állatka:</h2>
         @foreach ($allatok as $key => $allat)
             <div class="col-md-3  allat-card">
-                <div class="card">
+                <div class="card mb-2">
                         @if($allat->kep)
-                       <img class="card-img-top" src="{{ asset('storage/images/' . $allat->kep->src) }}" alt="Próba {{ $allat->kep->src }}">
+                            <img class="card-img-top myCardImg" src="{{ asset('storage/images/' . $allat->kep->src) }}" alt="Próba {{ $allat->kep->src }}">
                         @endif
                         <div class="card-body">
                         <h4 class="card-title">{{$allat->nev}}</h4>
@@ -51,32 +50,19 @@
                     </div>
                 </div>
             </div>
-            @php
-            $sorSzam++;
-            @endphp
-            @if ($sorSzam % ($elemekSzamaSoronkent * $sorokSzama) === 0)
-    </div>
-    <div class="row">
-       
-    @endif
-    @endforeach
+        @endforeach
     </div>
 </div>
 
 
 <div class="container">
-    @php
-    $elemekSzamaSoronkent = 3; // elemekSzamaSoronkent; // Soronkénti elemek száma
-    $sorokSzama = 1; // sorokSzama; // A megjelenítendő sorok számát itt állíthatod be
-    $sorSzam =  0;  //sorSzam;
-    @endphp
-    
     <div class="row">
+        <h2>Néhány menhely:</h2>
         @foreach ($menhelyek as $key => $menhely)
-        <div class="col-md-4  menhely-card">
-            <div class="card">
+        <div class="col-md-3  menhely-card">
+            <div class="card mb-2">
                         @if($menhely->kep)
-                        <img class="card-img-top" src="{{ asset('storage/images/' . $menhely->kep->src) }}" alt="Próba {{ $menhely->kep->src }}">
+                        <img class="card-img-top myCardImg" src="{{ asset('storage/images/' . $menhely->kep->src) }}" alt="Próba {{ $menhely->kep->src }}">
                         @endif
                         <div class="card-body">
                         <h4 class="card-title">{{$menhely->nev}}</h4>
@@ -86,46 +72,8 @@
                     </div>
                 </div>
             </div>
-            @php
-            $sorSzam++;
-            @endphp
-            @if ($sorSzam % ($elemekSzamaSoronkent * $sorokSzama) === 0)
-    </div>
-    <div class="row">
-    @endif
-    @endforeach
-    </div>
-    <div class="row">
-        <button class="menhelyVissza" data-aid="{{ $menhely->m_id }}"><<<<<<<<<<<<<<<<<<<<<<<<<< Vissza</button>
+        @endforeach
     </div>
 </div>
 
-    
-
-
-
-
-
-
-<script src="{{ asset('js/pagination.js') }}"></script> 
-<script src="{{ asset('js/menhelyPagination.js') }}"></script>
-<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF" crossorigin="anonymous"></script>
-
-  <!-- Modal -->
-  <script
-  src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
-  integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
-  crossorigin="anonymous"
-></script>
-<script
-  src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"
-  integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF"
-  crossorigin="anonymous"
-></script>
-
 @endsection
-
-
-
-

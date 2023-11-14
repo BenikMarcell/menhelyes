@@ -3,7 +3,7 @@
 // jQuery csak az egyszerűség kedvéért 
 // Online jQuery betöltése master.balde
 
-const elemekSzamaSoronkentAllatok = 3;
+const elemekSzamaSoronkentAllatok = 4;
 let jelenlegiOldalAllatok = 0;
 const jsAllatok = $(".allat-card");
 

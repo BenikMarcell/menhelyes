@@ -32,36 +32,17 @@
     <div class="row">
 
         <div class="col-6">
-            <h6>{{$allat->kor}} hónapos</h6>
-            <h6>{{$allat->nem}}</h6>
-            <h6> {{$allat->ivar_allapot}}</h6>
+            <h6>Kor: {{$allat->kor}} hónap</h6>
+            <h6>Neme: {{$allat->nem}}</h6>
+            <h6>Ivarállapota: {{$allat->ivar_allapot}}</h6>
             <h6>Chip: {{$allat->chip}}</h6>
             <h6>Színe: {{$allat->allat_szin->szin}}</h6>
             <h6>Faj: {{$allat->allat_faj->faj}}</h6>
         </div>
 
-        <div class="col-6 text-center">
-            <form class="form form-control" action="#">
-                <h3>Adakoznék:</h3>
-                <div>
-                    <label for="bankszamlaSzam">Bankszámlaszám:</label>
-                    <input class="form-control" type="text" name="bankszamlaSzam">
-                </div>
-                <div>
-                    <label for="osszeg">Összeg:</label>
-                    <input class="form-control" type="number" name="osszeg">
-                </div>
-                <div>
-                    <label for="uzenet">Üzenet:</label>
-                    <input class="form-control" type="text" name="uzenet">
-                </div>
-                <button id="donateBtn" class="btn rounded mt-3">Küldés!</button>
-            </form>
-        </div>
-
     </div>
 
-    <a id="visszaBtn" href="{{ url('/') }}" class="btn rounded">Vissza a Főoldalra!</a>
+    <a id="visszaBtn" href="{{ url('/menhelyek') }}" class="btn rounded">Menhely megtekintése!</a>
 
 </div>
 

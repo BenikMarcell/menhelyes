@@ -92,8 +92,12 @@ li {
     background-color: #17594A;
 }
 
-#fooldalkep {
-    width: 30vw;
+.myCardImg {
+    height: 24vh;
+}
+
+.sajatAllatKep {
+    width: 35vw;
 }
 
 .gyik {

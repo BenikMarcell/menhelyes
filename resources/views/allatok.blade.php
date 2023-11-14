@@ -63,28 +63,24 @@
         <h3>Állataink</h3>
         
         <div class="container">
-
-            @foreach ($allatok as $key => $allat) 
-            @if ($key % 3 === 0)
-                <div class="row">
-            @endif
-            <div class="col-md-3 m-4">
-                <div class="card">
-                    @if($allat->kep)
-                    <img class="card-img-top" src="{{ asset('storage/images/' . $allat->kep->src) }}" alt="Próba {{ $allat->kep->src }}">
-                    @endif
-                    <div class="card-body">
-                        <h4 class="card-title">{{$allat->nev}}</h4>
-                        <h6>{{$allat->kor}}</h6>
-                        <h6>{{$allat->nem}}</h6>  
-                        <a href="{{ route('egyAllat', ['a_id' => $allat->a_id]) }}" class="btn rounded">Bővebben</a>
+            <div class="row">
+                @foreach ($allatok as $key => $allat)
+                <div class="col-md-3">
+                    <div class="card mb-3">
+                        @if($allat->kep)
+                            <img class="card-img-top" src="{{ asset('storage/images/' . $allat->kep->src) }}" alt="Próba {{ $allat->kep->src }}">
+                        @endif
+                        <div class="card-body">
+                            <h4 class="card-title">{{$allat->nev}}</h4>
+                            <h6>{{$allat->kor}}</h6>
+                            <h6>{{$allat->nem}}</h6>  
+                            <a href="{{ route('egyAllat', ['a_id' => $allat->a_id]) }}" class="btn rounded">Bővebben</a>
+                        </div>
                     </div>
                 </div>
+                @endforeach
             </div>
-            @if (($key + 1) % 3 === 0 || $loop->last)
-                </div>
-            @endif
-          @endforeach   
+ 
 
         </div>
 @endsection
