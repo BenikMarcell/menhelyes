@@ -30,14 +30,14 @@
 
 <div class="container">
     @php
-    $elemekSzamaSoronkent = 3; // elemekSzamaSoronkent; // Soronkénti elemek száma
+    $elemekSzamaSoronkent = 4; // elemekSzamaSoronkent; // Soronkénti elemek száma
     $sorokSzama = 1; // sorokSzama; // A megjelenítendő sorok számát itt állíthatod be
     $sorSzam =  0;  //sorSzam;
     @endphp
     
     <div class="row">
         @foreach ($allatok as $key => $allat)
-            <div class="col-md-4  allat-card">
+            <div class="col-md-3  allat-card">
                 <div class="card">
                         @if($allat->kep)
                        <img class="card-img-top" src="{{ asset('storage/images/' . $allat->kep->src) }}" alt="Próba {{ $allat->kep->src }}">
@@ -61,11 +61,6 @@
     @endif
     @endforeach
     </div>
-
-    <div class="row">
-        <button class="vissza" data-aid="{{ $allat->a_id }}"><<<<<<<<<<<<<<<<<<<<<<<<<< Vissza</button>
-    </div>
-
 </div>
 
 
