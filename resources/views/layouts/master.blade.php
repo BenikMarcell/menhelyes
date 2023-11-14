@@ -27,20 +27,13 @@
            
         
             <div class="col-3">
-                @if (isset($showLogo) && $showLogo)
+                
                 <a href="{{ url('./') }}"><img id="logokep" src="{{asset('images/logo.png')}}" alt="Logo"></a>
-                @endif
             </div>
             <div id="nav-gombok" class="col-6">
-                @if (isset($showMenhely) && $showMenhely)
                 <a class="btn rounded" href="{{ url('./menhelyek') }}" >Menhelyek</a>
-                @endif
-                @if (isset($showAllat) && $showAllat)
                 <a class="btn rounded" href="{{ url('./allatok') }}" >Állatok</a>
-                @endif
-                @if (isset($showKapcsolat) && $showKapcsolat)
                 <a class="btn rounded" href="{{ url('./kapcsolat') }}" >Kapcsolat</a>
-                @endif
             </div>
             <div class="col-3 center">
                 <button id="login-btn" class=" rounded">
