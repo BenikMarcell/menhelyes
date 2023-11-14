@@ -34,13 +34,11 @@
             <div class="col-3 center">
                 
                     @guest
-                    <button id="login-btn" class=" rounded">
                         @if (Route::has('login'))
-                            <li class="nav-item">
+                            <li class="btn nav-item">
                                 <a class="nav-link" href="{{ route('login') }}">Bejelentkezés/Regisztráció</a>
                             </li>
                         @endif
-                    </button>
                     @else
         
                     <div class="dropdown">
