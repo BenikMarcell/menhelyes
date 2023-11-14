@@ -9,33 +9,45 @@
 @endphp
 
 
-<div class="container-fluid">
+<div class="container">
     <div class="row">
-        <div class="col-6">
-            <h1>Menhely Kereső</h1>
-            <form class="form form-control" form action="{{route('menhelyekKereses')}}" method="POST">
-                @csrf
-                <div>
-                    <label for="nev">Szűkítés név alapján:</label>
-                    <input class="form-control" id="nev" name="nev" type="text" placeholder="pl. Vagyunk">
+        <div class="col-12">
+            <h1 class="text-center">Menhely Kereső</h1>
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-4"></div>
+                    <div class="col-4">
+                        <form class="form form-control" form action="{{route('menhelyekKereses')}}" method="POST">
+                            @csrf
+                            <div>
+                                <label for="nev">Szűkítés név alapján:</label>
+                                <input class="form-control" id="nev" name="nev" type="text" placeholder="pl. Vagyunk">
+                            </div>
+                            <button class="btn m-5">Keress!</button>
+                        </form>
+                    </div>
+                    <div class="col-4"></div>
                 </div>
-                <button class="btn rounded m-5">Keress!</button>
-            </form>
-            
+            </div>
         </div>
 
-
-        <div class="col-6">
-            <h5>Menhelyek száma települések szerint:</h5>
-            <ul>
-                @foreach ($telepulesek as $telepules)
-                    <li>
-                        <a href="{{ route('menhelyekByTelepules', $telepules->telepules) }}">
-                            {{ $telepules->count }} {{ $telepules->telepules }}
-                        </a>
-                    </li>
-                @endforeach
-            </ul>
+        <div class="container-fluid">
+            <div class="row">
+                <h5 class="text-center">Menhelyek száma települések szerint:</h5>
+                <div class="col-4"></div>
+                <div class="col-4">
+                    <ul>
+                        @foreach ($telepulesek as $telepules)
+                            <li>
+                                <a href="{{ route('menhelyekByTelepules', $telepules->telepules) }}">
+                                    {{ $telepules->count }} {{ $telepules->telepules }}
+                                </a>
+                            </li>
+                        @endforeach
+                    </ul>
+                </div>
+                <div class="col-4"></div>
+            </div>
         </div>
     </div>
 </div>
