@@ -58,10 +58,6 @@ public function index()
 Itt a $allatok->first() az első állatot jelképezi a listából, míg a $menhely a menhely objektum. 
 Az authorize hívás során a megfelelő argumentumokat használva a záradékban definiált engedélyt lehet alkalmazni az első állatra és a menhelyre.
 
-
-
-
-
 */ 
     
     public function index()
