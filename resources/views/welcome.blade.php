@@ -22,16 +22,13 @@
             <img id="fooldalkep" src="./images/macska2.jpg" alt="fooldalkep" class="img-fluid">
         </div>
         <div class="col-12 col-md-6">
-            <h2 class="text-center">Rólunk</h2>
+            <h2 class="text-center">A menhely HUB célja</h2>
             Lorem ipsum dolor sit, amet consectetur adipisicing elit. Officia omnis minus dolor, ratione quia perferendis. Animi neque dolore, consequatur, debitis soluta voluptatum ipsam esse obcaecati aut, sit quae voluptates fugiat!
         </div>
     </div> <!-- </div> hozzáadva itt -->
 </div>
 
-
-
-
-
+<!-- Állat kártyák -->
 <div class="container">    
     <div class="row">
         <h2>Néhány állatka:</h2>
@@ -54,10 +51,10 @@
     </div>
 </div>
 
-
+<!-- Menhely kártyák -->
 <div class="container">
     <div class="row">
-        <h2>Néhány menhely:</h2>
+        <h2>Állat menhely partnereink:</h2>
         @foreach ($menhelyek as $key => $menhely)
         <div class="col-md-3  menhely-card">
             <div class="card mb-2">

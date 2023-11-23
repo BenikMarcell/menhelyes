@@ -8,29 +8,23 @@
     $showKapcsolat = true;
 @endphp
 
+<!-- Adott állat képe -->
 <div class="container">
-
-    
-
     <div class="row">
-
         <h1 class="text-center mb-5">{{$allat->nev}}</h1>
-
         <div class="col-6">
             @if($allat->kep)
             <img class="card-img-top" src="{{ asset('storage/images/' . $allat->kep->src) }}" alt="Próba {{ $allat->kep->src }}">
             @endif
         </div>
-
-        <div class="col-6">
-            
+<!-- Adott állat leírása DB-ből -->
+        <div class="col-6"> 
             <p>{{$allat->leiras}}</p>
         </div>
         
     </div>
-
+<!-- Adott állat adatai -->
     <div class="row">
-
         <div class="col-6">
             <h6>Kor: {{$allat->kor}} hónap</h6>
             <h6>Neme: {{$allat->nem}}</h6>

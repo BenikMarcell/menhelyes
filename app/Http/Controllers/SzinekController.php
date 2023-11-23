@@ -7,8 +7,8 @@ use Illuminate\Http\Request;
 
 class SzinekController extends Controller
 {
-    /**
-     * Display a listing of the resource.
+    /*
+      Display a listing of the resource.
      */
     public function index()
     {
@@ -16,16 +16,16 @@ class SzinekController extends Controller
         return view('szinek.index', compact('szinek'));
     }
 
-    /**
-     * Show the form for creating a new resource.
+    /*
+      Show the form for creating a new resource.
      */
     public function create()
     {
         return view('szinek.create');
     }
 
-    /**
-     * Store a newly created resource in storage.
+    /*
+      Store a newly created resource in storage.
      */
     public function store(Request $request)
     {

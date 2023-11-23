@@ -62,6 +62,8 @@ Az authorize hívás során a megfelelő argumentumokat használva a záradékba
     
     public function index()
     {
+        return view('menhelyAllatai');
+        /*
         if (auth()->check() && auth()->user()->type === 2) {
         $email = auth()->user()->email;
         $menhely = Menhely::where('email', $email)->first();
@@ -73,6 +75,7 @@ Az authorize hívás során a megfelelő argumentumokat használva a záradékba
 
             return view('menhelyAllatai', compact('allatok'));
             }
+            */
      }  
     
     /**

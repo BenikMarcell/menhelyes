@@ -17,12 +17,10 @@
         <div class="col-6">
             <h3>Leírás:</h3>
             <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Officiis reprehenderit excepturi facere incidunt recusandae quod tempore totam, temporibus autem sit, corrupti repellat reiciendis aspernatur. Commodi reiciendis sint quaerat? Harum, praesentium!</p>
-        </div>
-        
+        </div> 
     </div>
 
     <div class="row">
-
         <div class="col-6">
             <h3>Adatok:</h3>
             <p>Menhely adatai...</p>
