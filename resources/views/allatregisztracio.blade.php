@@ -16,7 +16,7 @@
         <div class="col-6 border border-primary m-3 p-4">
             <div class="mb-3">
                 <label for="nev" class="form-label"><h5>Az állat neve</h5></label>
-                <input type="text" class="form-control" name="nev" id="nev" placeholder="pl. Buksi">
+                <input type="text" class="form-control" name="nev" id="nev" placeholder="pl. Buksi" value="{{$allat->nev ?? old('nev')}}">
                  @error('nev')
                 <div class="alert alert-warning">{{$message}} </div>
                 @enderror
@@ -83,7 +83,7 @@
             
             <div class="mb-3">
                 <label for="kor" class="form-label"><h5>Az állat kora (hónapokban megadva)</h5></label>
-                <input type="text" class="form-control" name="kor" id="kor" placeholder="pl. 12 ">
+                <input type="text" class="form-control" name="kor" id="kor" placeholder="pl. 12 " value="{{$allat->kor ?? old('kor')}}">
                 @error('kor')
                 <div class="alert alert-warning">{{$message}} </div>
                 @enderror
@@ -93,7 +93,7 @@
                     
                 <label for="leiras" class="form-label"><h5>Az állat leírása</h5></label>
                 <textarea class="form-control" name="leiras" id="leiras" rows="10"
-                placeholder="A leírás szövege"></textarea>
+                placeholder="A leírás szövege" value="{{$allat->leiras ?? old('leiras')}}"></textarea>
                 @error('leiras')
                 <div class="alert alert-warning">{{$message}} </div>
                 @enderror
