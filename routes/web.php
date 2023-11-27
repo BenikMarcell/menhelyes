@@ -10,6 +10,8 @@ use App\Http\Controllers\SzinekController;
 use App\Http\Controllers\BarionController;
 use App\Http\Controllers\menhelyKepekController;
 
+use App\Http\Controllers\HomeController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -92,6 +94,11 @@ Route::get('/gyik', function () {
     return view('gyik');
 });
 
+
+// Ideiglenes controller a felhasználó kezelésnek
+Route::get('/userLista', [HomeController::class, "userLista"]);
+
+// Ideiglenes controller a felhasználó kezelésnek - vége
 
 
 

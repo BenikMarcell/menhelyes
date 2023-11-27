@@ -27,5 +27,11 @@ class HomeController extends Controller
         return view('layouts.home');
         
     }
-    
+
+    // / Ideiglenes controller a felhasználó kezelésnek
+    public function userLista()
+    {
+        return view('userLista');
+        
+    }
 }

@@ -80,6 +80,15 @@
                 <div class="col-1"></div>
                 <div class="col-10">
                     <div class="row">
+
+                        <!-- Ezt a gombot ideioglenesen tettem ide -->
+                        <div class="col-3 center">
+                            <div class="ml-5">
+                                <a class="btn" href="./userLista">Felhasznaló kezelés</a>
+                            </div>
+                        </div>
+                        <!-- Idáig -->
+
                         <div class="col-3 center">
                             <div class="ml-5">
                                 <a class="btn" href="./gyik">GyIK</a>
