@@ -13,12 +13,16 @@
                         <th>Name</th>
                         <th>User type</th>
                     </tr>
+                    @foreach ($users as $user)
                     <tr>
-                        <td>#1</td>
-                        <td>A neve</td>
-                        <td>a típusa</td>
+                        <td>{{ $user->id }}</td>
+                        <td>{{ $user->name }}</td>
+                        <td>{{ $user->type }}</td>
                     </tr>
+                    @endforeach
+                    
                 </table>
+                {{$users -> links()}}
             </div>
         </div>
     </div>

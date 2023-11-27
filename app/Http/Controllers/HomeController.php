@@ -31,7 +31,8 @@ class HomeController extends Controller
     // / Ideiglenes controller a felhasználó kezelésnek
     public function userLista()
     {
-        return view('userLista');
+        $users = DB::table('users')->paginate(2);
+        return view('userLista', ["users"=> $users]);
         
     }
 }
