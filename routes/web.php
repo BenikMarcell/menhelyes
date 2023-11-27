@@ -51,7 +51,9 @@ Route::get('/menhelyek/{telepules}', [MenhelyekController::class, 'menhelyekByTe
 Route::post('/menhelyek/kereses', [MenhelyekController::class, 'kereses'])->name('menhelyekKereses');
 Route::get('/megkeresettMenhely/{m_id}', [MenhelyekController::class, 'kereses'])->name('kereses');
 
-Route::get('allatregisztracio', [AllatokController::class, 'create'])->name('create')->middleware('menhely');
+Route::get('/allatregisztracio', [AllatokController::class, 'create'])->name('create')->middleware('menhely');
+
+Route::get('/allatmodositas/{a_id}', [AllatokController::class, 'modify'])->middleware('menhely');
 
 Route::get('menhelyAllatai', [AllatokController::class, 'index'])->name('menhelyAllatai');
 

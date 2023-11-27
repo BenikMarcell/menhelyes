@@ -62,8 +62,7 @@ Az authorize hívás során a megfelelő argumentumokat használva a záradékba
     
     public function index()
     {
-        return view('menhelyAllatai');
-        /*
+        
         if (auth()->check() && auth()->user()->type === 2) {
         $email = auth()->user()->email;
         $menhely = Menhely::where('email', $email)->first();
@@ -75,7 +74,7 @@ Az authorize hívás során a megfelelő argumentumokat használva a záradékba
 
             return view('menhelyAllatai', compact('allatok'));
             }
-            */
+            
      }  
     
     /**
@@ -156,9 +155,12 @@ Az authorize hívás során a megfelelő argumentumokat használva a záradékba
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(string $id)
+    public function modify($a_id)
     {
-        //
+        $allat = Allat::Find($a_id);
+        $fajok = Faj::all();
+        $szinek = Szin::all();
+        return view('allatRegisztracio', ['allat'=>$allat , 'fajok'=>$fajok , 'szinek'=>$szinek]);
     }
 
     /**

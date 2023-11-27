@@ -50,7 +50,7 @@
 
              <div class="mb-3">
                 <h5>Nem</h5>
-                <select class="form-select" id="nem" name="nem" size="2" aria-label="size 2 select example">
+                <select class="form-select" id="nem" name="nem">
                 <option value="Lány">Lány</option>
                 <option value="Fiú">Fiú</option>
                 </select>
@@ -61,7 +61,7 @@
 
             <div class="mb-3">
                 <h5>Válassz a nemzőképesség szerint!</h5>
-                <select class="form-select" id="ivar_allapot" name="ivar_allapot" size="2" aria-label="size 2 select example">
+                <select class="form-select" id="ivar_allapot" name="ivar_allapot">
                 <option value="Ivartalanított">Ivartalanított</option>
                 <option value="Nem ivartalanított">Nem ivartalanított</option>
                 </select>
@@ -72,7 +72,7 @@
 
             <div class="mb-3">
                 <h5>Rendelkezik chippel?</h5>
-                <select class="form-select" id="chip" name="chip" size="2" aria-label="size 2 select example">
+                <select class="form-select" id="chip" name="chip">
                 <option value="Igen">Igen</option>
                 <option value="Nem">Nem</option>
                 </select>
