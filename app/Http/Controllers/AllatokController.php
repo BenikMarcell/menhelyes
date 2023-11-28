@@ -174,9 +174,11 @@ Az authorize hívás során a megfelelő argumentumokat használva a záradékba
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(string $id)
+    public function destroy(string $a_id)
     {
-        //
+        $allat = Allat::find($a_id);
+        $allat->delete();
+        return redirect()->route('menhelyAllatai');
     }
 
 }

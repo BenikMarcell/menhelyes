@@ -102,21 +102,15 @@ Route::get('/userLista', [HomeController::class, "userLista"]);
 
 // Ideiglenes controller a felhasználó kezelésnek - vége
 
-
-
-Route::get('/tamogatoiProfil', function () {
-    return view('tamogatoiProfil');
-});
-
 Route::get('/menhelyProfil', function () {
     return view('menhelyProfil');
 })->name('menhelyProfil');
 
-Route::get('/allatTorles', function () {
+Route::get('/allatTorles/{a_id}', function () {
     return view('allatTorles');
-})->name('allatTorles');
+});
 
-
+Route::post('/allatTorles/{a_id}', [AllatokController::class,"destroy"]);
 
 Route::get('/menhelyAdomanyai',[BarionController::class,"lista"])->name('menhelyAdomanyai');
 
