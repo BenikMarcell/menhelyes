@@ -10,6 +10,8 @@ use App\Http\Controllers\SzinekController;
 use App\Http\Controllers\BarionController;
 use App\Http\Controllers\menhelyKepekController;
 
+
+
 use App\Http\Controllers\HomeController;
 
 /*
@@ -94,7 +96,7 @@ Route::get('/kapcsolat', function () {
 });
 Route::get('/gyik', function () {
     return view('gyik');
-});
+})->name('gyik');
 
 
 // Ideiglenes controller a felhasználó kezelésnek
@@ -113,6 +115,7 @@ Route::get('/allatTorles/{a_id}', function () {
 Route::post('/allatTorles/{a_id}', [AllatokController::class,"destroy"]);
 
 Route::get('/menhelyAdomanyai',[BarionController::class,"lista"])->name('menhelyAdomanyai');
+Route::get('/menhelyregisztracio',[MenhelyekController::class,"create"])->name('menhelyRegisztracio');
 
 
 

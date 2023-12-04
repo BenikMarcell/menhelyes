@@ -91,7 +91,7 @@
 
                         <div class="col-3 center">
                             <div class="ml-5">
-                                <a class="btn" href="./gyik">GyIK</a>
+                                <a class="btn" href="{{route('gyik')}}">GyIK</a>
                             </div>
                         </div>
                         <div class="col-3 center">

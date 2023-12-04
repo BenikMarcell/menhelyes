@@ -62,18 +62,20 @@ Az authorize hívás során a megfelelő argumentumokat használva a záradékba
     
     public function index()
     {
-        
-        if (auth()->check() && auth()->user()->type === 2) {
-        $email = auth()->user()->email;
-        $menhely = Menhely::where('email', $email)->first();
-        if ($menhely) {
-            // Ha találtunk egyezést, akkor beállítjuk az "m_id"-t a menhely "m_id"-jére
-            $m_id = $menhely->m_id;
-             }
-             $allatok = Allat::where('m_id', $m_id)->paginate(5);
+        if (auth()->check()) {
+            $email = auth()->user()->email;
+            $menhely = Menhely::where('email', $email)->first();
+            if ($menhely) {
+                // Ha találtunk egyezést, akkor beállítjuk az "m_id"-t a menhely "m_id"-jére
+                $m_id = $menhely->m_id;
+                $allatok = Allat::where('m_id', $m_id)->paginate(5);
 
-            return view('menhelyAllatai', compact('allatok'));
+                return view('menhelyAllatai', compact('allatok'));
+            }else{
+                return redirect()->route('menhelyRegisztracio');
             }
+            
+        }
             
      }  
     
