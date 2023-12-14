@@ -25,7 +25,7 @@ class MenhelyekController extends Controller
      }
 
           
-     public function menhelyListaMenhelyek()  //menhelyek oldlon kilistázza a menhelyeket, előtte megszámolja mennyi van egy településen
+     public function menhelyListaMenhelyek()  //menhelyek oldalon kilistázza a menhelyeket, előtte megszámolja mennyi van egy településen
      {
         $menhelyek = Menhely::all();
 
@@ -37,6 +37,7 @@ class MenhelyekController extends Controller
          return view('menhelyek', ["menhelyek" => $menhelyek, "telepulesek" => $telepulesek]);
      }
 
+     // A menhelyek települések szerint
      public function menhelyekByTelepules($telepules)
 {
     $menhelyek = Menhely::where('telepules', $telepules)->get();
@@ -49,6 +50,7 @@ class MenhelyekController extends Controller
     return view('egyMenhely', ['menhely' => $menhely]);
 }
 
+// Menhely keresés függvény a gombra
 public function kereses(Request $request)
 {
     $kereses = $request->input('nev');

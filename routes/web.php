@@ -31,12 +31,16 @@ use App\Http\Controllers\HomeController;
 
 //Állat kártyán a kép
 Route::get('/allat/{id}/kep', [AllatokController::class, 'kartyaKep'])->name('allat.image');
+
 //Menhely kártyán a kép
 Route::get('/menhely/{id}/kep', [MenhelyekController::class, 'menhelyKep'])->name('menhely.image');
+
 //a kártyák: állatok és menhelyek
 Route::get('/', [MenhelyekController::class, 'menhelyLista'])->name('menhelyLista');
+
 // allatok oldalra kártyákban megjelenteti az állatokat
 Route::get('/allatok', [AllatokController::class,'allatokLista'])->name('allatokLista');
+
 // Egy állat adatai
 Route::get('/egyAllat/{a_id}', [AllatokController::class, 'egyAllat'])->name('egyAllat');
 
@@ -44,14 +48,23 @@ Route::get('/sajatAllat/{a_id}', [AllatokController::class, 'sajatAllat'])->name
 
 Route::get('/ujAllat/{a_id}', [KepekController::class, 'ujAllat'])->name('ujAllat');
 
+
+
+//---------Menhelyek aloldal:
 Route::get('/menhelyek', [MenhelyekController::class, 'menhelyListaMenhelyek'])->name('menhelyListaMenhelyek');
 
 Route::get('/egyMenhely/{m_id}', [MenhelyekController::class, 'egyMenhely'])->name('egyMenhely');
 
 Route::get('/menhelyek/{telepules}', [MenhelyekController::class, 'menhelyekByTelepules'])->name('menhelyekByTelepules');
 
+// A menhelykeresés gomb POST
 Route::post('/menhelyek/kereses', [MenhelyekController::class, 'kereses'])->name('menhelyekKereses');
+
+// A megkeresett menhely aloldal megjelenítése
 Route::get('/megkeresettMenhely/{m_id}', [MenhelyekController::class, 'kereses'])->name('kereses');
+
+
+
 
 Route::get('/allatregisztracio', [AllatokController::class, 'create'])->name('create')->middleware('menhely');
 
@@ -87,7 +100,7 @@ Route::resource('menhelykepek', MenhelyKepekController::class);
 
 
 
-
+// Főoldal route
 Route::get('/fooldal', function () {
     return view('welcome');
 });
