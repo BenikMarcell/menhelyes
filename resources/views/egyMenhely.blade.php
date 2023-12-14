@@ -54,7 +54,7 @@
     </div>
     
 <div>
-    <a id="visszaBtn" href="{{ url('/') }}" class="btn rounded">Vissza a Főoldalra!</a>
+    <a id="visszaBtn" href="{{ url('/menhelyek') }}" class="btn rounded">Vissza a Menhelyekhez!</a>
 </div>
 
     
