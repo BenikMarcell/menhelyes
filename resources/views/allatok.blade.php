@@ -22,6 +22,8 @@
                     <option value="medve">Medve</option>
                 </select>
             </div>
+
+    <!-- Az állat színét kivettem a keresésből
             <div class="inputMezo">
                 <label for="allatSzine">Állat színe:</label>
                 <select class="form-control" name="allatSzine" id="allatSzineValaszto">
@@ -32,6 +34,7 @@
                     <option value="barna">Barna</option>
                 </select>
             </div>
+    -->
             <div class="inputMezo">
                 <label for="allatNeme">Állat neme:</label>
                 <select class="form-control" name="allatNeme" id="allatNemeValaszto">
@@ -54,6 +57,10 @@
             </div>
         </div>
         <button class="btn rounded">Keress!</button>
+        
+        <!-- Az állat keresés funkció nem működik. Ez van a menhely kereső gombon
+        <a href="{{ route('egyMenhely', ['m_id' => $menhely->m_id]) }}" class="btn rounded">Bővebben</a>
+        -->
     </form>
 </div>
 

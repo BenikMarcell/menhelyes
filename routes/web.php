@@ -25,18 +25,14 @@ use App\Http\Controllers\HomeController;
 |
 */
 
-
-
 // KG routok kezdete -----------------------------------------------------------------------------------------
 
+//Főoldal megjelenítése és hozzá a kártyák: állatok és menhelyek
+Route::get('/', [MenhelyekController::class, 'menhelyLista'])->name('menhelyLista');
+
+//-----------Állatok aloldalak
 //Állat kártyán a kép
 Route::get('/allat/{id}/kep', [AllatokController::class, 'kartyaKep'])->name('allat.image');
-
-//Menhely kártyán a kép
-Route::get('/menhely/{id}/kep', [MenhelyekController::class, 'menhelyKep'])->name('menhely.image');
-
-//a kártyák: állatok és menhelyek
-Route::get('/', [MenhelyekController::class, 'menhelyLista'])->name('menhelyLista');
 
 // allatok oldalra kártyákban megjelenteti az állatokat
 Route::get('/allatok', [AllatokController::class,'allatokLista'])->name('allatokLista');
@@ -63,6 +59,8 @@ Route::post('/menhelyek/kereses', [MenhelyekController::class, 'kereses'])->name
 // A megkeresett menhely aloldal megjelenítése
 Route::get('/megkeresettMenhely/{m_id}', [MenhelyekController::class, 'kereses'])->name('kereses');
 
+//Menhely kártyán a kép
+Route::get('/menhely/{id}/kep', [MenhelyekController::class, 'menhelyKep'])->name('menhely.image');
 
 
 
@@ -114,7 +112,6 @@ Route::get('/gyik', function () {
 
 // Ideiglenes controller a felhasználó kezelésnek
 Route::get('/userLista', [HomeController::class, "userLista"]);
-
 // Ideiglenes controller a felhasználó kezelésnek - vége
 
 Route::get('/menhelyProfil', function () {
