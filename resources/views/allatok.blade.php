@@ -43,10 +43,12 @@
                     <option value="nosteny">Nőstény</option>
                 </select>
             </div>
+    <!--
             <div class="inputMezo">
                 <label for="allatKora">Állat kora:</label>
                 <input class="form-control" type="number" placeholder="Kor">
             </div>
+    -->
             <div class="inputMezo">
                 <label for="allatIvara">Állat ivarállapota:</label>
                 <select class="form-control" name="allatIvara" id="allatIvaraValaszto">
@@ -59,7 +61,7 @@
         <button class="btn rounded">Keress!</button>
         
         <!-- Az állat keresés funkció nem működik. Ez van a menhely kereső gombon
-        <a href="{{ route('egyMenhely', ['m_id' => $menhely->m_id]) }}" class="btn rounded">Bővebben</a>
+        <a href="" class="btn rounded">Bővebben</a>
         -->
     </form>
 </div>
