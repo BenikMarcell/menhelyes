@@ -111,7 +111,7 @@ Route::get('/hirlevel', function () {
     return view('hirlevel');
 })->name('hirlevel');
 
-//Menhely profil oldal
+//---------Menhely profil oldal
 Route::get('/menhelyProfil', function () {
     return view('menhelyProfil');
 })->name('menhelyProfil');
@@ -130,6 +130,8 @@ Route::get('/allatTorles/{a_id}', function () {
 Route::post('/allatTorles/{a_id}', [AllatokController::class,"destroy"]);
 
 Route::get('/menhelyAdomanyai',[BarionController::class,"lista"])->name('menhelyAdomanyai');
+
+
 Route::get('/menhelyregisztracio',[MenhelyekController::class,"create"])->name('menhelyRegisztracio');
 
 

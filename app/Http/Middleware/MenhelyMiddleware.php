@@ -14,7 +14,7 @@ class MenhelyMiddleware
  
     public function handle(Request $request, Closure $next)
     {
-        if (auth()->check() && auth()->user()->type === 2) {
+        if (auth()->check() && auth()->user()->type == 2) {
             // Ellenőrizd, hogy a felhasználó bejelentkezett és "menhely" típusú
             // Most megpróbáljuk megtalálni azt a menhelyet, ahol az email cím megegyezik
             $email = auth()->user()->email;
