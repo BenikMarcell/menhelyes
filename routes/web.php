@@ -62,7 +62,7 @@ Route::get('/megkeresettMenhely/{m_id}', [MenhelyekController::class, 'kereses']
 //Menhely kártyán a kép
 Route::get('/menhely/{id}/kep', [MenhelyekController::class, 'menhelyKep'])->name('menhely.image');
 
-
+//--------
 
 Route::get('/allatregisztracio', [AllatokController::class, 'create'])->name('create')->middleware('menhely');
 
@@ -95,9 +95,6 @@ Route::resource('menhelykepek', MenhelyKepekController::class);
 
 // KG routok vége ----------------------------------------------------------------------------------
 
-
-
-
 // Főoldal route
 Route::get('/fooldal', function () {
     return view('welcome');
@@ -114,16 +111,17 @@ Route::get('/hirlevel', function () {
     return view('hirlevel');
 })->name('hirlevel');
 
-
+//Menhely profil oldal
+Route::get('/menhelyProfil', function () {
+    return view('menhelyProfil');
+})->name('menhelyProfil');
 
 
 // Ideiglenes controller a felhasználó kezelésnek
 Route::get('/userLista', [HomeController::class, "userLista"])->name('userLista');
 // Ideiglenes controller a felhasználó kezelésnek - vége
 
-Route::get('/menhelyProfil', function () {
-    return view('menhelyProfil');
-})->name('menhelyProfil');
+
 
 Route::get('/allatTorles/{a_id}', function () {
     return view('allatTorles');

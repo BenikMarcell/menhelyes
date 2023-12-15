@@ -14,7 +14,7 @@
                     Sikeresen bejelentkeztél!
 
                     Átirányítás a profilra...
-                    <meta http-equiv="refresh" content="2; url={{route('menhelyAllatai')}}">
+                    <meta http-equiv="refresh" content="2; url={{route('menhelyProfil')}}">
 
                 </div>
 
