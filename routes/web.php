@@ -104,7 +104,8 @@ Route::get('/fooldal', function () {
 });
 Route::get('/kapcsolat', function () {
     return view('kapcsolat');
-});
+})->name('kapcsolat');
+
 Route::get('/gyik', function () {
     return view('gyik');
 })->name('gyik');

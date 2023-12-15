@@ -96,13 +96,13 @@
                         </div>
                         <div class="col-3 center">
                             <div class="ml-5">
-                                <a class="btn" href="./kapcsolat">Kapcsolat</a>
+                                <a class="btn" href="{{route('kapcsolat')}}">Kapcsolat</a>
                             </div>
                         </div>
           
                         <div class="col-3 center">
                             <div class="ml-5">
-                                <a class="btn" href="./hirlevel">Hírlevél</a>
+                                <a class="btn" href="{{route('hirlevel')}}">Hírlevél</a>
                             </div>
                         </div>
           
