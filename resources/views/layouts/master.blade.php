@@ -26,7 +26,9 @@
                 
                 <a href="{{ url('./') }}"><img id="logokep" src="{{asset('images/logo.png')}}" alt="Logo"></a>
             </div>
+            
             <div id="nav-gombok" class="col-6">
+                <a class="btn" href="./userLista">Felhasznaló kezelés</a>
                 <a class="btn rounded" href="{{ url('./menhelyek') }}" >Menhelyek</a>
                 <a class="btn rounded" href="{{ url('./allatok') }}" >Állatok</a>
                 <a class="btn rounded" href="{{ url('./kapcsolat') }}" >Kapcsolat</a>
@@ -80,14 +82,6 @@
                 <div class="col-1"></div>
                 <div class="col-10">
                     <div class="row">
-
-                        <!-- Ezt a gombot ideioglenesen tettem ide -->
-                        <div class="col-3 center">
-                            <div class="ml-5">
-                                <a class="btn" href="./userLista">Felhasznaló kezelés</a>
-                            </div>
-                        </div>
-                        <!-- Idáig -->
 
                         <div class="col-3 center">
                             <div class="ml-5">
