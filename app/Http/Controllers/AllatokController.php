@@ -34,7 +34,7 @@ class AllatokController extends Controller
     return view('welcome', compact('allat', 'error'));
     }
 
-
+// lekéri az állatokat a DB-ből
     public function allatokLista()
     {
         $allatok = Allat::all();

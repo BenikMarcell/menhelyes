@@ -37,6 +37,8 @@
     </div>
 
     <a id="visszaBtn" href="{{ url('/menhelyek') }}" class="btn rounded">Menhely megtekintése!</a>
+<!-- Betettem egy plusz gombot ami visszavisz a keresésre, az állatok -->
+    <a id="visszaBtn" href="{{ url('/allatok') }}" class="btn rounded mt-2">Tovább keresek!</a>
 
 </div>
 

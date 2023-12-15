@@ -43,7 +43,7 @@
                     <option value="nosteny">Nőstény</option>
                 </select>
             </div>
-    <!--
+    <!-- Az állat korát kivettem a kereséséből
             <div class="inputMezo">
                 <label for="allatKora">Állat kora:</label>
                 <input class="form-control" type="number" placeholder="Kor">
