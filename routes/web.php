@@ -118,7 +118,7 @@ Route::get('/hirlevel', function () {
 
 
 // Ideiglenes controller a felhasználó kezelésnek
-Route::get('/userLista', [HomeController::class, "userLista"]);
+Route::get('/userLista', [HomeController::class, "userLista"])->name('userLista');
 // Ideiglenes controller a felhasználó kezelésnek - vége
 
 Route::get('/menhelyProfil', function () {
