@@ -109,6 +109,12 @@ Route::get('/gyik', function () {
     return view('gyik');
 })->name('gyik');
 
+Route::get('/hirlevel', function () {
+    return view('hirlevel');
+})->name('hirlevel');
+
+
+
 
 // Ideiglenes controller a felhasználó kezelésnek
 Route::get('/userLista', [HomeController::class, "userLista"]);

@@ -102,7 +102,7 @@
           
                         <div class="col-3 center">
                             <div class="ml-5">
-                                <a class="btn" href="./kapcsolat">Hírlevél</a>
+                                <a class="btn" href="./hirlevel">Hírlevél</a>
                             </div>
                         </div>
           

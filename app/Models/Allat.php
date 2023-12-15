@@ -15,6 +15,7 @@ class Allat extends Model
     public $primaryKey = "a_id";
     public $timestamps = false;
 
+    
     public function menhely()
     {
         return $this->belongsTo(Menhely::class);

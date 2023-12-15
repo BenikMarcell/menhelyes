@@ -10,10 +10,11 @@
 @endphp
 
 
-<div class="container">
+<div class="container-fluid">
 
     <div class="row">
-        <div class="col-6">
+        <div class="col-4"></div>
+        <div class="col-4">
             <h1>Kapcsolat!</h1>
             <div class="mb-3">
                 <label for="exampleFormControlInput1" class="form-label">Név:</label>
@@ -31,8 +32,9 @@
             <div class="d-grid gap-2 col-6 mx-auto mb-3">
                 <button type="button" class="btn">Beküld!</button>
             </div>
+            <div class="col-4"></div>
         </div>
-
+<!-- kivettem a hirlevel formot mert külön oldalra került 
         <div class="col-6">
             <h1>Feliratkozás a hírlevélre!</h1>
             <div class="mb-3">
@@ -47,7 +49,7 @@
                 <button type="button" class="btn">Kérem a hírlevelet!</button>
             </div>
         </div>
-
+-->
     </div>
 
 </div>
