@@ -1,5 +1,6 @@
 <?php
 
+use GuzzleHttp\Middleware;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AllatokController;
@@ -11,8 +12,8 @@ use App\Http\Controllers\BarionController;
 use App\Http\Controllers\menhelyKepekController;
 
 
-
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\AdminController;
 
 /*
 |--------------------------------------------------------------------------
@@ -141,4 +142,6 @@ Route::get('/menhelyregisztracio',[MenhelyekController::class,"create"])->name('
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+//hozzáadtam egy újabb Routot és egy AdminControllert
+Route::get('/homeAdmin', [App\Http\Controllers\AdminController::class, 'indexAdmin'])->name('home.admin')->middleware('isAdminMiddleware');
 

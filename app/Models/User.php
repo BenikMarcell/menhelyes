@@ -44,11 +44,11 @@ class User extends Authenticatable
         'password' => 'hashed',
     ];
     public function isAdmin() {
-        return $this->type === 1;
+        return $this->type == 1;
     }
     
     public function isMenhely() {
-        return $this->type === 2;
+        return $this->type == 0;
     }
     
 

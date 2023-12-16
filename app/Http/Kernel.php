@@ -19,6 +19,7 @@ class Kernel extends HttpKernel
      protected $routeMiddleware = [
         // ...
         'menhely' => \App\Http\Middleware\MenhelyMiddleware::class,
+        'isAdmin' => \App\Http\Middleware\isAdmin::class
     ];
 
 

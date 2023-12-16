@@ -11,7 +11,7 @@
 
                 <div class="card-body">
 
-                    Sikeresen bejelentkeztél mint felhasználó!
+                    Sikeresen bejelentkeztél mint Adminisztrátor!
 
                     Átirányítás a profilra...
                     <meta http-equiv="refresh" content="2; url={{route('menhelyProfil')}}">
