@@ -10,8 +10,6 @@ use App\Http\Controllers\MenhelyekController;
 use App\Http\Controllers\SzinekController;
 use App\Http\Controllers\BarionController;
 use App\Http\Controllers\menhelyKepekController;
-
-
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\AdminController;
 
@@ -141,7 +139,7 @@ Route::get('/menhelyregisztracio',[MenhelyekController::class,"create"])->name('
 
 Auth::routes();
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home')->middleware('isAdminMiddleware');
 //hozzáadtam egy újabb Routot és egy AdminControllert
-Route::get('/homeAdmin', [App\Http\Controllers\AdminController::class, 'indexAdmin'])->name('home.admin')->middleware('isAdminMiddleware');
+Route::get('/homeAdmin', [App\Http\Controllers\AdminController::class, 'index'])->name('home.admin')->middleware('isAdminMiddleware');
 

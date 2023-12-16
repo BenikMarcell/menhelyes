@@ -17,7 +17,7 @@ class isAdminMiddleware
                 return $next($request);                
             }
             else {
-                return to_route('admin.home');
+                return to_route('home.admin');
             }
         }
         

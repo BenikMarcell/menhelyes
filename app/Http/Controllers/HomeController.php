@@ -12,11 +12,13 @@ class HomeController extends Controller
      *
      * @return void
      */
-    public function __construct()
+    //Kiszedtem ezt
+     /*
+     public function __construct()
     {
         $this->middleware('auth');
     }
-
+    */
     /**
      * Show the application dashboard.
      *
@@ -24,15 +26,10 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('layouts.home');
+        return view('home');
         
     }
 
     // / Ideiglenes controller a felhasználó kezelésnek
-    public function userLista()
-    {
-        $users = DB::table('users')->paginate(2);
-        return view('userLista', ["users"=> $users]);
-        
-    }
+    
 }
