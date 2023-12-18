@@ -7,7 +7,7 @@
     @include('menhelyProfilNav')
 
     <div class="row">
-
+        <!-- ide jön  amenhely neve -->
         <h1 class="text-center mb-5">Menhely Neve</h1>
 
         <div class="col-6">

@@ -14,7 +14,7 @@ class isAdminMiddleware
     {
         if(auth()->check())
         {
-            if(auth()->user()->type == 1){
+            if(auth()->user()->type === 1){
                 return $next($request);                
             }
             else {
