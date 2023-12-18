@@ -15,11 +15,19 @@
                             Sikeresen bejelentkeztél mint adminisztrátor!
 
                             Átirányítás a profilra...
+
+                            <!--átadom a menhely adatokat-->
+
                             <meta http-equiv="refresh" content="2; url={{ route('menhelyProfil') }}">
                         @else
                             Sikeresen bejelentkeztél mint felhasználó!
 
                             Átirányítás a profilra...
+                            <?php
+                            
+                            echo (Auth::user()->name);
+                            ?>
+
                             <meta http-equiv="refresh" content="2; url={{ route('menhelyProfil') }}">
                         @endif
 
