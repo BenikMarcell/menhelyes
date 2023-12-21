@@ -59,12 +59,16 @@ Itt a $allatok->first() az első állatot jelképezi a listából, míg a $menhe
 Az authorize hívás során a megfelelő argumentumokat használva a záradékban definiált engedélyt lehet alkalmazni az első állatra és a menhelyre.
 
 */ 
-    
+
+    /**
+     * Ez nem működik ? mert nincs a többinek menhelye regisztrálva és nincs a menhely tablaban email cím
+     */
     public function index()
     {
         if (auth()->check()) {
-            $email = auth()->user()->email;
-            $menhely = Menhely::where('email', $email)->first();
+            $email = auth()->user()->email; // email beolvas
+            $menhely = Menhely::where('email', $email)->first(); //megkeresi az emailhez tartozó menhelyet
+            
             if ($menhely) {
                 // Ha találtunk egyezést, akkor beállítjuk az "m_id"-t a menhely "m_id"-jére
                 $m_id = $menhely->m_id;
@@ -72,7 +76,7 @@ Az authorize hívás során a megfelelő argumentumokat használva a záradékba
 
                 return view('menhelyAllatai', compact('allatok'));
             }else{
-                return redirect()->route('menhelyRegisztracio');
+                return redirect()->route('create'); //Undefined variable $menhely
             }
             
         }
