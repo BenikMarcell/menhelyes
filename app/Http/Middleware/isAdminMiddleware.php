@@ -6,6 +6,8 @@ use Closure;
 use Illuminate\Http\Request;
 use Symfony\Component\HttpFoundation\Response;
 use App\Models\Menhely;
+use App\Models\User;
+
 
 class isAdminMiddleware
 {
@@ -24,4 +26,7 @@ class isAdminMiddleware
         
         
     }
+
+    //Ide kellene írni azt ami megnézni, hogy a user ID szerepel-e a menhely táblában?
+    
 }

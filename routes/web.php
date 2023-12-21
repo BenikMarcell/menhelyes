@@ -63,7 +63,8 @@ Route::get('/menhely/{id}/kep', [MenhelyekController::class, 'menhelyKep'])->nam
 
 //--------
 
-Route::get('/allatregisztracio', [AllatokController::class, 'create'])->name('create')->middleware('menhely');
+Route::get('/allatregisztracio', [AllatokController::class, 'create'])->name('create');
+//->middleware('menhely');
 
 Route::get('/allatmodositas/{a_id}', [AllatokController::class, 'modify'])->middleware('menhely');
 
@@ -141,5 +142,5 @@ Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home')->middleware('isAdmin');
 //hozzáadtam egy újabb Routot és egy AdminControllert
-Route::get('/homeAdmin', [App\Http\Controllers\AdminController::class, 'index'])->name('home.admin');
+//Route::get('/homeAdmin', [App\Http\Controllers\AdminController::class, 'index'])->name('home.admin');
 

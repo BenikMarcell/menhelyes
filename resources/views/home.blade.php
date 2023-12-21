@@ -25,7 +25,9 @@
                             Átirányítás a profilra...
                             <?php
                             
-                            echo (Auth::user()->name);
+
+                            echo (Auth::user()->id);
+                            
                             ?>
 
                             <meta http-equiv="refresh" content="2; url={{ route('menhelyProfil') }}">

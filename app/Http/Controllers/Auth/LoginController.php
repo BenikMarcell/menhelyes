@@ -5,6 +5,8 @@ namespace App\Http\Controllers\Auth;
 use App\Http\Controllers\Controller;
 use App\Providers\RouteServiceProvider;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
+// g-Temp
+use App\Models\Menhely;
 
 class LoginController extends Controller
 {
@@ -20,6 +22,13 @@ class LoginController extends Controller
     */
 
     use AuthenticatesUsers;
+
+    // Gtemp
+    public function menhelyID(){
+        $menhely = Menhely::All();
+        $m_id = $menhely->m_id;
+        return view('home', ["m_id" => $m_id]);
+    }
 
     /**
      * Where to redirect users after login.
