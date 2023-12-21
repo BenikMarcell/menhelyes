@@ -30,7 +30,7 @@
                 <p>Menhely adatai...</p>
             </div>
             <div class="col-6">
-                <a href="{{ route('menhely.edit') }}" class="btn">Szerkesztés</a>
+                <a href="{{ route('menhely.edit') }}" class="btn">Menhely profil szerkesztése</a>
             </div>
         </div>
 
