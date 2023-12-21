@@ -114,7 +114,7 @@ Az authorize hívás során a megfelelő argumentumokat használva a záradékba
 
        
        // Ellenőrizzük, hogy a bejelentkezett felhasználó "menhely" típusú-e
-    if (auth()->check() && auth()->user()->type === 2) {
+    if (auth()->check() && auth()->user()->type === 1) {
         $email = auth()->user()->email;
         $menhely = Menhely::where('email', $email)->first();
         if ($menhely) {
