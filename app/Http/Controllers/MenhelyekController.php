@@ -197,12 +197,13 @@ public function menhelyKep(string $m_id)
 
     /**
      * Show the form for editing the specified resource.
+     * && auth()->user()->type === 0
      */
 
 
      public function edit()
 {
-    if (auth()->check() && auth()->user()->type === 2) {
+    if (auth()->check() && auth()->user()) {
         $email = auth()->user()->email;
         $menhely = Menhely::where('email', $email)->first();  // itt találom meg a menhelyet
 
