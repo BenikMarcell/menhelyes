@@ -6,6 +6,13 @@
 
         @include('menhelyProfilNav')
 
+        <!-- A szerkesztés után ez a success jön vissza -->
+        @if (session('success'))
+        <div class="alert alert-success">
+            {{session('success')}}
+        </div>
+        @endif
+         
         <div class="row">
             
             <?php

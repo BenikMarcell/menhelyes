@@ -7,15 +7,7 @@
 <div class="container">
 
     @include('menhelyProfilNav')
-
-    @if (session('success'))
-    <div class="alert alert-success">
-        {{session('success')}}
-    
-    </div>
-        
-    @endif
-   
+  
     
     <h1 class="text-center mb-5">Állataim:</h1>
    

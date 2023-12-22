@@ -302,7 +302,7 @@ public function menhelyKep(string $m_id)
         $menhely->save();
         
         
-        return redirect()->route('menhelyAllatai')->with('success', 'Menhely sikeresen szerkesztve.');
+        return redirect()->route('menhelyProfil')->with('success', 'Menhely sikeresen szerkesztve.');
     }
 
     /**
