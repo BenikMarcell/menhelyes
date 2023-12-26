@@ -19,7 +19,7 @@
 
         <div class="col-6">
             @if($allat->kep)
-            <img class="card-img-top sajatAllatKep" src="{{ asset('storage/images/' . $allat->kep->src) }}" alt="Próba {{ $allat->kep->src }}">
+            <img class="card-img-top sajatAllatKep" src="{{ asset('storage/images/'.$allat->kep->src) }}" alt="Próba {{ $allat->kep->src }}">
             @endif
         </div>
 

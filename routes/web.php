@@ -81,7 +81,7 @@ Route::delete('/menhelykepek/{mk_id}', [MenhelyKepekController::class, 'destroy'
 Route::put('/menhelykepek/{mk_id}', [MenhelyKepekController::class, 'update'])->name('menhelykepek.update');
 
 
-
+//Hiányzik a kepek.store???
 
 Route::get('kepek/create', [KepekController::class, 'create'])->name('kepek.create');
 
