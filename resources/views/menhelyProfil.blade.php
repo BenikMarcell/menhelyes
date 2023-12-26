@@ -12,7 +12,7 @@
             {{session('success')}}
         </div>
         @endif
-         
+
         <div class="row">
             
             <?php
@@ -34,6 +34,7 @@
         <div class="row">
             <div class="col-6">
                 <h3>Adatok:</h3>
+                
                 <p>Menhely adatai...</p>
             </div>
             <div class="col-6">

@@ -4,6 +4,11 @@
 @include('menhelyProfilNav')
 
 <h1>Állatok regisztrációja!</h1>
+
+<?php
+//echo $fajok,$szinek,$menhelyek;
+?>
+
 <form action="{{route('bevall.store')}}" method="POST">
 
     @csrf

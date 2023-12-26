@@ -19,7 +19,7 @@
         <tr>
             <th>ID</th>
             <th>Név</th>
-            <th>Kor</th>
+            <th>Kor (hónap)</th>
             <th>Nem</th>
             <th>Faj</th>
             <th>Műveletek</th>

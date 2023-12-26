@@ -51,7 +51,7 @@
         </div>
     </div>
 </div>
-
+<!-- Itt kezdődik  akértya kiírás -->
 <div class="container">
 
     <div class="row">

@@ -198,6 +198,7 @@ public function menhelyKep(string $m_id)
     /**
      * Show the form for editing the specified resource.
      * && auth()->user()->type === 0
+     * Az edit hibára fut ha a usernek nincs még regisztrált menhelye
      */
 
 

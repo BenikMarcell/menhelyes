@@ -88,11 +88,12 @@ Az authorize hívás során a megfelelő argumentumokat használva a záradékba
      */
     public function create()
     {
-        $this->authorize('create-allat');
+        //$this->authorize('create-allat');
+        // Ez a $this miért van itt?
         $fajok = Faj::all();
         $szinek = Szin::all();
         $menhelyek = Menhely::all();
-        return view('allatregisztracio', compact('fajok', 'szinek'));
+        return view('allatregisztracio', compact('fajok', 'szinek','menhelyek'));
     }
 
     /**
