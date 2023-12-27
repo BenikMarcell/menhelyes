@@ -76,7 +76,8 @@ class KepekController extends Controller
         ]);   
         // fájl neve
         $ujSrc = date('YmdHis').".".$request->src->extension();
-        // ahova elmentjük
+        // ahova elmentjük, de nemk ide menti
+        // $request->src->storeAs('public/images', $ujSrc);
         $request->src->storeAs('public/images', $ujSrc);
        
 
