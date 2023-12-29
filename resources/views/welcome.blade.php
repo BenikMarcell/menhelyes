@@ -33,9 +33,7 @@
             <div class="col-md-3  allat-card">
                 <div class="card mb-2">
                         @if($allat->kep)
-                            <img class="card-img-top myCardImg" src="{{ asset('storage/images/' . $allat->kep->src) }}" alt="Próba {{ $allat->kep->src }}"> <!-- ezzel csak az  abaj, hogy nem ide tölti fel a képeket 
-                            C:\xampp\htdocs\menhelyes\storage\app\public\images\20231022101635.jpg
-                            -->
+                            <img class="card-img-top myCardImg" src="{{ asset('storage/images/' . $allat->kep->src) }}" alt="Próba {{ $allat->kep->src }}"> 
                         @endif
                         <div class="card-body">
                         <h4 class="card-title">{{$allat->nev}}</h4>
