@@ -16,7 +16,7 @@ class isAdminMiddleware
     {
         if(auth()->check())
         {
-            if(auth()->user()->type === 1){
+            if(auth()->user()->type == 1){
                 return $next($request);                
             }
             else {
@@ -27,6 +27,6 @@ class isAdminMiddleware
         
     }
 
-    //Ide kellene írni azt ami megnézni, hogy a user ID szerepel-e a menhely táblában?
+
     
 }
