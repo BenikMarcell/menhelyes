@@ -211,6 +211,7 @@ public function menhelyKep(string $m_id)
         // Most kinyerheted az m_id-t a megtalált menhely rekordból
         $m_id = $menhely->m_id;
 
+        //return view('menhelyregisztracio', compact('menhely', 'm_id'));
         return view('menhelyszerkesztes', compact('menhely', 'm_id'));
     } else {
         $error = 'Menhely nem található';

@@ -140,7 +140,8 @@ Route::get('/menhelyregisztracio',[MenhelyekController::class,"create"])->name('
 
 Auth::routes();
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home')->middleware('isAdmin');
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+//->middleware('isAdmin')
 //hozzáadtam egy újabb Routot és egy AdminControllert
 //Route::get('/homeAdmin', [App\Http\Controllers\AdminController::class, 'index'])->name('home.admin');
 

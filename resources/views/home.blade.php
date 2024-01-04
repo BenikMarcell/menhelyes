@@ -7,7 +7,9 @@
                 <div class="card">
                     <div class="card-header">{{ __('Dashboard') }}</div>
 
-
+                    <!-- Itt meg kell nézni, hogy a bejelentkezett user ID szerepel-e már mint U_ID a menhelyeknél.
+        A regisztráció után egyből a Menhely reg- oldalra kell dobjon és ott kell beállítani a U_ID-t.
+        -->
 
                     <div class="card-body">
 
@@ -24,10 +26,9 @@
 
                             Átirányítás a profilra...
                             <?php
-                            
 
                             echo (Auth::user()->id);
-                            
+
                             ?>
 
                             <meta http-equiv="refresh" content="2; url={{ route('menhelyProfil') }}">

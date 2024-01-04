@@ -19,10 +19,10 @@
             use App\Models\Menhely;
             $email = auth()->user()->email;
             $menhely = Menhely::where('email', $email)->first();
-            //$leiras = $menhely->menhely_leiras;
+            
             ?>
             
-            <h1 class="text-center mb-5">{{$email}}</h1>
+            <h1 class="text-center mb-5">{{Auth::user()->name}}</h1>
             <h4 class="text-center mb-5">{{Auth::user()->id}}</h4>
 <!-- ide először beolvassuk, hogy melyik menhelről van szó 
 aztán kivesszük a menhelyből az adatait és azokat írjuk alább.
@@ -42,18 +42,18 @@ A képfeltöltés még hiányzik!
 
         <div class="row">
             <div class="col-6">
-                <h3>Adatok:</h3>
+                <h4>Adatok:</h4>
                 <div class="col">
-                    <h4>Menhely neve: {{$menhely->nev}}</h4>
-                    <h4>Irányítószám: {{ $menhely->irsz }}</h4>
-                    <h4>Település: {{ $menhely->telepules }}</h4>
-                    <h4>Utca, házszám: {{ $menhely->utca_hsz }}</h4>
-                    <h4>Bankszámla: {{ $menhely->bankszamla_sz }}</h4>
-                    <h4>Nyilvántartási szám: {{ $menhely->nyilv_szam }}</h4>
-                    <h4>Adószám: {{ $menhely->adoszam }}</h4>
-                    <h4>Email: {{ $menhely->email}}</h4>
-                    <h4>Telefon: {{ $menhely->telefon}}</h4>
-                    <h4>Web-oldal: {{ $menhely->weblink }}</h4>  
+                    <p>Irányítószám: {{ $menhely->irsz }}</p>
+                    <p>Menhely neve: {{$menhely->nev}}</p>
+                    <p>Település: {{ $menhely->telepules }}</p>
+                    <p>Utca, házszám: {{ $menhely->utca_hsz }}</p>
+                    <p>Bankszámla: {{ $menhely->bankszamla_sz }}</p>
+                    <p>Nyilvántartási szám: {{ $menhely->nyilv_szam }}</p>
+                    <p>Adószám: {{ $menhely->adoszam }}</p>
+                    <p>Email: {{ $menhely->email}}</p>
+                    <p>Telefon: {{ $menhely->telefon}}</p>
+                    <p>Web-oldal: {{ $menhely->weblink }}</p>  
                   </div>
                   
             </div>

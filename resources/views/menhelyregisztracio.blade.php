@@ -14,7 +14,7 @@
 
 
 
-<h1>Szerkesztés </h1>
+<h1>Új menhely felvitele </h1>
 <br>
 
 
