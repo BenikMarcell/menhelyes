@@ -11,7 +11,8 @@ use App\Http\Controllers\SzinekController;
 use App\Http\Controllers\BarionController;
 use App\Http\Controllers\menhelyKepekController;
 use App\Http\Controllers\HomeController;
-use App\Http\Controllers\isAdminController;
+//use App\Http\Controllers\isAdminController;
+use App\Http\Middleware\isAdminMiddleware;
 
 /*
 |--------------------------------------------------------------------------
@@ -117,6 +118,9 @@ Route::get('/menhelyProfil', function () {
 })->name('menhelyProfil');
 
 
+// Megpróbálom
+//Route::get('/userLista', [AdminControllerp::class, "userLista"])->name('userLista');
+
 // Ideiglenes controller a felhasználó kezelésnek
 Route::get('/userLista', [HomeController::class, "userLista"])->name('userLista');
 // Ideiglenes controller a felhasználó kezelésnek - vége
@@ -140,8 +144,8 @@ Route::get('/menhelyregisztracio',[MenhelyekController::class,"create"])->name('
 
 Auth::routes();
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home')->middleware('isAdmin');
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');//->middleware('isAdmin');
 
 //hozzáadtam egy újabb Routot és egy AdminControllert
-Route::get('/homeAdmin', [App\Http\Controllers\HomeController::class, 'index'])->name('homeAdmin')->middleware('isAdmin');
+Route::get('/homeAdmin', [App\Http\Controllers\HomeController::class, 'index'])->name('homeAdmin')->middleware(isAdminMiddleware::class);
 

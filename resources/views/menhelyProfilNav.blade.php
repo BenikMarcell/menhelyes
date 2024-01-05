@@ -1,23 +1,26 @@
-<div class="container">
+<div class="container d-flex  justify-content-center">
     <div class="row">
         <nav class="navbar navbar-expand-sm">
             <div class="container-fluid">
                 <div class="row w-100">
-                    <div class="col-3"></div>
-                    <div class="col-8">
-                        <ul class="navbar-nav ms-5">
+                    
+                    <div class="col-12">
+                        <ul class="navbar-nav">
                             <li class="nav-item">
-                                <a class="btn" href="{{ url('menhelyAllatai') }}">Állataim</a>
+                                <a class="btn my-2" href="{{ url('menhelyAllatai') }}">Állataim</a>
                             </li>
                             <li class="nav-item">
-                                <a class="btn" href="{{ url('menhelyAdomanyai') }}">Adományaim</a>
+                                <a class="btn my-2" href="{{ url('menhelyAdomanyai') }}">Adományaim</a>
                             </li>
                             <li class="nav-item">
-                                <a class="btn" href="{{ route('menhelyProfil') }}">Profilom</a>
+                                <a class="btn my-2" href="{{ route('menhelyProfil') }}">Profilom</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="btn my-2" href="{{ url('./userLista') }}">Felhasznaló kezelés</a>
                             </li>
                         </ul>
                     </div>
-                    <div class="col-1"></div>
+                    
                 </div>
             </div>
         </nav>

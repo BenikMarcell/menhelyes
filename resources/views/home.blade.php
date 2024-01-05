@@ -10,7 +10,7 @@
 
         <div class="card-body">
 
-            Sikeresen bejelentkeztél mint User!
+            Sikeresen bejelentkeztél mint User!<br/>
 
             Átirányítás a profilra...
             <meta http-equiv="refresh" content="2; url={{route('menhelyProfil')}}">

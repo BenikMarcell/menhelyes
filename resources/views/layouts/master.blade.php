@@ -28,7 +28,7 @@
             </div>
             
             <div id="nav-gombok" class="col-6">
-                <a class="btn rounded" href="{{ url('./userLista') }}">Felhasznaló kezelés</a>
+                
                 <a class="btn rounded" href="{{ url('./menhelyek') }}" >Menhelyek</a>
                 <a class="btn rounded" href="{{ url('./allatok') }}" >Állatok</a>
                 <a class="btn rounded" href="{{ url('./kapcsolat') }}" >Kapcsolat</a>

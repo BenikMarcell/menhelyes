@@ -20,7 +20,7 @@ class isAdminMiddleware
                 return $next($request);                
             }
             else {
-                return response()->view('home');
+                return response()->view('home');// ez irányítja át
             }
         }
         
