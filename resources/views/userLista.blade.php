@@ -2,6 +2,7 @@
 
 @section('title', 'Felhasznaló kezelés')
 @section('content')
+@include('menhelyProfilNav')
     <h2 class="text-center">Felhasználó kezelés</h2>
 
     <div class="container">
