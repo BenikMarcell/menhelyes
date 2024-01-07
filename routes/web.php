@@ -13,7 +13,7 @@ use App\Http\Controllers\menhelyKepekController;
 use App\Http\Controllers\HomeController;
 //use App\Http\Controllers\isAdminController;
 use App\Http\Middleware\isAdminMiddleware;
-
+use App\Http\Middleware\adminBTNMiddleware;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -122,7 +122,7 @@ Route::get('/menhelyProfil', function () {
 //Route::get('/userLista', [AdminControllerp::class, "userLista"])->name('userLista');
 
 // Ideiglenes controller a felhasználó kezelésnek
-Route::get('/userLista', [HomeController::class, "userLista"])->name('userLista');
+Route::get('/userLista', [HomeController::class, "userLista"])->name('userLista')->middleware(adminBTNMiddleware::class);
 // Ideiglenes controller a felhasználó kezelésnek - vége
 
 

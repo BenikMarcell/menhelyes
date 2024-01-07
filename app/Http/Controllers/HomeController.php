@@ -32,7 +32,7 @@ class HomeController extends Controller
 
     public function userLista()
     {
-        $users = DB::table('users')->paginate(2);
+        $users = DB::table('users')->paginate(4);
         return view('userLista', ["users"=> $users]);
         
     }

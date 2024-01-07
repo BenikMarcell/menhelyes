@@ -21,6 +21,7 @@ class isAdminMiddleware
             }
             else {
                 return response()->view('home');// ez irányítja át
+                
             }
         }
         

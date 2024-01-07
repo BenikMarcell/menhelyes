@@ -20,6 +20,7 @@ class Kernel extends HttpKernel
         // ...
         
         'isAdmin' => \App\Http\Middleware\isAdminMiddleware::class,
+        'adminBTN' => \App\Http\Middleware\adminBTNMiddleware::class
     ];
 
 
