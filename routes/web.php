@@ -67,8 +67,8 @@ Route::get('/menhely/{id}/kep', [MenhelyekController::class, 'menhelyKep'])->nam
 Route::get('/allatregisztracio', [AllatokController::class, 'create'])->name('create');
 //->middleware('menhely');
 
-Route::get('/allatmodositas/{a_id}', [AllatokController::class, 'modify'])->middleware('menhely');
-
+Route::get('/allatmodositas/{a_id}', [AllatokController::class, 'modify']);
+//->middleware('menhely')
 Route::get('menhelyAllatai', [AllatokController::class, 'index'])->name('menhelyAllatai');
 
 Route::resource('menhelykepek', MenhelyKepekController::class);
