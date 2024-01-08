@@ -39,6 +39,7 @@
             <h6>Chip: {{$allat->chip}}</h6>
             <h6>Színe: {{$allat->allat_szin->szin}}</h6>
             <h6>Faj: {{$allat->allat_faj->faj}}</h6>
+            <h6>a_id: {{$allat->a_id}}</h6>
         </div>
     </div>
 </div>

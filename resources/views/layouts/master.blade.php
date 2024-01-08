@@ -19,22 +19,17 @@
         <h1 id="focim">MenhelyHub</h1>
         <div class="container-fluid">
          
-            
-           
-        
-            <div class="col-3">
-                
+            <div class="col-3">       
                 <a href="{{ url('./') }}"><img id="logokep" src="{{asset('images/logo.png')}}" alt="Logo"></a>
             </div>
             
-            <div id="nav-gombok" class="col-6">
-                
+            <div id="nav-gombok" class="col-6">  
                 <a class="btn rounded" href="{{ url('./menhelyek') }}" >Menhelyek</a>
                 <a class="btn rounded" href="{{ url('./allatok') }}" >Állatok</a>
                 <a class="btn rounded" href="{{ url('./kapcsolat') }}" >Kapcsolat</a>
             </div>
-            <div class="col-3 center">
-                
+
+            <div class="col-3 center">    
                     @guest
                         @if (Route::has('login'))
                             <li class="btn nav-item">
