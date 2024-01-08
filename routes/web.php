@@ -55,30 +55,31 @@ Route::get('/menhelyek/{telepules}', [MenhelyekController::class, 'menhelyekByTe
 
 // A menhelykeresés gomb POST
 Route::post('/menhelyek/kereses', [MenhelyekController::class, 'kereses'])->name('menhelyekKereses');
-
 // A megkeresett menhely aloldal megjelenítése
 Route::get('/megkeresettMenhely/{m_id}', [MenhelyekController::class, 'kereses'])->name('kereses');
-
 //Menhely kártyán a kép
 Route::get('/menhely/{id}/kep', [MenhelyekController::class, 'menhelyKep'])->name('menhely.image');
-
 //--------
-
 Route::get('/allatregisztracio', [AllatokController::class, 'create'])->name('create');
 //->middleware('menhely');
+
 
 Route::get('/allatmodositas/{a_id}', [AllatokController::class, 'modify']);
 //->middleware('menhely')
 Route::get('menhelyAllatai', [AllatokController::class, 'index'])->name('menhelyAllatai');
-
 Route::resource('menhelykepek', MenhelyKepekController::class);
 
 
 Route::get('/menhely/edit', [MenhelyekController::class, 'edit'])->name('menhely.edit');
+//ide kell egy middleware amelyik megnézi, hogy normál szerkesztés-e vagy admin szerkesztés. Ha Admin akkor az AdminEdit funkciót hivja
+
+//Menhelyszerkesztés m-id
+Route::get('/menhely/edit/{m_id}', [MenhelyekController::class, 'editAdmin'])->name('menhely.editAdmin');
+
+
+
 Route::put('/menhely/update/{m_id}', [MenhelyekController::class, 'update'])->name('menhely.update');
 Route::delete('/menhelykepek/{mk_id}', [MenhelyKepekController::class, 'destroy'])->name('menhelykepek.destroy');
-
-
 Route::put('/menhelykepek/{mk_id}', [MenhelyKepekController::class, 'update'])->name('menhelykepek.update');
 
 

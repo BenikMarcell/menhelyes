@@ -15,11 +15,7 @@
 <br>
 
 <form action="{{ route('menhely.update', ['m_id' => $menhely->m_id]) }}" method="POST">
-
-
-
-
-    
+ 
     @csrf
 
     @method('PUT')

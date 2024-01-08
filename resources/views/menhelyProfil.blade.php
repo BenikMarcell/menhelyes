@@ -21,9 +21,6 @@
         @endif
 
 
-
-
-
         <div class="row">
 
             <?php

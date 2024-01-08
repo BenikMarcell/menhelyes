@@ -21,9 +21,9 @@ class adminBTNMiddleware
             if (auth()->user()->type == 1) {
                 return $next($request);
             } else {
-                //return response()->view('menhelyProfil')->with('alert', 'HEY');
+                
                 return redirect()->route('menhelyProfil')->with('alert', 'A Felhasználók kezeléséhez adminisztrátori jogok szükségesek!');
-                //return redirect()->back();
+                
 
 
             }

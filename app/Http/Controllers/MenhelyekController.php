@@ -206,7 +206,8 @@ public function menhelyKep(string $m_id)
 {
     if (auth()->check() && auth()->user()) {
         $email = auth()->user()->email;
-        $menhely = Menhely::where('email', $email)->first();  // itt találom meg a menhelyet
+        
+        $menhely = Menhely::where('email', $email)->first();  // a bejelentkezett alapján itt találom meg a menhelyet
 
         // Most kinyerheted az m_id-t a megtalált menhely rekordból
         $m_id = $menhely->m_id;
@@ -217,6 +218,25 @@ public function menhelyKep(string $m_id)
         $error = 'Menhely nem található';
     }
 }
+/**
+     * Ez egy másik edit, ami az m_id-t a sorból kapja
+     */
+public function editAdmin($m_id)
+{
+    
+        
+        $menhely = Menhely::Find($m_id);  // a kapott m_id-t adja tovább
+        
+        // Most kinyerheted az m_id-t a megtalált menhely rekordból
+        //$m_id = $menhely->m_id;
+        
+        //return view('menhelyregisztracio', compact('menhely', 'm_id'));
+        return view('menhelyszerkesztes', compact('menhely', 'm_id'));
+    
+}
+
+
+
     /**
      * Update the specified resource in storage.
      */
