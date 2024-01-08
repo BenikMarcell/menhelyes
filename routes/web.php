@@ -71,12 +71,8 @@ Route::resource('menhelykepek', MenhelyKepekController::class);
 
 
 Route::get('/menhely/edit', [MenhelyekController::class, 'edit'])->name('menhely.edit');
-//ide kell egy middleware amelyik megnézi, hogy normál szerkesztés-e vagy admin szerkesztés. Ha Admin akkor az AdminEdit funkciót hivja
-
 //Menhelyszerkesztés m-id
 Route::get('/menhely/edit/{m_id}', [MenhelyekController::class, 'editAdmin'])->name('menhely.editAdmin');
-
-
 
 Route::put('/menhely/update/{m_id}', [MenhelyekController::class, 'update'])->name('menhely.update');
 Route::delete('/menhelykepek/{mk_id}', [MenhelyKepekController::class, 'destroy'])->name('menhelykepek.destroy');

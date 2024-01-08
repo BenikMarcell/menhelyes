@@ -222,15 +222,8 @@ public function menhelyKep(string $m_id)
      * Ez egy másik edit, ami az m_id-t a sorból kapja
      */
 public function editAdmin($m_id)
-{
-    
-        
-        $menhely = Menhely::Find($m_id);  // a kapott m_id-t adja tovább
-        
-        // Most kinyerheted az m_id-t a megtalált menhely rekordból
-        //$m_id = $menhely->m_id;
-        
-        //return view('menhelyregisztracio', compact('menhely', 'm_id'));
+{     
+        $menhely = Menhely::Find($m_id);  
         return view('menhelyszerkesztes', compact('menhely', 'm_id'));
     
 }
