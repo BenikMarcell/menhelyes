@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AdminController;
 use GuzzleHttp\Middleware;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
@@ -79,8 +80,6 @@ Route::delete('/menhelykepek/{mk_id}', [MenhelyKepekController::class, 'destroy'
 Route::put('/menhelykepek/{mk_id}', [MenhelyKepekController::class, 'update'])->name('menhelykepek.update');
 
 
-
-
 Route::get('kepek/create', [KepekController::class, 'create'])->name('kepek.create');
 
 // Ezeket átdolgozni, a Tanár kérése szerint!
@@ -91,7 +90,6 @@ Route::resource('bevall', AllatokController::class);
 Route::resource('kepek', KepekController::class);
 Route::resource('menhelykepek', MenhelyKepekController::class);
 
-// KG routok vége ----------------------------------------------------------------------------------
 
 // Főoldal route
 Route::get('/fooldal', function () {
@@ -115,12 +113,12 @@ Route::get('/menhelyProfil', function () {
 })->name('menhelyProfil');
 
 
-// Megpróbálom
-//Route::get('/userLista', [AdminControllerp::class, "userLista"])->name('userLista');
 
-// Ideiglenes controller a felhasználó kezelésnek
+// Kontroller a felhasználó kezelésnek
 Route::get('/userLista', [HomeController::class, "userLista"])->name('userLista')->middleware(adminBTNMiddleware::class);
-// Ideiglenes controller a felhasználó kezelésnek - vége
+
+//Modal routok
+Route::post('/menhely-torles-megerosites', [AdminController::class, "menhelyTorlesMegerosites"]);
 
 
 

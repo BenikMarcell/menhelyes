@@ -13,6 +13,16 @@ class AdminController extends Controller
         
     }
 
-    // Ideiglenes controller a felhasználó kezelésnek
+    // menhelyTorlesMegerosites
+
+    public function menhelyTorlesMegerosites(Request $req)
+{
+    $data['modal-header'] = 'Menhely és User Törlése';
+    $data['modal-body'] = 'Biztosan törölni szeretnéd a menhelyet, a usert és a hozzá tartozó állatokat?';
+    $data['modal-footer'] = '<button type="button" class="btn btn-dark" data-bs-dismiss="modal">Mégse</button>';
+    $data['modal-footer'] .= '<button type="button" class="btn btn-danger">Törlés</button>';
+
+    return response() ->json($data);
     
+}    
 }
