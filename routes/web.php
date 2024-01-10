@@ -15,18 +15,7 @@ use App\Http\Controllers\HomeController;
 //use App\Http\Controllers\isAdminController;
 use App\Http\Middleware\isAdminMiddleware;
 use App\Http\Middleware\adminBTNMiddleware;
-/*
-|--------------------------------------------------------------------------
-| Web Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register web routes for your application. These
-| routes are loaded by the RouteServiceProvider and all of them will
-| be assigned to the "web" middleware group. Make something great!
-|
-*/
 
-// KG routok kezdete -----------------------------------------------------------------------------------------
 
 //Főoldal megjelenítése és hozzá a kártyák: állatok és menhelyek
 Route::get('/', [MenhelyekController::class, 'menhelyLista'])->name('menhelyLista');
@@ -119,6 +108,7 @@ Route::get('/userLista', [HomeController::class, "userLista"])->name('userLista'
 
 //Modal routok
 Route::post('/menhely-torles-megerosites', [AdminController::class, "menhelyTorlesMegerosites"]);
+Route::post('/menhely-torles', [AdminController::class, "menhelyTorles"]);
 
 
 

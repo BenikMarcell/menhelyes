@@ -9,14 +9,14 @@
         <div class="rowy col-12">
             <div class="table-responsive">
                 <table class="table table-light table-striped table-hoover">
-                    <tr>
+                    <tr >
                         <th>user ID</th>
                         <th>Name</th>
                         <th>User type</th>
                         <th>Műveletek</th>
                     </tr>
                     @foreach ($users as $user)
-                        <tr>
+                        <tr id="menhely_sor_{{$user->id}}">
                             <td>{{ $user->id }}</td>
                             <td>{{ $user->name }}</td>
                             <td>{{ $user->type }}</td>
@@ -94,6 +94,35 @@
                     $("#modal-body").html(data['modal-body']);
                     $("#modal-footer").html(data['modal-footer']);
                     $("#myModal").modal('show');
+                },
+                headers: {
+                    'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+                }
+
+            });
+            //alert(m_id);
+        }
+
+        function torles(m_id) {
+            $.ajax({
+                url: 'menhely-torles',
+                method: 'POST',
+                data: {
+                    "m_id": m_id
+                },
+                beforeSend: function() {
+                    //Amig nem jön válasz
+                    $(".gombok").attr("disabled", true);
+
+                },
+                success: function(data) {
+                    //HA már megjött a válasz
+                    $("#myModal").modal('hide');
+                    if(data['error'] == false){
+                        $('#menhely_sor_'+m_id).remove();
+                    } else{
+                        $("#modal-body").html(data['errorMsg']);  
+                    }
                 },
                 headers: {
                     'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
