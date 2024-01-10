@@ -120,6 +120,7 @@
                     $("#myModal").modal('hide');
                     if(data['error'] == false){
                         $('#menhely_sor_'+m_id).remove();
+                        
                     } else{
                         $("#modal-body").html(data['errorMsg']);  
                     }
