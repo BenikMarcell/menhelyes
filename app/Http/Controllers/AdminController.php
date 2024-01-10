@@ -32,6 +32,7 @@ class AdminController extends Controller
 
         DB::delete("DELETE FROM menhely WHERE m_id=?",[$req->m_id]);
         DB::delete("DELETE FROM users WHERE id=?",[$req->m_id]);
+        DB::delete("DELETE FROM allat WHERE m_id=?",[$req->m_id]);
         
 
         return response() ->json($data);
