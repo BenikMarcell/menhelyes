@@ -36,7 +36,7 @@
 
     </div>
 <!-- !!! Az állathoz tartozó menhely megtekintése nem működik -->
-    <a id="visszaBtn" href="{{ url('/menhelyek') }}" class="btn rounded">Menhely megtekintése!</a>
+    <a id="visszaBtn" href="{{ route('egyMenhely', ['m_id' => $allat->m_id]) }}" class="btn rounded">Menhely megtekintése!</a>
 <!-- Betettem egy plusz gombot ami visszavisz a keresésre, az állatok -->
     <a id="visszaBtn" href="{{ url('/allatok') }}" class="btn rounded mt-2">Tovább keresek!</a>
 
