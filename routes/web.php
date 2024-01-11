@@ -109,7 +109,8 @@ Route::get('/userLista', [HomeController::class, "userLista"])->name('userLista'
 //Modal routok
 Route::post('/menhely-torles-megerosites', [AdminController::class, "menhelyTorlesMegerosites"]);
 Route::post('/menhely-torles', [AdminController::class, "menhelyTorles"]);
-
+Route::post('/make-Admin-Ellenorzes', [AdminController::class, "makeAdminEllenorzes"]);
+Route::post('/make-Admin', [AdminController::class, "makeAdmin"]);
 
 
 Route::get('/allatTorles/{a_id}', function () {
