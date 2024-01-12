@@ -29,7 +29,8 @@
             $menhely = Menhely::where('email', $email)->first();
             ?>
 
-            <h1 class="text-center mb-5">{{ Auth::user()->name }}</h1>
+            <h1 class="text-center mb-5 py-3" style="background-color: #17594A;
+            color: #D3D04F;">{{ Auth::user()->name }}</h1>
             <!--<h4 class="text-center mb-5">{{ Auth::user()->id }}</h4>-->
             <!-- ide először beolvassuk, hogy melyik menhelről van szó
                         aztán kivesszük a menhelyből az adatait és azokat írjuk alább.
