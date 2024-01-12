@@ -14,7 +14,7 @@
 <h1 class="text-center m-3 kekText">Üdvözlünk a MenhelyHUB-on</h1>
 
 <div class="container">
-    <div class="row">
+    <div class="row p-3" style="background-color: #a2b6b2;">
         <div class="col-12 col-md-6">
             <img id="fooldalkep" src="./images/Welcome_Image.jpg" alt="fooldalkep" class="img-fluid">
         </div>

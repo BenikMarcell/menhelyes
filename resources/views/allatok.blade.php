@@ -75,7 +75,7 @@
             <div class="row">
                 @foreach ($allatok as $key => $allat)
                 <div class="col-md-3">
-                    <div class="card mb-3">
+                    <div class="card mb-5">
                         @if($allat->kep)
                             <img class="card-img-top" src="{{ asset('storage/images/' . $allat->kep->src) }}" alt="Próba {{ $allat->kep->src }}">
                         @endif
