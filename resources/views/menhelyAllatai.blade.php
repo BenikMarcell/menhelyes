@@ -15,7 +15,7 @@
     <p>{{ $pendingAnimalId }}</p>
 @endif
    
-    <table class="table table-striped">
+    <table class="table table-striped table-light">
         <tr>
             <th>ID</th>
             <th>Név</th>

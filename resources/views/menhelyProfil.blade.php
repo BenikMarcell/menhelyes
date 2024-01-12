@@ -31,13 +31,16 @@
             ?>
 
             <h1 class="text-center mb-5">{{ Auth::user()->name }}</h1>
-            <h4 class="text-center mb-5">{{ Auth::user()->id }}</h4>
+            <!--<h4 class="text-center mb-5">{{ Auth::user()->id }}</h4>-->
             <!-- ide először beolvassuk, hogy melyik menhelről van szó
             aztán kivesszük a menhelyből az adatait és azokat írjuk alább.
             A képfeltöltés még hiányzik!
             -->
             <div class="col-6">
-                <img class="profilkep" src="/images/menhelykep.jpg" alt="profilkep">
+                @if ($menhely->kep)
+                    <img class="img-fluid" src="{{ asset('storage/images/' . $menhely->kep->src) }}"
+                        alt="Próba {{ $menhely->kep->src }}">
+                @endif
             </div>
 
             <div class="col-6">
