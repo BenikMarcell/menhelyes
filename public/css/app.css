@@ -19,7 +19,7 @@ nav {
 }
 
 body {
-    background-color: #D3D04F;
+    background-color: #ffffff;
     display: flex;
     flex-direction: column;
     min-height: 100vh;
@@ -94,6 +94,8 @@ li {
 
 .myCardImg {
     height: 24vh;
+    
+    
 }
 
 .sajatAllatKep {
@@ -121,6 +123,12 @@ li {
 .card-body {
     background-color: #F3F2AF;
 }
+.card{
+    max-width: 300px;
+}
+.menhely-card{
+    max-width: 300px;
+}
 
 .deleteBtn {
     background-color: red;
@@ -129,4 +137,26 @@ li {
 
 .dropdown-menu , .dropdown-menu:hover {
     z-index: 990000;
+}
+
+.kekText{
+    color: #213363;
+}
+h1 {
+    color:#213363
+}
+
+h2 {
+    color:#213363
+}
+
+p {
+    color: #213363;
+}
+
+#keszitette{
+    color: #D3D04F; 
+}
+.card-title{
+    color: #213363;
 }
