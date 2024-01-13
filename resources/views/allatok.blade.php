@@ -10,16 +10,17 @@
 
 <div class="container">
     <h1 class="text-center ps-5">Állat Kereső</h1>
-    <form class="form form-control p-3 m-3 text-center" action="#" method="post">
+    <form class="form form-control p-3 m-3 text-center" action="#" method="get">
         <div class="col-6 p-3 m-3 text-center">
             <div class="inputMezo">
                 <label for="allatFajta">Állat fajta:</label>
-                <select class="form-control" name="allatFajta" id="allatFajtaValaszto">
+                <select class="form-select" name="allatFajta" id="allatFajtaValaszto">
                     <option selected value="none">Válassz fajt</option>
                     <option value="kutya">Kutya</option>
                     <option value="macska">Macska</option>
-                    <option value="horcsog">Hörcsög</option>
-                    <option value="medve">Medve</option>
+                    <option value="nyul">Nyúl</option>
+                    <option value="tengerimalac">Tengerimalac</option>
+                    <option value="mosomedve">Mosómedve</option>
                 </select>
             </div>
 
@@ -37,7 +38,7 @@
     -->
             <div class="inputMezo">
                 <label for="allatNeme">Állat neme:</label>
-                <select class="form-control" name="allatNeme" id="allatNemeValaszto">
+                <select class="form-select" name="allatNeme" id="allatNemeValaszto">
                     <option selected value="none">Válassz nemet</option>
                     <option value="him">Hím</option>
                     <option value="nosteny">Nőstény</option>
@@ -51,14 +52,14 @@
     -->
             <div class="inputMezo">
                 <label for="allatIvara">Állat ivarállapota:</label>
-                <select class="form-control" name="allatIvara" id="allatIvaraValaszto">
+                <select class="form-select" name="allatIvara" id="allatIvaraValaszto">
                     <option selected value="none">Válassz ivarállapotot</option>
                     <option value="ivaros">Ivaros</option>
                     <option value="ivartalanitott">Ivartalanított</option>
                 </select>
             </div>
         </div>
-        <button class="btn rounded">Keress!</button>
+        <button type="submit" class="btn rounded">Keress!</button>
         
         <!-- Az állat keresés funkció nem működik. Ez van a menhely kereső gombon
         <a href="" class="btn rounded">Bővebben</a>
@@ -81,7 +82,7 @@
                         @endif
                         <div class="card-body">
                             <h4 class="card-title">{{$allat->nev}}</h4>
-                            <h6>{{$allat->kor}}</h6>
+                            <h6>{{$allat->kor}} hónapos</h6>
                             <h6>{{$allat->nem}}</h6>  
                             <a href="{{ route('egyAllat', ['a_id' => $allat->a_id]) }}" class="btn rounded">Bővebben</a>
                         </div>
