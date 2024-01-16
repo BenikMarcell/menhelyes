@@ -1,5 +1,5 @@
 @extends('layouts.master')
-@section('title',"Főoldal")
+@section('title',"Hírlevél")
 
 @section('content')
 @php

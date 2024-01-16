@@ -37,6 +37,7 @@ class AllatokController extends Controller
 // lekéri az állatokat a DB-ből
     public function allatokLista()
     {
+        
         $allatok = Allat::all();
         return view('allatok',  ["allatok" => $allatok]);
     }
@@ -60,9 +61,7 @@ Az authorize hívás során a megfelelő argumentumokat használva a záradékba
 
 */ 
 
-    /**
-     * Ez nem működik ? mert nincs a többinek menhelye regisztrálva és nincs a menhely tablaban email cím
-     */
+    
     public function index()
     {
         if (auth()->check()) {
@@ -187,7 +186,18 @@ Az authorize hívás során a megfelelő argumentumokat használva a záradékba
         $allat->delete();
         return redirect()->route('menhelyAllatai');
     }
-
+    //Keresés
+   /*
+    public function allatKereses(string $allatfajta)
+     {
+    $faj = Faj::where('faj',$allatfajta)->get();
+    $af_id = $faj->af_id;
+    $allatok = Allat::find($af_id);
+    //$menhelyek = Menhely::where('telepules', $telepules)->get();
+    
+        return view('allatok',  ["allatok" => $allatok]);
+    }
+    */
 }
 
 

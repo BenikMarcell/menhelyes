@@ -15,7 +15,7 @@ class Allat extends Model
     public $primaryKey = "a_id";
     public $timestamps = false;
 
-    
+
     public function menhely()
     {
         return $this->belongsTo(Menhely::class);
@@ -26,7 +26,7 @@ class Allat extends Model
         return $this->belongsTo(Szin::class, 'szin_id', 'szin_id');
 
     }
-    
+
     public function allat_faj()
     {
         return $this->belongsTo(Faj::class, 'af_id', 'af_id');
@@ -34,12 +34,17 @@ class Allat extends Model
     }
 
     public function allat_kep()
-{
-    return $this->hasMany(Kep::class, 'a_id', 'a_id');
-}
+    {
+        return $this->hasMany(Kep::class, 'a_id', 'a_id');
+    }
 
     public function kep()
-{
-    return $this->hasOne(Kep::class, 'a_id', 'a_id');
-}
+    {
+        return $this->hasOne(Kep::class, 'a_id', 'a_id');
+    }
+
+
+    //kell a fajta, neme, ivarállapota
+    
+
 }

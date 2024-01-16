@@ -34,6 +34,7 @@ Route::get('/sajatAllat/{a_id}', [AllatokController::class, 'sajatAllat'])->name
 
 Route::get('/ujAllat/{a_id}', [KepekController::class, 'ujAllat'])->name('ujAllat');
 
+//Route::get('/allatKereses', [AllatokController::class,'allatKereses']);
 
 
 //---------Menhelyek aloldal:

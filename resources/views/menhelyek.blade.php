@@ -12,7 +12,7 @@
 <div class="container">
     <div class="row">
         <div class="col-12">
-            <h1 class="text-center">Menhely Kereső</h1>
+            <h1 class="text-center mb-4">Menhely Kereső</h1>
             <div class="container-fluid">
                 <div class="row">
                     <div class="col-4"></div>
@@ -23,7 +23,7 @@
                                 <label for="nev">Szűkítés név alapján:</label>
                                 <input class="form-control" id="nev" name="nev" type="text" placeholder="pl. Vagyunk">
                             </div>
-                            <button class="btn m-5">Keress!</button>
+                            <button class="btn m-4">Keress!</button>
                         </form>
                     </div>
                     <div class="col-4"></div>
@@ -33,20 +33,20 @@
 
         <div class="container-fluid">
             <div class="row">
-                <h5 class="text-center">Menhelyek száma települések szerint:</h5>
-                <div class="col-4"></div>
-                <div class="col-4">
-                    <ul>
+                <h5 class="text-center mt-4">Menhelyek száma települések szerint:</h5>
+                
+                <div class="col mb-3 text-center">
+                    
                         @foreach ($telepulesek as $telepules)
-                            <li>
-                                <a href="{{ route('menhelyekByTelepules', $telepules->telepules) }}">
-                                    {{ $telepules->count }} {{ $telepules->telepules }}
+                            
+                                <a class="mx-4" href="{{ route('menhelyekByTelepules', $telepules->telepules) }}">
+                                    {{ $telepules->count." db- " }} {{ $telepules->telepules }}
                                 </a>
-                            </li>
+                            
                         @endforeach
-                    </ul>
+                    
                 </div>
-                <div class="col-4"></div>
+                
             </div>
         </div>
     </div>
