@@ -4,7 +4,7 @@
 
 namespace Composer\Autoload;
 
-class ComposerStaticInite0ce5353653ac4aa921859375d213f73
+class ComposerStaticInit2e21676e13eb7d2387adbfd346aeb16a
 {
     public static $files = array (
         '0e6d7bf4a5811bfa5cf40c5ccd6fae6a' => __DIR__ . '/..' . '/symfony/polyfill-mbstring/bootstrap.php',
@@ -535,6 +535,7 @@ class ComposerStaticInite0ce5353653ac4aa921859375d213f73
     public static $classMap = array (
         'App\\Console\\Kernel' => __DIR__ . '/../..' . '/app/Console/Kernel.php',
         'App\\Exceptions\\Handler' => __DIR__ . '/../..' . '/app/Exceptions/Handler.php',
+        'App\\Http\\Controllers\\AdminController' => __DIR__ . '/../..' . '/app/Http/Controllers/AdminController.php',
         'App\\Http\\Controllers\\AllatokController' => __DIR__ . '/../..' . '/app/Http/Controllers/AllatokController.php',
         'App\\Http\\Controllers\\Auth\\ConfirmPasswordController' => __DIR__ . '/../..' . '/app/Http/Controllers/Auth/ConfirmPasswordController.php',
         'App\\Http\\Controllers\\Auth\\ForgotPasswordController' => __DIR__ . '/../..' . '/app/Http/Controllers/Auth/ForgotPasswordController.php',
@@ -560,6 +561,7 @@ class ComposerStaticInite0ce5353653ac4aa921859375d213f73
         'App\\Http\\Middleware\\TrustProxies' => __DIR__ . '/../..' . '/app/Http/Middleware/TrustProxies.php',
         'App\\Http\\Middleware\\ValidateSignature' => __DIR__ . '/../..' . '/app/Http/Middleware/ValidateSignature.php',
         'App\\Http\\Middleware\\VerifyCsrfToken' => __DIR__ . '/../..' . '/app/Http/Middleware/VerifyCsrfToken.php',
+        'App\\Http\\Middleware\\adminBTNMiddleware' => __DIR__ . '/../..' . '/app/Http/Middleware/adminBTNMiddleware.php',
         'App\\Http\\Middleware\\isAdminMiddleware' => __DIR__ . '/../..' . '/app/Http/Middleware/isAdminMiddleware.php',
         'App\\Models\\Allat' => __DIR__ . '/../..' . '/app/Models/Allat.php',
         'App\\Models\\Barion' => __DIR__ . '/../..' . '/app/Models/Barion.php',
@@ -6535,9 +6537,9 @@ class ComposerStaticInite0ce5353653ac4aa921859375d213f73
     public static function getInitializer(ClassLoader $loader)
     {
         return \Closure::bind(function () use ($loader) {
-            $loader->prefixLengthsPsr4 = ComposerStaticInite0ce5353653ac4aa921859375d213f73::$prefixLengthsPsr4;
-            $loader->prefixDirsPsr4 = ComposerStaticInite0ce5353653ac4aa921859375d213f73::$prefixDirsPsr4;
-            $loader->classMap = ComposerStaticInite0ce5353653ac4aa921859375d213f73::$classMap;
+            $loader->prefixLengthsPsr4 = ComposerStaticInit2e21676e13eb7d2387adbfd346aeb16a::$prefixLengthsPsr4;
+            $loader->prefixDirsPsr4 = ComposerStaticInit2e21676e13eb7d2387adbfd346aeb16a::$prefixDirsPsr4;
+            $loader->classMap = ComposerStaticInit2e21676e13eb7d2387adbfd346aeb16a::$classMap;
 
         }, null, ClassLoader::class);
     }

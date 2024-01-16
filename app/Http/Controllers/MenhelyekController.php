@@ -175,6 +175,7 @@ public function menhelyKep(string $m_id)
         $menhely->telefon =$request->telefon;
         $menhely->menhely_leiras =$request->menhely_leiras;
         $menhely->weblink =$request->weblink;
+        
 
         $menhely->save();
         

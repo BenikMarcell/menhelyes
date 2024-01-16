@@ -127,7 +127,6 @@ Route::get('/menhelyregisztracio',[MenhelyekController::class,"create"])->name('
 
 
 
-
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');//->middleware('isAdmin');
