@@ -1,5 +1,5 @@
 @extends('layouts.master')
-@section('title',"Főoldal")
+@section('title',"GY.I.K.")
 @section('content')
 @php
     $showLogo = true;
